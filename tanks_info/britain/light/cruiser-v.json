@@ -1,0 +1,11 @@
+{
+  "name": "Cruiser Mk V/Covenanter",
+  "description": "The Cruiser tank Mk V or A13 Mk III Covenanter was a British cruiser tank of the Second World War. The Covenanter was the first cruiser tank design to be given a name. Designed by the London, Midland and Scottish Railway as a better-armoured replacement for the Cruiser Mark IV, it was ordered into production in 1939 before pilot models were built. Problems with the design became apparent only after production was under way.\nThe tank equipped various British armoured divisions for home defence and training. It never left the UK as poor engine cooling caused the Mk I to Mk III to be declared unfit for overseas service especially in hot climates. This was rectified in the Mk IV after many corrective actions were undertaken but, by February 1944, it was declared obsolete. More than 1,700 of the type were built. It was named after the Covenanters, a Scottish religious faction at the time of the Wars of the Three Kingdoms",
+  "armaments": "QF 2 pounder",
+  "armour": "7-40mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/IWM-KID-778-Covenanter.jpg/300px-IWM-KID-778-Covenanter.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "light",
+  "nation": "britain"
+}

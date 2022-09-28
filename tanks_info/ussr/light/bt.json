@@ -1,0 +1,11 @@
+{
+  "name": "BT Series",
+  "description": "The BT tanks (Russian: Быстроходный танк/БТ, romanized: Bystrokhodnyy tank, lit. \"fast moving tank\" or \"high-speed tank\") were a series of Soviet light tanks produced in large numbers between 1932 and 1941. They were lightly armoured, but reasonably well-armed for their time, and had the best mobility of all contemporary tanks. The BT tanks were known by the nickname Betka from the acronym, or its diminutive Betushka. The successor of the BT tanks was the famous T-34 medium tank, introduced in 1940, which would replace all of the Soviet fast tanks, infantry tanks, and medium tanks in service.",
+  "armaments": "**BT-1:** None (prototype)\n**BT-2:** 37mm gun (60 rounds)\n**BT-5, BT-7:** 45mm 20-K gun\n**BT-5A:** 76.2mm howitzer (prototype)\n**BT-5 flamethrower:** Flamethrower (prototype)\n**RBT-5:** 2x 420mm Tank Torpedoes (prototype)\n**A-32:** 76.2mm L-10",
+  "armour": "6-23mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Khalkhin_Gol_Soviet_tanks_1939.jpg/220px-Khalkhin_Gol_Soviet_tanks_1939.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "light",
+  "nation": "ussr"
+}

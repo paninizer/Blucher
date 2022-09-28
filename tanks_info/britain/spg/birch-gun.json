@@ -1,0 +1,11 @@
+{
+  "name": "Birch Gun",
+  "description": "The Birch Gun was the first practical British self-propelled artillery gun, built at the Royal Arsenal, Woolwich in 1925.\nDespite proving itself a practical proposition the Birch Gun was never highly regarded by the British High Command, apparently not for any particular defect or lack of capability but an entrenched belief that such an innovation was unprecedented and so at best unwelcome and at worst an expensive and unnecessary indulgence.\nNamed after General Sir Noel Birch, who was Master General of Ordnance at the time, the Birch gun comprised a Vickers Medium Mark II tank chassis originally fitted with a QF 18-pounder (83.8 mm) gun. This remained the armament in all the models, although the latest version, usually called the Mk III, had limited elevation. Birch Guns were used in the Experimental Mechanized Force manoeuvres of 1928 but by 1931 they had been removed from service and political pressure was applied to prevent any plans to complete the third version of this weapon.\nIt would be a decade before the British Army returned to the concept of tracked artillery, in the middle years of a war for national survival where speed and mobility on the battlefield were not optional and eleven years before it would once again be equipped with a similarly effective weapon.",
+  "armaments": "QF 18-pounder 3.30 in (83.8 mm) gun",
+  "armour": "6mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/BirchGun.jpg/250px-BirchGun.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "spg",
+  "nation": "britain"
+}

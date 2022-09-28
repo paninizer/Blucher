@@ -1,0 +1,11 @@
+{
+  "name": "IS-3",
+  "description": "The IS-3 (also known as Object 703) is a Soviet heavy tank developed in late 1944. Its semi-hemispherical cast turret (resembling that of an upturned soup bowl), became the hallmark of post-war Soviet tanks. Its pike nose design would also be mirrored by other tanks of the IS tank family such as the IS-7 and T-10. Too late to see combat in World War II, the IS-3 participated in the Berlin Victory Parade of 1945, in the border conflict during the Sino-Soviet split, the Soviet invasion of Hungary, the Prague Spring and on both sides during the Six-Day War.\n\nObject 703 was developed in late 1944 by Factory No.100 Kirovskiy Works or ChTZ (in Chelyabinsk) and left the factory shop in May 1945. This tank had an improved armour layout, and a semi-hemispherical cast turret (resembling that of an upturned soup bowl), which became the hallmark of post-war Soviet tanks. While this low, hemispherical turret improved protection, it also significantly diminished crew headroom, especially for the loader. The low turret also limited the maximum depression of the main gun, since the gun breech had little room inside the turret to elevate, and this limited the extent to which the IS-3 could take advantage of hull-down positions. The IS-3's pointed prow earned it the nickname Shchuka (Pike) by its crews. It weighed slightly less and stood 28 centimetres (11 in) lower than previous versions. Wartime production resulted in many mechanical problems and a hull weldline that had a tendency to crack open. The IS-3M solved some of these problems.\n\nThe IS-3 was a significant improvement to the IS-1 and IS-2 due to its pike nose frontal armor. Having frontal hull armor that was already pre-angled meant that less armor was needed to maintain the same effective armor thickness on the upper glacis.",
+  "armaments": "122mm Gun D-25 (28 rounds)",
+  "armour": "110mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/IS3.jpg/300px-IS3.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "heavy",
+  "nation": "ussr"
+}

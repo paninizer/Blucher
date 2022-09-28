@@ -1,0 +1,11 @@
+{
+  "name": "T18 HMC",
+  "description": "The T18 Howitzer Motor Carriage, abbreviated as HMC. was an American self-propelled gun. Its development started in September 1941 as a close-support vehicle using the M3 Stuart's chassis. A 75 mm howitzer was mounted on the right front of the vehicle. The gun mount was adapted from the M3 Grant. Two prototypes were produced by Firestone and then sent to the Aberdeen Proving Ground. However, they were unsatisfactory because of their high superstructure and nose weight. Because the Army disliked the high superstructure and nearly vertical armor, the T18 was abandoned in 1942, and soon started a new turreted project, the T41 75 mm HMC, also known as the Howitzer Motor Carriage M8.\n\nLater, the prototypes were kept on display in the Aberdeen Proving Ground until they were destroyed in 1947.",
+  "armaments": "M1A1 75 mm pack howitzer",
+  "armour": "UNKNOWN",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/T18HMC.png/300px-T18HMC.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

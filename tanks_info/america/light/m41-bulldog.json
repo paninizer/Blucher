@@ -1,0 +1,11 @@
+{
+  "name": "M41 Walker Bulldog",
+  "description": "The M41 Walker Bulldog, officially 76-mm Gun Tank, M41, was an American light tank developed for armed reconnaissance purposes. It was produced by Cadillac between 1951 and 1954 and marketed successfully to the United States Army as a replacement for its aging fleet of World War II vintage M24 Chaffee tanks. Although engineered as a reconnaissance vehicle, the M41's weight and armament also made it effective in the close infantry support role and for rapid airborne deployments. Upon entering US service, all M41s received the designation Little Bulldog and subsequently, Walker Bulldog after the late General Walton Walker, who was killed in a Jeep accident in 1950. The M41 was the first postwar American light tank to see worldwide service, and was exported in considerable numbers by the United States, particularly to Asia.\n\nDevelopment of the M41 proceeded slowly until the outbreak of the Korean War, when the US Army's renewed demands for more tanks resulted in its being rushed into production.The haste with which it was initially produced led to technical problems, which, coupled with the relatively cramped dimensions of its hull interior, gave it a mediocre reputation among American tank crews. It was also considered too large in comparison to the Chaffee for reconnaissance. Funding for the M41 program was slashed accordingly, and more emphasis placed on the development of new main battle tanks such as the M47 Patton. Cadillac ceased production of the M41A1 in late 1954. It was replaced by the M551 Sheridan during the 1960s.",
+  "armaments": "76 mm M32A1 rifled cannon, 65 rounds",
+  "armour": "25.4 mm (1.00 in) turret front\n25 mm (0.98 in) turret sides and rear\n12.7 mm (0.50 in) turret top\n31.7 mm (1.25 in) at 45° hull nose plate\n25.4 mm (1.00 in) at 30° hull glacis plate\n19 mm (0.75 in) hull rear\n9.25 mm (0.364 in) hull floor",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/M41_Bulldog_Fort_Meade.jpg/300px-M41_Bulldog_Fort_Meade.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

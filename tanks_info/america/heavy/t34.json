@@ -1,0 +1,11 @@
+{
+  "name": "T34",
+  "description": "The T34 Heavy Tank was an American design for a heavy tank. It evolved from the T29 Heavy Tank and T30 Heavy Tank in 1945, sporting a 120 mm (4.72 in) modified 120 mm Gun M1 anti-aircraft gun. Extra armor plating was applied to the rear of the turret bustle as a counterweight for the heavier 120mm T53 main gun. The vehicle was deemed very well made, and large production orders were placed.",
+  "armaments": "120 mm T53 L/60 rifled gun (34 rounds)",
+  "armour": "**Hull front:** 102–203 mm (4.0–8.0 in)\n**Maximum gun shield:** 279 mm (11.0 in) maximum\n**Turret front:** 303 mm (11.9 in)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/T34Heavy_tank_in_Aberdeen_Proving_Ground_1947.jpg/300px-T34Heavy_tank_in_Aberdeen_Proving_Ground_1947.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}

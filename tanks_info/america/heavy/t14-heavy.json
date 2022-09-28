@@ -1,0 +1,11 @@
+{
+  "name": "T14",
+  "description": "The Assault Tank T14 was a joint project between the United States and the United Kingdom with the goal being to produce a universal infantry tank.\nThe T14 project never came to fruition, as a pilot model was not delivered to the UK until 1944 by which time the British Churchill tank had been in service for two years and greatly improved over its initial model. US efforts working on a similarly well-armoured tank but with a higher speed for use other than in infantry support led to the T20 Medium Tank.\n\nIn 1941, the head of the United States Ordnance Department travelled to Britain to learn of their experience, ideas and requirements for the future. Among the discussion was the possibility of designing a well-armed and armoured combat vehicle, one that was stronger than the British Churchill infantry tank then in production.\nThe tank design would have a British QF 6-pounder (57 mm) or a US 75 mm gun and share many parts with the M4 Sherman; they had the same armour thickness, but with sloped armour at extreme angles, effective armour on the T14 was greatly increased to 101 mm (4.0 in).\nThe British initially ordered 8,500 in 1942 following which detail design work started. Testing of the pilot model which was completed in 1944 showed the vehicle to be much too heavy for practical use. By this time, the British Army was satisfied with the Churchill and its cruiser tank designs and further production of the T14 was halted.\nOnly two were built; one tested in the US and the other sent to Britain. The example sent to Britain survives in The Tank Museum, Bovington. The British had developed the Heavy Assault Tank A33 \"Excelsior\" design to the same specification as the T14 but this did not go into service either.",
+  "armaments": "75mm gun M3, 70 rounds",
+  "armour": "133mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Assault-tank-T-14.jpg/300px-Assault-tank-T-14.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}

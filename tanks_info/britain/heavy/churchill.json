@@ -1,0 +1,11 @@
+{
+  "name": "Churchill",
+  "description": "The Tank, Infantry, Mk IV (A22) Churchill was a British infantry tank used in the Second World War, best known for its heavy armour, large longitudinal chassis with all-around tracks with multiple bogies, its ability to climb steep slopes, and its use as the basis of many specialist vehicles. It was one of the heaviest Allied tanks of the war.\n\nThe origins of the Churchill's design lay in the expectation that war in Europe might well be fought in conditions similar to those of the First World War, and thus emphasised the ability to cross difficult ground. The Churchill was hurried into production in order to build up British defences against a possible German invasion. The first vehicles had flaws that had to be overcome before the Churchill was accepted for wide use. After several Marks (versions) had been built, a better-armoured specification, the Mark VII, entered service with the British Army. The improved versions performed well in the later stages of the war.",
+  "armaments": "QF 2 pounder (Mark I and II)\nQF 6 pounder (Mark III and IV)\nQF 75mm (Mark VI and VII)\nQF 95mm (Mark V and VIII)",
+  "armour": "For Churchill Mark I-VI: 102 mm hull front, 76 mm hull side, 51 mm hull rear, 89 mm turret front, 76 mm turret side and rear\nFor Mark VII-VIII - 152 mm hull and turret front, 95 mm hull sides and turret sides and rear, 51 mm hull rear",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg/300px-Tanks_and_Afvs_of_the_British_Army_1939-45_KID1265.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "heavy",
+  "nation": "britain"
+}

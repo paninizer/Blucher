@@ -1,0 +1,11 @@
+{
+  "name": "T-28",
+  "description": "The T-28 was a Soviet multi-turreted medium tank. The prototype was completed in 1931, and production began in late 1932. It was an infantry support tank intended to break through fortified defences. The T-28 was designed to complement the heavier T-35 (also multi-turreted), with which it shared turret designs. The type did not have great success in combat, but it played an important role as a development project for Soviet tank designers. A series of new ideas and solutions that were tried out on the T-28 were later incorporated in future models.\n\nThe T-28 was in many ways similar to the British Vickers A1E1 Independent tank, which greatly influenced tank design in the period between the wars, even though only a single prototype was manufactured in 1926. The Kirov Factory in Leningrad began manufacturing a tank that was based on the design of the British Independent in 1932. The T-28 tank was officially approved on 11 August 1933. The T-28 had one large turret with a 76.2 mm gun and two smaller turrets with 7.62 mm machine guns. A total of 503 T-28 tanks were manufactured over the eight-year period from 1933 to 1941.",
+  "armaments": "76.2mm KT-28 Howitzer (70 rounds)",
+  "armour": "20-40mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/T28_parola_1.jpg/300px-T28_parola_1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "medium",
+  "nation": "ussr"
+}

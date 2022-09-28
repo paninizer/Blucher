@@ -1,0 +1,11 @@
+{
+  "name": "M1 Combat Car/M1 Light",
+  "description": "The M1 Combat Car, officially Light Tank, M1, was a light tank used by the U.S. Cavalry in the late 1930s and developed at the same time as the infantry's very similar M2 light tank. After the Spanish Civil War, most armies, (including the U.S. Army), realized that they needed tanks armed with cannons, not merely vehicles armed with machine guns, and so the M1 became obsolete.",
+  "armaments": ".50 cal (12.7 mm) machine gun",
+  "armour": "6–16 mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Combat_Car%2C_M1.png/300px-Combat_Car%2C_M1.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

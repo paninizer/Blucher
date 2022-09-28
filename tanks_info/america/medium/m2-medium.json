@@ -1,0 +1,11 @@
+{
+  "name": "M2 Medium",
+  "description": "The M2 Medium Tank, officially Medium Tank, M2, was a United States Army medium tank that was first produced in 1939 by the Rock Island Arsenal, just prior to the commencement of the Second World War in Europe.[2] Production was 18 M2 tanks, and 94 slightly improved M2A1 tanks, for a total of 112. Events in Western Europe rapidly demonstrated that the M2 was obsolete, and it was never used overseas in combat; it was, however, used for training purposes throughout the war.\n\nThe M2's features included an unusually large number of machine guns, bullet deflector plates, and sloped armor on the hull front (glacis plate). The main armament was a 37 mm (1.5 in) gun, with 32 mm (1.3 in) armor; the M2A1 had a 51 mm (2.0 in) gun mantlet. Some features of the M2 series, especially the suspension and powertrain, provided the basis for later, important U.S. tank designs including the M3 Lee, M4 Sherman and other armored fighting vehicles.",
+  "armaments": "37 mm Gun M3, 200 rounds",
+  "armour": "M2 6.4–32 mm (0.25–1.26 in)\nM2A1 6.4–51 mm (0.25–2.01 in)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Aberdean_proving_grounds_014.JPG/300px-Aberdean_proving_grounds_014.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

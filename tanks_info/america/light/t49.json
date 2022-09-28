@@ -1,0 +1,11 @@
+{
+  "name": "T49",
+  "description": "T49 was an attempt to upgun M41 Walker-Bulldog in order to stay relevant against more heavily armored tanks such as T-54 which appeared after the introduction of M41. To create T49, M41 was upgraded with a 90mm gun and a larger turret. This tank later served as the test bed for the 152mm M8E1 rifled gun/launcher. This tank was later adapted into the M551 Sheridan.",
+  "armaments": "152 mm Gun-Launcher XM81 (conventional)\n90 mm Gun T132E3",
+  "armour": "25.4mm",
+  "footer": "America",
+  "image": "https://wiki.gcdn.co/images/2/25/AnnoA100_T49.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "KV-2",
+  "description": "After disappointing results with the multi-turreted T-35 heavy tank, Soviet tank designers started drawing up replacements. The T-35 conformed to the 1920s notion of a \"breakthrough tank\" with very heavy firepower though its armour protection was lacking and it suffered from poor mobility. The Spanish Civil War demonstrated the need for much heavier armour on tanks, and was the main influence on Soviet tank design just prior to World War II.\n\nSeveral competing designs were offered, and even more were drawn up prior to reaching prototype stage. All had heavy armour, torsion-bar suspension, wide tracks, and were of welded and cast construction. One of the main competing designs was the SMK, which in its final form had two turrets, mounting one 76.2 mm and one 45 mm weapon. The designers of the SMK independently drew up a single-turreted variant and this received approval at the highest level. Two of these, named after the People's Commissar for Defence, were ordered alongside a single SMK. The smaller hull and single turret enabled the designer to install heavy frontal and turret armour while keeping the weight within manageable limits.\n\nThe KV was ordered right off the drawing board. When the Soviets entered the Winter War, the SMK, KV and a third design, the T-100, were sent to be tested in combat conditions. The KV outperformed the SMK and T-100 designs. The KV's heavy armour proved highly resistant to Finnish anti-tank weapons, making it more difficult to stop. In 1939, the production of 50 KVs was ordered. During the war, the Soviets found it difficult to deal with the concrete bunkers used by the Finns and a request was made for a tank with a large howitzer. One of the rush projects to meet the request put the howitzer in a new turret on one of the KV tanks. Initially known as 'Little turret KV' and 'Big turret KV', the 76-mm-armed tank was redesignated as the KV-1 Heavy Tank and the 152 mm howitzer one as KV-2 Heavy Artillery Tank.",
+  "armaments": "152 mm M-10T howitzer (20 rounds)",
+  "armour": "60-110mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/%D0%9A%D0%B2-2_3.jpg/300px-%D0%9A%D0%B2-2_3.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "heavy",
+  "nation": "ussr"
+}

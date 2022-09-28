@@ -1,0 +1,11 @@
+{
+  "name": "T54 Heavy",
+  "description": "The T54 was a series of prototype American tanks of the 1950s with three different turrets, all armed with a 105 mm gun, mounted on the M48 Patton chassis. The T54 had a conventional turret with an autoloader with 3 shells, the T54E1 had an oscillating design with an autoloader, and the T54E2 had a conventional turret with a human loader.\n\nThe turret on the T54E1 was similar to that of the T69 in its oscillating design and in that it held a crew of three and a nine-round drum autoloader under the gun. The T54E1 was abandoned in 1956 and in 1957 the entire project was cancelled in favor of the T95 Medium Tank.",
+  "armaments": "T54: 105mm L/67.3 T140\nT54E1: 105mm L/67.3 T140E2\nT54E2: 105mm L/67.3 T140E3",
+  "armour": "Upper glacis: 110 mm (4.3 in) at 60° = 220 mm (8.7 in) LoS",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/T54E1.jpg/220px-T54E1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}

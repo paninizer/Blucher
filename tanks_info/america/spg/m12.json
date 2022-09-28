@@ -1,0 +1,11 @@
+{
+  "name": "M12",
+  "description": "The 155 mm Gun Motor Carriage M12 was a U.S. self-propelled gun developed during the Second World War. It mounted a 155 mm gun derived from the French Canon de 155mm GPF field gun.\n\nThe idea for the M12 was first proposed in 1941 and the pilot - T6 GMC - built and tested in early 1942. The Army Ground Forces initially rejected the design as unnecessary, but after the Artillery Board supported the Ordnance Department in asking for 50 units, 100 were authorized and built by March 1943. These vehicles were at first used for training.\n\nThe M12 was built on the chassis of the M3 Grant tank. The engine was moved forward to the center of the vehicle to allow room for the gun mount, and most vehicles used later M4-style bogies with trailing return rollers. The armored compartment at the front was occupied by the driver and commander. The gun crew were located in an open-topped area at the back of the vehicle. It mounted a 155 mm gun M1917, M1917A1 or M1918 M1, depending upon availability, a weapon derived from the nearly identical French 155 mm GPF gun of World War I vintage. The main armament had a traverse of 14° and elevation limits of +30° to -5°. Limited storage space meant that only 10 155 mm projectiles and propellant charges could be carried on the vehicle.\nAn earth spade (similar to a bulldozer blade) at the rear was employed to absorb recoil. This layout (large gun mounted in an open mount at the rear, with a spade) was the pattern adopted for many years by other pieces of heavy self-propelled artillery.",
+  "armaments": "155 mm (6.1 in) M1917, M1918, or M1918M1 gun in Mount M4, 10 rounds",
+  "armour": "13-51mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/155mm-GMC-M12-France-1944.jpg/300px-155mm-GMC-M12-France-1944.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

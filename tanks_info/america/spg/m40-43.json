@@ -1,0 +1,11 @@
+{
+  "name": "M40/43",
+  "description": "The 155 mm Gun Motor Carriage M40 was an American self-propelled artillery vehicle built on a widened and lengthened Medium Tank M4A3 chassis, but with a Continental engine and with HVSS (Horizontal Volute Spring Suspension), which was introduced at the end of the Second World War.\n\nEquipped with a 155 mm M2 gun, it was designed to replace the earlier M12 Gun Motor Carriage. Its prototype designation was the T38, but this was changed to the M40 in March 1945.\nA single pilot vehicle was used in the European Theatre in 1945 by the 991st Field Artillery Battalion, along with a related 8 inch Howitzer Motor Carriage T89, (later re-designated the M43 Howitzer Motor Carriage) which was sometimes also equipped with a 155 mm barrel. A total of 311 out of a planned 600 were completed by the Pressed Steel Car Company before the end of the war, 24 of which were later converted into M43s. From there it was deployed during the Korean War.\n\nAfter World War II, the M40 was used by the British Army, who designated it 155 mm SP, M40 and called it Cardinal in the tradition of using ecclesiastical names for SP artillery, such as Deacon, Priest, Bishop and Sexton.",
+  "armaments": "155 mm M2 gun, 20 rounds",
+  "armour": "12mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/155mm_Gun_Motor_Carriage_M40_2.JPG/300px-155mm_Gun_Motor_Carriage_M40_2.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

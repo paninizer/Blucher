@@ -1,0 +1,11 @@
+{
+  "name": "M37",
+  "description": "The M37 105 mm Howitzer Motor Carriage is a 105 mm howitzer self propelled gun developed by the United States. It saw combat in the Korean War and remained part of the U.S. military until being replaced in the late 1950s. Approximately 300 were built.\n\nThe M37 105 mm Howitzer Motor Carriage (named T76 105 mm HMC during development starting in 8 July 1943) was developed by the US on an extended M24 Chaffee base, and was intended to be the successor to the 105 mm M7 Priest. It used the same 105 mm Howitzer M4 as the ones mounted on some M4 Sherman medium tanks. The M37 HMC was an open topped vehicle using torsion bar suspension with tracks 16 in (41cm) wide. Though the gun performance was similar to that of the M7 Priest, the use of the lighter chassis from the M24 Chaffee made the self-propelled gun easier to handle.",
+  "armaments": "105 mm Howitzer M4 in Mount M5, 126 rounds",
+  "armour": "13mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/M37_SPH.jpg/300px-M37_SPH.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

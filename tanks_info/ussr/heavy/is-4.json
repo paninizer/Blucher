@@ -1,0 +1,11 @@
+{
+  "name": "IS-4",
+  "description": "The IS-4, also known as the Object 701, was a Soviet heavy tank that started development in 1943 and began production in 1946. Derived from the IS-2 and part of the IS tank family, the IS-4 featured a longer hull and increased armor. With the IS-3 already in production, as well as the decreased need for tanks (particularly heavy tanks) and sluggish mobility, many were sent to the Russian Far East with some eventually becoming pillboxes along the Chinese border in the 1960s. Less than 250 were produced.",
+  "armaments": "1x D-25T 122 mm gun (22 rounds)",
+  "armour": "???",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IS-4_Tank.jpg/300px-IS-4_Tank.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "heavy",
+  "nation": "ussr"
+}

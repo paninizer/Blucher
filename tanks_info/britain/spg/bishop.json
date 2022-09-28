@@ -1,0 +1,11 @@
+{
+  "name": "Bishop",
+  "description": "The Bishop was a British self-propelled gun vehicle based on the Valentine tank and armed with the 25 pounder gun-howitzer, which could fire an 87.6 mm (3.45 in) 11.5 kg (25 lb) HE shell or an armour-piercing shell. A result of a rushed attempt to create a self-propelled gun, the vehicle had numerous problems, was produced in limited numbers and was soon replaced by better designs.\n\nThe rapid manoeuvre warfare practiced in the North African Campaign led to a requirement for a self-propelled artillery vehicle armed with the 25-pounder gun-howitzer. In June 1941, the development was entrusted to the Birmingham Railway Carriage and Wagon Company. A prototype was ready for trials by August and 100 were ordered by November 1941. The result was a vehicle with the formal title: \"Ordnance QF 25-pdr on Carrier Valentine 25-pdr Mk 1\".\nThe vehicle was based on the Valentine II hull, with the turret replaced by a fixed boxy superstructure with large rear doors. It was nicknamed the \"Bishop\" for its high mitre-like superstructure.\nInto this superstructure the 25-pounder gun-howitzer was fitted. As a consequence of the gun mounting, the resulting vehicle had very high silhouette, which is a disadvantage in desert warfare. The maximum elevation for the gun was limited to 15 degrees, reducing the range to 6,400 yards (5,900 m), about half that of the same gun on a wheeled carriage. The maximum depression was 5 degrees, traverse was 8 degrees, and the vehicle could also carry a Bren light machine gun. By July 1942, 80 Bishops had been built; as the last 20 were being built, an order for a further 50 was placed, with an option for a further 200 but the tender was abandoned in favour of the American M7 105 mm SP howitzer, named \"Priest\" in British service.",
+  "armaments": "QF 25 pounder gun-howitzer, 32 rounds",
+  "armour": "8-60mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/IWM-E-17430-Bishop-SP-gun-19420925.jpg/300px-IWM-E-17430-Bishop-SP-gun-19420925.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "spg",
+  "nation": "britain"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "T1 Light (Cunningham)",
+  "description": "The Light Tank, T1 was a United States Army light tank of the late 1920s and early 1930s that was only built in prototype form. The tank was an Army design built by James Cunningham, Son and Company. Introduced in 1927, it was developed up through 1932 as a series of modified versions (T1E1, T1E2, T1E3, T1E4, T1E5, and T1E6). The tank was never mass-produced, nor was it ever used in combat.",
+  "armaments": "T1, T1E1: 37 mm M1918 short tank gun\nT1E2, T1E3: 37 mm semi-automatic long-barreled Browning\nT1E4, T1E6: 37 mm semi-automatic M1924",
+  "armour": "T1, T1E1: 0.25–0.375 in (6.4–9.5 mm)\nT1E2, T1E3, T1E4: 0.25–0.625 in (6.4–15.9 mm)\nT1E6: 0.375–0.625 in (9.5–15.9 mm)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Light_Tank_T1E1.jpg/300px-Light_Tank_T1E1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

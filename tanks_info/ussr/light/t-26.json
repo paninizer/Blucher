@@ -1,0 +1,11 @@
+{
+  "name": "T-26",
+  "description": "The T-26 tank was a Soviet light tank used during many conflicts of the Interwar period and in World War II. It was a development of the British Vickers 6-Ton tank and was one of the most successful tank designs of the 1930s until its light armour became vulnerable to newer anti-tank guns. It was produced in greater numbers than any other tank of the period, with more than 11,000 units manufactured. During the 1930s, the USSR developed 53 variants of the T-26, including flame-throwing tanks, combat engineer vehicles, remotely controlled tanks, self-propelled guns, artillery tractors, and armoured carriers. Twenty-three of these were series-produced, others were experimental models.\n\nThe T-26 and BT were the main tanks of the Red Army's armoured forces during the interwar period. The T-26 was the most important tank of the Spanish Civil War and played a significant role during the Battle of Lake Khasan in 1938, as well as in the Winter War in 1939–40. Though nearly obsolete by the beginning of World War II, the T-26 was the most numerous tank in the Red Army's armoured force during the German invasion of the Soviet Union in June 1941. The T-26 fought the Germans and their allies during the Battle of Moscow in 1941–42, the Battle of Stalingrad and the Battle of the Caucasus in 1942–1943; some tank units of the Leningrad Front used their T-26s until 1944. Soviet T-26 light tanks last saw use in August 1945, during the defeat of the Japanese Kwantung Army in Manchuria.\n\nThe T-26 was exported and used extensively by Spain, China and Turkey. Captured T-26s were used by the Finnish, German, Romanian and Hungarian armies. The tank was reliable and simple to maintain, and its design was continually modernised between 1931 and 1941. No new models of the T-26 were developed after 1940.",
+  "armaments": "45 mm 20K mod. 1932–34 tank gun (122 rounds)",
+  "armour": "Varies",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/T-26_in_Kirovsk.JPG/300px-T-26_in_Kirovsk.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "light",
+  "nation": "ussr"
+}

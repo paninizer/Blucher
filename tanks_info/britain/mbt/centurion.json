@@ -1,0 +1,11 @@
+{
+  "name": "Centurion",
+  "description": "The Centurion was the primary British Army main battle tank of the post-World War II period. Introduced in 1945, it is widely considered to be one of the most successful post-war tank designs, remaining in production into the 1960s, and seeing combat in the front lines into the 1980s. The chassis was also adapted for several other roles, and these have remained in service to this day. It was a very popular tank with good armour, maneuverability, and armament.\n\nDevelopment of the Centurion began in 1943 with manufacture beginning in January 1945. Six prototypes arrived in Belgium less than a month after the war in Europe ended in May 1945. It first entered combat with the British Army in the Korean War in 1950 in support of the UN forces. The Centurion later served on the Indian side in the Indo-Pakistani War of 1965, where it fought against US-supplied M47 and M48 Patton tanks and it served with the Royal Australian Armoured Corps in Vietnam.",
+  "armaments": "105 mm L7 rifled gun\n20 pdr (84 mm) rifled gun\n17 pdr (76.2mm) rifled gun",
+  "armour": "51–152 mm (2.0–6.0 in)",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Centurion_cfb_borden_1.JPG/300px-Centurion_cfb_borden_1.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "mbt",
+  "nation": "britain"
+}

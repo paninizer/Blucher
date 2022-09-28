@@ -1,0 +1,11 @@
+{
+  "name": "T-44",
+  "description": "The T-44 is a medium tank first developed and produced near the end of World War II by the Soviet Union. It was the successor to the T-34, offering an improved ride and cross-country performance, along with much greater armor. Designed to be equipped with an 85 mm main gun, by the time it was fully tested the T-34 had also moved to this weapon. Both tanks offered similar performance, so introducing the T-44 was not considered as important as increasing T-34 production. Fewer than 2,000 T-44s were built, compared to about 58,000 T-34s. Although the T-44 was available by the end of the war, it was not used in any battle. It was 1 ton lighter than the T-34-85 and slightly faster. The T-44 was heavily influential on the design of the T-54/55 main battle tank, most notably the removal of side sloping, thick frontal armor, and a low profile. Also notable was the T-44-100, a 100 mm D-10T-armed prototype, which would be the same 100 mm gun mounted on the T-54/55, bar some minor changes.\nAttempts were made to improve the T-44's armament with a new 122 mm gun, but the turret proved to be very cramped and the rate of fire was poor, on the order of three rounds per minute. Design work on a slightly enlarged version of the T-44 began during the war and a prototype was produced in 1945. This newer design entered production in 1947 as the T-54/55 series of medium tanks, the most-produced tank series of all time.",
+  "armaments": "85 mm ZiS-S-53 tank gun (58 rounds)\n100-mm D-10T tank gun\n100-mm LB-1 tank gun\n122-mm D-25-44 tank gun",
+  "armour": "120mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/T-44_left_front.jpg/300px-T-44_left_front.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "medium",
+  "nation": "ussr"
+}

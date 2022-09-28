@@ -1,0 +1,11 @@
+{
+  "name": "M24 Chaffee",
+  "description": "The M24 Chaffee (officially Light Tank, M24) is an American light tank used during the later part of World War II; it was also used in post–World War II conflicts including the Korean War, and by the French in the War in Algeria and the First Indochina War. In British service it was given the service name Chaffee after the United States Army General Adna R. Chaffee Jr., who helped develop the use of tanks in the United States armed forces. M24s were mostly removed from U.S. and NATO armies by the 1960s, but remained in service with some Third World countries.",
+  "armaments": "75mm gun M6, 48 rounds",
+  "armour": "10-38mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/M24_Chaffee_33314_4CV_pic07.JPG/300px-M24_Chaffee_33314_4CV_pic07.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

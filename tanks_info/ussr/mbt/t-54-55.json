@@ -1,0 +1,11 @@
+{
+  "name": "T-54/55",
+  "description": "The T-54 and T-55 tanks are a series of Soviet main battle tanks introduced in the years following the Second World War. The first T-54 prototype was completed at Nizhny Tagil by the end of 1945. From the late 1950s, the T-54 eventually became the main tank for armoured units of the Soviet Army, armies of the Warsaw Pact countries, and many others. T-54s and T-55s have been involved in many of the world's armed conflicts since their introduction in the last half of the 20th century.\n\nThe T-54/55 series is the most-produced tank in history. Estimated production numbers for the series range from 96,500 to 100,000. They were replaced by the T-62, T-64, T-72, T-80 and T-90 tanks in the Soviet and Russian armies, but remain in use by up to 50 other armies worldwide, some having received sophisticated retrofitting.\n\nDuring the Cold War, Soviet tanks never directly faced their NATO adversaries in combat in Europe. However, the T-54/55's first appearance in the West around the period of the 1950s (then the beginning of the Cold War) spurred the United Kingdom to develop a new tank gun, the Royal Ordnance L7, and the United States to develop the M60 Patton.",
+  "armaments": "D-10T 100 mm rifled gun (43 rounds)",
+  "armour": "205 mm turret front\n130 mm turret sides\n60 mm turret rear\n30 mm turret roof\n120 mm hull front at 60° (100 mm after 1949)\n79 mm hull upper sides\n20 mm hull lower sides\n60 mm at 0° hull rear\n20 mm hull bottom\n33-16 mm hull roof",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/T-44_left_front.jpg/300px-T-44_left_front.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "mbt",
+  "nation": "ussr"
+}

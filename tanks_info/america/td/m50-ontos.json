@@ -1,0 +1,11 @@
+{
+  "name": "M36 Ontos",
+  "description": "Ontos, officially the Rifle, Multiple 106 mm, Self-propelled, M50, was a U.S. light armored tracked anti-tank vehicle developed in the 1950s.\n\nIt mounted six 106 mm manually loaded M40 recoilless rifles as its main armament, which could be fired in rapid succession against single targets to increase the probability of a kill. Although the actual caliber of the main guns was 105 mm, it was designated 106 mm to prevent confusion with the ammunition for the 105 mm M27 recoilless rifle, which the M40 replaced.\n\nIt was produced in limited numbers for the U.S. Marines after the U.S. Army cancelled the project. The Marines consistently reported excellent results when they used the Ontos for direct fire support against infantry in numerous battles and operations during the Vietnam War. The American stock of Ontos was largely expended towards the end of the conflict and the Ontos was removed from service in 1969.",
+  "armaments": "6 × M40A1C recoilless rifles",
+  "armour": "Unknown",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/American_tank_destroyers.jpg/300px-American_tank_destroyers.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "td",
+  "nation": "america"
+}

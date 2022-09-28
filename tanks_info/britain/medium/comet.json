@@ -1,0 +1,11 @@
+{
+  "name": "Comet",
+  "description": "The Comet tank or Tank, Cruiser, Comet I (A34) was a British cruiser tank that first saw use near the end of the Second World War, during the Western Allied invasion of Germany. The Comet was developed from the earlier Cromwell tank and mounted the new 17 pounder High Velocity (HV) (3 inch; 76.2 mm – sometimes referred to as \"77 mm\") gun, in a lower profile, partly-cast turret. This gun was effective against late-war German tanks, including the Panther at medium range, and the Tiger.\nThe Comet rendered the Cruiser Mk VIII Challenger obsolete, and led to the development of the Centurion tank. When firing APDS rounds, the 77 mm HV was superior in armour penetration capability to the 75 mm KwK 42 gun of the equivalent Axis tank, the Panther.\nThe Comet entered active service in January 1945 and remained in British service until 1958. In some cases, Comets sold to other countries continued to operate into the 1980s.",
+  "armaments": "17 pounder HV, 61 rounds",
+  "armour": "32-102mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Comet_tank_tankfest_2021B.JPG/300px-Comet_tank_tankfest_2021B.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "medium",
+  "nation": "britain"
+}

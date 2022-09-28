@@ -1,0 +1,11 @@
+{
+  "name": "Cruiser Mk VI/Crusader",
+  "description": "Crusader, in full \"Tank, Cruiser Mk VI, Crusader\", also known by its General Staff number A.15, was one of the primary British cruiser tanks during the early part of the Second World War. Over 5,000 tanks were manufactured and they made important contributions to the British victories during the North African campaign. The Crusader tank would not see active service beyond Africa, but the chassis of the tank was modified to create anti-aircraft, fire support, observation, communication, bulldozer and recovery vehicle variants.\nThe first Crusader Mark I tanks entered service in 1941, and, though manoeuvrable, it was relatively lightly armoured and under-armed. The following Crusader Mark II had a maximum armour of 49 mm (1.9 in). The main armament for the Crusader Mark I and II's was a 40 mm Ordnance QF 2-pounder gun; the following Crusader Mark III was fitted with a 57 mm Ordnance QF 6-pounder gun at the expense of one member of the crew in the turret. This variant was more than a match for the mid-generation German Panzer III and Panzer IV medium tanks that it faced in combat. As part of the 1st Armoured Brigade, the Crusader was to prove vital during the Battle of El Alamein, at Tobruk and in Tunisia campaign.\nRetained in service because of delays with its replacement, by late 1942, the lack of armament upgrades, plus reliability problems due to the harsh desert conditions and the appearance of Tiger I heavy tanks among the German Afrika Korps, saw the Crusader replaced as the main tank by US-supplied M3 Grant and then by the M4 Sherman medium tanks but it was retained in combat use until the end of the war in North Africa and after that for training purposes in Britain.",
+  "armaments": "Mk I, II: QF 2 pdr (40 mm), 110 rounds\nMk III: QF 6 pdr (57 mm), 65 rounds",
+  "armour": "Mk I: 40 mm\nMk II: 49 mm\nMk III: 51 mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Crusader_MkIII_%E2%80%98T126272%E2%80%99_%2836590905746%29.jpg/300px-Crusader_MkIII_%E2%80%98T126272%E2%80%99_%2836590905746%29.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "light",
+  "nation": "britain"
+}

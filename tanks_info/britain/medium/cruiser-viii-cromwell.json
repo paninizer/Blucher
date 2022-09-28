@@ -1,0 +1,11 @@
+{
+  "name": "Cruiser VIII/Cromwell",
+  "description": "The Cromwell tank, officially Tank, Cruiser, Mk VIII, Cromwell (A27M), was one of the series of cruiser tanks fielded by Britain in the Second World War. Named after the English Civil War-era military leader Oliver Cromwell, the Cromwell was the first tank put into service by the British to combine high speed from a powerful, reliable engine (the Rolls-Royce Meteor) and reasonable armour. The intended dual-purpose high velocity gun could not be fitted in the turret, so a medium velocity dual purpose gun was fitted instead. Further development of the Cromwell combined with a high velocity gun led to the Comet tank.\nThe name \"Cromwell\" was initially applied to three vehicles during development. Early Cromwell development led to the creation of the A24 Cavalier. Later Cromwell development led to the creation of the competing Tank, Cruiser, Mk VIII, Centaur (A27L) design. The Centaur tank was closely related to the Cromwell, both vehicles being externally similar. The Cromwell and Centaur tanks differed in the engine used; the Centaur had the 410 hp Liberty engine, the Cromwell had the significantly more powerful 600 hp Meteor; Centaur hulls were converted to Cromwells by changing the engine.\nThe Cromwell first saw action in the Battle of Normandy in June 1944. The tank equipped the armoured reconnaissance regiments of the Royal Armoured Corps, in the 7th Armoured Division, 11th Armoured Division and the Guards Armoured Division. While the armoured regiments of the latter two divisions were equipped with M4 Shermans, the armoured regiments of the 7th Armoured Division were equipped with Cromwells. The Centaurs were not used in combat except for those fitted with a 95 mm howitzer, which were used in support of the Royal Marines during the amphibious invasion of Normandy.",
+  "armaments": "QF 75mm, 64 rounds",
+  "armour": "76mm on Mk IV, 100mm on Mk V",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Cromwell_%28A27M%29_front-right_2017_Bovington.jpg/300px-Cromwell_%28A27M%29_front-right_2017_Bovington.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "medium",
+  "nation": "britain"
+}

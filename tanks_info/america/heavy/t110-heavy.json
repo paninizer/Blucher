@@ -1,0 +1,11 @@
+{
+  "name": "T110E5",
+  "description": "Developed from 1952 as a heavy tank with more powerful armament, compared to the T43 (M103). Restrictions were placed on the vehicle sizing as the tank was supposed to pass through the narrow tunnels of the Bernese Alps. Several designs were considered, but the project was canceled. No vehicles were ever manufactured.",
+  "armaments": "120mm gun M58",
+  "armour": "76.2-203.2mm",
+  "footer": "America",
+  "image": "https://wiki.gcdn.co/images/thumb/9/92/Heavy_Tank_T110E5_1.jpg/320px-Heavy_Tank_T110E5_1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}

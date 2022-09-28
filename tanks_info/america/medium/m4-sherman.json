@@ -1,0 +1,11 @@
+{
+  "name": "M4 Sherman",
+  "description": "The M4 Sherman, officially Medium Tank, M4, was the most widely used medium tank by the United States and Western Allies in World War II. The M4 Sherman proved to be reliable, relatively cheap to produce, and available in great numbers. It was also the basis of several other armored fighting vehicles including self-propelled artillery, tank destroyers, and recovery vehicles. Tens of thousands were distributed through the Lend-Lease program to the British Commonwealth and Soviet Union. The tank was named by the British for the American Civil War general William Tecumseh Sherman.",
+  "armaments": "M4, M4A3E2 Jumbo: 75mm gun M3, 90-110 rounds\nM4 (105): 105mm Howitzer M4, 66 rounds\nM4A1,A2,A3: 76mm gun M1, 71 rounds\nSherman Calliope: T34 Calliope MRL and 75mm gun M3\nSherman Firefly: QF 17 Pounder(76.2mm)\nM4 Fl-10: 75 mm SA 50 L/61.",
+  "armour": "12.7 to 177.8 mm (0.50 to 7.00 in) depending on location and variant",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/M4_Sherman_tank_-_Flickr_-_Joost_J._Bakker_IJmuiden.jpg/280px-M4_Sherman_tank_-_Flickr_-_Joost_J._Bakker_IJmuiden.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "T71",
+  "description": "Experimental airborne light tank with an oscillating turret and automatic loading. Developed by Detroit Arsenal and Cadillacs from 1952 through 1953 as a replacement for M41. The armament was deemed ineffective, and the development was stopped after one wooden prototype had been built.\n\nThe T71 was a project from 1952 intended to replace the M41 Walker Bulldog. By 1953, there were several different prospective designs that could replace the M41 made by different companies – Detroit Arsenal, Cadillac, and AAI Corporation.\nCadillac’s design was one which did not seem to get very far off the ground at all. It was a more sensible and traditional design than Detroit’s. It featured the T185 gun, essentially the same 76mm M32 gun as the M41, but with a quick change tube. The vehicle was likely to be over 5.5 tons lighter, as it was estimated to weigh less than 18 tons. It had a crew of four – three in the turret (commander, gunner, loader), and a driver in the hull. It featured an AOI-628-I engine, with a fuel capacity of 150 gallons, with an estimated range of 150 miles.",
+  "armaments": "76 mm Gun T185E\n76 mm Gun M1A2L",
+  "armour": "22.2mm",
+  "footer": "America",
+  "image": "https://wiki.gcdn.co/images/thumb/b/bb/Detroit_proposal_piked_front_version.jpg/200px-Detroit_proposal_piked_front_version.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

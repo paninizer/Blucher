@@ -1,0 +1,11 @@
+{
+  "name": "T69",
+  "description": "The T69 was a prototype American medium tank with an oscillating turret mounting a 90mm cannon with an eight-round drum autoloader. It held a crew of three. Developed on the basis of the T42 experimental medium tank in mid-50s, the vehicle never entered mass production.\n\nIn the early 1950s, the United States Military began a design program to develop tanks that would replace those currently in service. The M4 Sherman was getting obsolete and was in the process of being replaced by the M26 Pershing and the upgraded M46 Patton.\nThese tanks, however, were still very similar to vehicles of World War II era and did not make use of newer technologies that had begun to appear. One of the tanks to spring from the design program was the Medium Tank T42. This tank would form the basis of the T69 project.\nThe unique feature of the T69 among other medium tanks then in development was its oscillating turret and autoloading system. The T69 project followed on from the T71 Light Tank project, which featured a 76mm autoloading gun in an oscillating turret. It also ran parallel to the 120mm armed T57 and the 155 mm armed T58 Heavy Tank projects, both of which also featured autoloading systems and oscillating turrets. These two were based on the hull of the M103 Heavy Tank.",
+  "armaments": "90mm Tank Gun T178 (30 rounds per minute)",
+  "armour": "101.6mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/T69.jpg/300px-T69.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "M26 Pershing",
+  "description": "The M26 Pershing was a heavy tank/medium tank of the United States Army. The tank was named after General of the Armies John J. Pershing, who led the American Expeditionary Force in Europe in World War I. It was used in the last months of World War II during the Invasion of Germany and extensively during the Korean War.\n\nThe M26 was intended as a replacement of the M4 Sherman, but a prolonged development period meant that only a small number saw combat in Europe. Based on the criteria of firepower, mobility, and protection, US historian R. P. Hunnicutt ranked the Pershing behind the German Tiger II heavy tank, but ahead of the Tiger I heavy and Panther medium tanks. It was withdrawn in 1951 in favor of its improved derivative, the M46 Patton, which had a more powerful and reliable engine and advanced suspension. The lineage of the M26 continued with the M47 Patton, and was reflected in the new designs of the later M48 Patton and M60 Patton.",
+  "armaments": "90mm gun M3, 70 rounds",
+  "armour": "Upper hull: 102mm\nLower hull, turret sides: 76mm\nHull sides: 50–75mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Tanks_at_the_USS_Alabama_-_Mobile%2C_AL_-_001.jpg/300px-Tanks_at_the_USS_Alabama_-_Mobile%2C_AL_-_001.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}
