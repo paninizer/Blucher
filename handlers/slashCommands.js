@@ -18,20 +18,19 @@ const dirSetup = [
 		"CmdDescription": "Administrate the Server!"
 	},
 	{
-		"Folder": "NSFW",
-		"CmdName": "nsfw",
-		"CmdDescription": "NSFW Content, NSFW CHANNELS only!"
-	},
-	{
 		"Folder": "Fun",
 		"CmdName": "fun",
 		"CmdDescription": "Fun related Commands!"
 	}
 ];
 module.exports = (client) => {
+  	let dateNow = Date.now();
+  	console.log(`${String("[x] :: ".magenta)}Now loading the SLASH (/) Commands ...`.brightGreen);
+
 	try {
 		// client.slashCommands.set("commandname") //Each Command Data
 		// client.slashCommands("normal" + "commandname") //each Command Data
+		client.application.commands.set([]) //purges all slash commands
 		client.allCommands = []; //raw Slash Commands Data
 		readdirSync("./slashCommands/").forEach(async (dir) => {
 			if (lstatSync(`./slashCommands/${dir}`).isDirectory()) {
@@ -154,13 +153,11 @@ module.exports = (client) => {
 	} catch (e) {
 		console.log(String(e.stack).bgRed)
 	}
+	client.application.commands.set(client.allCommands);
+
+  	console.log(`[x] :: `.magenta + `LOADED THE ${client.slashCommands.size} COMMANDS after: `.brightGreen + `${Date.now() - dateNow}ms`.green)
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */
+
+//Improved by paninizer#8583
+//Original by Tomato#6966
+//Panzer Shipyards Developments

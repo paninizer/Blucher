@@ -176,7 +176,7 @@ module.exports = (c) => {
           )
       });
       //UNBAN
-      c.on("guildBanAdd", async function (ban) {
+      c.on("guildBanRemove", async function (ban) {
         //set it that it's a ban
         banMap.set(ban.user.id, true);
         send_log(c,
@@ -404,7 +404,7 @@ async function send_log(c, guild, color, title, description, thumb, fieldt, fiel
       .setTitle(title ? title.substring(0, 256) : "\u200b")
       .setTimestamp()
       .setThumbnail(thumb ? thumb : icon)
-      .setFooter(c.getFooter(guild?.name + "\n❯ Dashboard: www.milrato.com", icon))
+      .setFooter(c.getFooter(guild?.name + "\n❯ Dashboard: https://blucher.panzer-chan.repl.co", icon))
     if(fieldt && fieldv){
       if(fieldv.trim() !== ">>>") {
         LogEmbed.addField(fieldt.substring(0, 256), fieldv.substring(0, 1024))

@@ -12,7 +12,7 @@
  * 8  LOAD_the_BOT_Functions
  * 9  Login_to_the_Bot
  * 
- *   BOT CODED BY: TOMato6966 | https://milrato.eu
+ *   BOT CODED BY: paninizer#8583 as improved from bot by Tomato#6966
  *********************************************************/
 
 
@@ -184,6 +184,7 @@ requirehandlers();
 
 
 //tanks
+let now = Date.now();
 client.tanks = new Discord.Collection();
   fs.readdirSync("./tanks_info/").forEach(async (n_dir) => {
     fs.readdirSync(`./tanks_info/${n_dir}`).forEach(async (t_dir) => {
@@ -199,12 +200,14 @@ client.tanks = new Discord.Collection();
   })
 client.tanks.sort((tankA, tankB) => tankA.name-tankB.name);
 
+console.log(`Loaded ${client.tanks.size} tanks after ${Date.now()-now}ms.`.green);
+
  
  /**********************************************************
   * @param {9} Login_to_the_Bot
   *********************************************************/
 client.cluster = new Cluster.Client(client); //Init the Client & So we can also access broadcastEval...
-client.login(process.env["token"]);
+client.login(config.token);
 
 
 //start the dashboard
@@ -215,30 +218,18 @@ client.login(process.env["token"]);
  
  /**********************************************************
   * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+  * Bot Coded by paninzer | 
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Panzer Shipyards Development
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
-  * @INFO
-  *********************************************************/
-
-  /**
-   * NEEDED TO HAVE DMS WORKING (for receiving messages and interaction)
-   */
-/**********************************************************
-  * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
-  * @INFO
-  * Work for Milrato Development | https://milrato.eu
-  * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Improved on code by Tomato#6966
   * @INFO
   *********************************************************/
 
   /**
    * NEEDED TO HAVE DMS WORKING (for receiving messages and interaction)
    */
+
 client.cluster.on("message", async (msg) => {
   if(!msg._sCustom) return
   if(msg.dm && msg.message) {

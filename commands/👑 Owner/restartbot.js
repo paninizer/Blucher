@@ -15,13 +15,17 @@ module.exports = {
   cooldown: 5,
   usage: "restartbot",
   type: "bot",
-  description: "Restarts the Bot, if it`s not working as intended or so..",
+  description: "Restarts the Bot, if it`s not working as intended, and to prevent any undefined verdicts.",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
-    
-    return;
+    if ("744625722714357800" !== message.author?.id)
+      return message.channel.send({embeds : [new MessageEmbed()
+        .setColor(es.wrongcolor)
+        .setFooter(client.getFooter(es))
+        .setTitle(eval(client.la[ls]["cmds"]["owner"]["eval"]["variable1"]))
+      ]});
     try {
       await message.reply("NOW RESTARTING!");
-      require("child_process").exec(`pm2 restart ID_OF_THE_BOT_PROCESS_IN_PM2_LIST`, (error, stdout, stderr) => {
+      require("child_process").exec(`pm2 restart index.js`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           message.reply({content : eval(client.la[ls]["cmds"]["owner"]["restartbot"]["variable4"])})

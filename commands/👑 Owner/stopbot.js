@@ -56,7 +56,7 @@ ${clientapp.description ? clientapp.description : "❌ NO DESCRIPTION YET!"}
       : ""}
       `});
 
-      require("child_process").exec(`pm2 stop index.js CLANBOT_${process.cwd().split(require("path").sep).pop()}`, (error, stdout, stderr) => {
+      require("child_process").exec(`pm2 stop index.js`, (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
           message.reply({content : eval(client.la[ls]["cmds"]["owner"]["stopbot"]["variable4"])})

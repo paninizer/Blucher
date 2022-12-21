@@ -52,7 +52,16 @@ module.exports = {
           warnings: [],
           kicks: []
         });
-        const warnIDs = await client.userProfiles.get(message.author?.id + '.warnings')
+
+        await dbEnsure(client.userProfiles, warnmember.id, {
+          id: message.author?.id,
+          guild: message.guild.id,
+          totalActions: 0,
+          warnings: [],
+          kicks: []
+        });
+
+        const warnIDs = await client.userProfiles.get(warnmember.id + '.warnings')
         const modActions = await client.modActions.all();
         const warnData = warnIDs.map(id => modActions.find(d => d.ID == id)?.data);
         let warnings = warnData.filter(v => v.guild == message.guild.id);

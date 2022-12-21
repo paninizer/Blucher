@@ -61,9 +61,9 @@ module.exports = {
           }
         }
       });
-      if(d.some(x => x.error)) {
+      /*if(d.some(x => x.error)) {
         message.reply(`Failed to reload on some shards...\n\`\`\`\n${String(d.find(x => x.error)?.[0]).substring(0, 250)}\n\`\`\``);
-      }
+      }*/
       await t.edit(`Loaded ${client.commands.size} Commands!`)
     } catch (e) {
       console.log(String(e.stack).dim.bgRed)

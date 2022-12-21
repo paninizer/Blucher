@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Blucher listening on port ${port}`)
 })
 
 
@@ -17,10 +17,10 @@ const colors = require("colors");
 const OS = require("os");
 const clusterAmount = 2;
 const shardsPerCluster = 2; // suggested is: 2-8
-const totalShards = clusterAmount * shardsPerCluster; // suggested is to make it that 600-900 Servers are per shard, if u want to stay save, make it that it"s 400 servers / shard, and once it reached the ~1k mark, change the amount and restart
+const totalShards = clusterAmount * shardsPerCluster; // suggested is to make it that 600-900 Servers are per shard, if you want to stay safe, make it that it"s 400 servers / shard, and once it reached the ~1k mark, change the amount and restart
 
 const manager = new Manager("./bot.js", { 
-    token: process.env['token'],    
+    token: config.token,    
     // shardList: [ 0, 1, 2, 3, 4, 5 ], // if only those shards on that host etc.
     totalShards: totalShards, // amount or: "auto"
     shardsPerClusters: shardsPerCluster || 2, // amount of shards / cluster

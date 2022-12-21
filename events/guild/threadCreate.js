@@ -8,12 +8,6 @@ module.exports = async (client, thread) => {
         console.log(String(e).grey)
     }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/dcdev
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */
+//Improved by paninizer#8583
+//Original by Tomato#6966
+//Panzer Shipyards Development

@@ -139,3 +139,7 @@ module.exports = async (client) => {
         await client.snipes.set(message.channel.id, snipes).catch(()=>null);
     })
 }
+
+//Improved by paninizer#8583
+//Original by Tomato#6966
+//Panzer Shipyards Development

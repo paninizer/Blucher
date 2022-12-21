@@ -34,7 +34,6 @@ module.exports = {
 					.setTitle(eval(client.la[ls]["cmds"]["programming"]["httpstatus"]["variable1"]))
 					.setDescription(eval(client.la[ls]["cmds"]["programming"]["httpstatus"]["variable2"]))
 				]});
-			// 599 isn't standard i think, not in Node.js but it's on http.cat so let's handle it.
 			if(status !== "599" && !STATUS_CODES[status]) return message.reply({content : eval(client.la[ls]["cmds"]["programming"]["httpstatus"]["variable3"])});
 			return message.reply({embeds: [new MessageEmbed()
 			  .setTitle(eval(client.la[ls]["cmds"]["programming"]["httpstatus"]["variable4"]))

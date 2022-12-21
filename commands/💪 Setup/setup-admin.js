@@ -90,7 +90,7 @@ module.exports = {
             let SetupNumber = menu?.values[0].split(" ")[0]
             handle_the_picks(menu?.values[0], SetupNumber, menuoptiondata)
           }
-          else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
@@ -141,7 +141,7 @@ module.exports = {
                     });
                   }
                 } else {
-                  return message.reply( "you didn't ping a valid Role")
+                  return message.reply("You didn't ping a valid **__Role__**")
                 }
               })
               .catch(e => {
@@ -202,7 +202,7 @@ module.exports = {
                     });
                   }
                 } else {
-                  return message.reply( "you didn't ping a valid Role")
+                  return message.reply("You didn't ping a valid **__Role__**")
                 }
               })
               .catch(e => {
@@ -427,11 +427,11 @@ module.exports = {
                       let SetupNumber = menu?.values[0].split(" ")[0]
                       handle_the_picks2(menu?.values[0], SetupNumber, menuoptiondata)
                     }
-                    else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+                    else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
                   });
                   //Once the Collections ended edit the menu message
                   collector.on('end', collected => {
-                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:833101995723194437> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+                    menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
                   });
                 }
                 async function handle_the_picks2(optionhandletype, SetupNumber, menuoptiondata) {
@@ -488,7 +488,7 @@ module.exports = {
                               return message.reply({embeds: [new MessageEmbed()
                                 .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-admin"]["variable13"]))
                                 .setColor(es.color)
-                                .setDescription(`Everyone with one of those Roles/Users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
+                                .setDescription(`Everyone with one of those roles/users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
                                 .setFooter(client.getFooter(es))]
                               });
                             } catch (e) {
@@ -535,7 +535,7 @@ module.exports = {
                               return message.reply({embeds: [new MessageEmbed()
                                 .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-admin"]["variable17"]))
                                 .setColor(es.color)
-                                .setDescription(`Everyone with one of those Roles/Users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
+                                .setDescription(`Everyone with one of those roles/users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
                                 .setFooter(client.getFooter(es))]
                               });
                             } catch (e) {
@@ -547,7 +547,7 @@ module.exports = {
                               });
                             }
                           } else {
-                            return message.reply( "you didn't ping a valid Role")
+                            return message.reply("You didn't ping a valid role")
                           }
                         })
                         .catch(e => {
@@ -565,7 +565,7 @@ module.exports = {
                     case "Remove Role":
                     {
                       var tempmsg = await message.reply({embeds: [new MessageEmbed()
-                        .setTitle("Which Role/User do you wanna remove from " + thecmd)
+                        .setTitle("Which role/user do you want to remove from " + thecmd)
                         .setColor(es.color)
                         .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-admin"]["variable21"]))
                         .setFooter(client.getFooter(es))]
@@ -618,7 +618,7 @@ module.exports = {
                               return message.reply({embeds: [new MessageEmbed()
                                 .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-admin"]["variable23"]))
                                 .setColor(es.color)
-                                .setDescription(`Everyone with one of those Roles/Users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
+                                .setDescription(`Everyone with one of those roles/users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
                                 .setFooter(client.getFooter(es))]
                               });
                             } catch (e) {
@@ -669,7 +669,7 @@ module.exports = {
                               return message.reply({embeds: [new MessageEmbed()
                                 .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-admin"]["variable27"]))
                                 .setColor(es.color)
-                                .setDescription(`Everyone with one of those Roles/Users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
+                                .setDescription(`Everyone with one of those roles/users:\n${cmdrole.join("\n")}\nis now able to use the ${thecmd} Admin Commands`.substring(0, 2048))
                                 .setFooter(client.getFooter(es))]
                               });
                             } catch (e) {
@@ -681,7 +681,7 @@ module.exports = {
                               });
                             }
                           } else {
-                            return message.reply( "you didn't ping a valid Role")
+                            return message.reply("You didn't ping a valid role")
                           }
                         })
                         .catch(e => {

@@ -79,13 +79,22 @@ module.exports = {
           warnings: [],
           kicks: []
         });
+
+        await dbEnsure(client.userProfiles, warnmember.id, {
+          id: message.author?.id,
+          guild: message.guild.id,
+          totalActions: 0,
+          warnings: [],
+          kicks: []
+        });
+
         const newActionId = await client.modActions.stats().then(d => client.getUniqueID(d.count));
         await client.modActions.set(newActionId, {
-          user: message.author?.id,
+          user: warnmember.id,
           guild: message.guild.id,
           type: 'warning',
           moderator: message.author?.id,
-          reason: "Anticaps Autowarn",
+          reason: reason,
           when: new Date().toLocaleString(`de`),
           oldhighesrole: message.member.roles ? message.member.roles.highest : `Had No Roles`,
           oldthumburl: message.author.displayAvatarURL({
@@ -93,10 +102,10 @@ module.exports = {
           })
         });
         // Push the action to the user's warnings
-        await client.userProfiles.push(message.author?.id + '.warnings', newActionId);
+        await client.userProfiles.push(warnmember.id + '.warnings', newActionId);
         await client.userProfiles.add(message.author?.id + '.totalActions', 1);
         await client.stats.push(message.guild.id + message.author?.id + ".warn", new Date().getTime());
-        const warnIDs = await client.userProfiles.get(message.author?.id + '.warnings')
+        const warnIDs = await client.userProfiles.get(warnmember.id + '.warnings')
         const modActions = await client.modActions.all();
         const warnData = warnIDs.map(id => modActions.find(d => d.ID == id)?.data);
         let warnings = warnData.filter(v => v.guild == message.guild.id);

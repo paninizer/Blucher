@@ -21,7 +21,7 @@ module.exports = {
   cooldown: 5,
   usage: "setup-advertise  -->  Follow the Steps",
   type: "bot",
-  description: "Changes if the Advertisement of BERO-HOST.de Should be there or NOT",
+  description: "Setup Bot Advertisement Message",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
     

@@ -55,7 +55,7 @@ module.exports = {
         console.log(String(e.stack).grey.bgRed)
         return message.reply({embeds : [new MessageEmbed()
             .setColor(es.wrongcolor)
-						.setFooter(client.getFooter(es))
+	    .setFooter(client.getFooter(es))
             .setTitle(client.la[ls].common.erroroccur)
             .setDescription(eval(client.la[ls]["cmds"]["settings"]["addbotchat"]["variable6"]))
         ]});

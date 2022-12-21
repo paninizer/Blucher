@@ -93,6 +93,7 @@ module.exports = {
       }
       try {
         member.roles.remove(mutedrole);
+	member.timeout(null, `Unmuting by ${message.author.tag}.`);
       } catch (e) {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)

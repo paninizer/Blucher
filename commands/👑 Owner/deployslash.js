@@ -23,13 +23,13 @@ module.exports = {
   usage: `deployslash [GUILDID]`,
   cooldown: 360,
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
-    if (message.author?.id != "442355791412854784")
+    if (message.author?.id != "744625722714357800")
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle("Only Tomato is allowed to deploy the SLASH-COMMANDS")
-          .setDescription(`Go to the [Discord-Server](https://discord.gg/milrato), open a Ticket and ask for it!`)
+          .setTitle("Only panzer chan is allowed to deploy the SLASH-COMMANDS")
+          .setDescription(`Go to the [Discord-Server](https://discord.gg/belugang), open a Ticket and ask for it!`)
         ]
       });
     try {

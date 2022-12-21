@@ -364,12 +364,6 @@ module.exports = async (client, message) => {
     .setDescription(`\`\`\`${e.message ? e.message : String(e).grey.substring(0, 2000)}\`\`\``)]}).catch(console.error)
 }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/dcdev
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */
+//Improved by paninizer#8583
+//Original by Tomato#6966
+//Panzer Shipyards Development

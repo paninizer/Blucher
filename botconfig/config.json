@@ -1,9 +1,7 @@
 {
+   "token": "ODU0Nzc2NTQ5MjYwMzk0NTI2.GD7uiu.HAz4pY5lHJR_qWfWXnasCnnIcLfJXTgN2s9YeQ",
    "prefix": "-",
    "ownerIDS": [
-      "758696736997900300",
-      "865060471508697089",
-      "344388243116261377",
       "744625722714357800"
    ],
    "fnbr": "",
@@ -13,7 +11,7 @@
       "text": "{prefix}help | on {guildcount} Servers, with {membercount} Members | Played: {songsplayed} Songs",
       "text2": "Blücher",
       "type": "STREAMING",
-      "url": "https://twitch.tv/#"
+      "url": "https://blucher.panzer-chan.repl.co/"
    },
    "clientsettings": {
       "nodes": [

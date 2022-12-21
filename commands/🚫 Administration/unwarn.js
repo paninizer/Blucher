@@ -82,12 +82,12 @@ module.exports = {
           kicks: []
         });
 
-        const warnIDs = await client.userProfiles.get(message.author?.id + '.warnings')
+        const warnIDs = await client.userProfiles.get(warnmember.id + '.warnings')
         const modActions = await client.modActions.all();
         const warnData = warnIDs.map(id => modActions.find(d => d.ID == id)?.data);
         let warnings = warnData.filter(v => v.guild == message.guild.id);
 
-        if (!warnIDs || !dwarnData || !dwarnData.length || !warnData || !warnData.length)
+        if (!warnIDs || !warnData || !warnData.length || !warnData || !warnData.length)
           return message.reply({embeds : [new MessageEmbed()
             .setColor(es.wrongcolor)
             .setFooter(client.getFooter(es))
@@ -104,9 +104,9 @@ module.exports = {
         let warning = warnData[parseInt(args[1])]
         let warned_by = message.guild.members.cache.get(warning.moderator) ? message.guild.members.cache.get(warning.moderator).user.tag : warning.moderator;
         let warned_at = warning.when;
-        let warned_in = await client.getGuildData(warning.guild).then(g => g.name) || warning.guild;
+        let warned_in = warning.guild;
 
-        warnmember.send({embeds : [new MessageEmbed()
+        await warnmember.send({embeds : [new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["unwarn"]["variable11"]))
@@ -117,7 +117,7 @@ module.exports = {
 
         ]}).catch(e => console.log(e.message))
 
-        message.reply({embeds : [new MessageEmbed()
+        await message.reply({embeds : [new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
           .setFooter(client.getFooter(es))
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["unwarn"]["variable12"]))
@@ -126,7 +126,7 @@ module.exports = {
           .addField(`Warned in:`, `\`${warned_in}\``, true)
           .addField(`Warn Reason:`, `\`${warning.reason.length > 900 ? warning.reason.substring(0, 900) + ` ...` : warning.reason}\``, true)
         ]});
-        await dbRemove(client.userProfiles, warnmember.user.id+'.warnings', warnIDs[parseInt(args[1])])
+        await dbRemove(client.userProfiles, warnmember.user.id+'.warnings', warnIDs[parseInt(args[1])]);
 
         if(GuildSettings && GuildSettings.adminlog && GuildSettings.adminlog != "no"){
           try{

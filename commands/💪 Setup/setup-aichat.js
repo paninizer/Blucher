@@ -124,7 +124,7 @@ module.exports = {
                     .setFooter(client.getFooter(es))
                   ]});
                 }
-                else{
+                else {
                   return message.reply( "NO CHANNEL PINGED");
                 }
               })

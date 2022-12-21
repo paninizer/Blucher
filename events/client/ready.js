@@ -33,10 +33,10 @@ module.exports = async (client) => {
     });
     
     change_status(client);
-    //loop through the status per each 10 minutes
+    //loop through the status per each 7s
     setInterval(()=>{
       change_status(client);
-    }, 10 * 60 * 1000);
+    }, 7*1000);
   
   } catch (e){
     console.log(String(e.stack).grey.bgRed)
@@ -83,12 +83,6 @@ async function change_status(client){
     }, (10 * 60 * 1000));
   }
 }
-/**
-  * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/dcdev
-  * @INFO
-  * Work for Milrato Development | https://milrato.eu
-  * @INFO
-  * Please mention him / Milrato Development, when using this Code!
-  * @INFO
-*/
+//Improved by paninizer#8583
+//Original by Tomato#6966
+//Panzer Shipyards Development

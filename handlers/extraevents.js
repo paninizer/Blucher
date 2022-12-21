@@ -172,7 +172,7 @@ module.exports = async (client) => {
       if(!guildId) rej(new Error("No guildId Provided"));
       if(client.guilds.cache.has(id)) return res(client.guilds.cache.get(guildId));
       console.log(`Getting Guild Data for: ${guildId}`)
-      client.cluster.evalOnCluster(`this.guilds.cache.get(${guildId})`, { guildId }).catch(rej).then(d => res(d))
+      client.cluster.evalOnCluster(`this.guilds.cache.get(${guildId})`, { guildId, timeout: 10000 }).catch(rej).then(d => res(d))
     })
   }
   // on this shard
@@ -261,7 +261,7 @@ module.exports = async (client) => {
 
     let text = embedData.footertext;
     let iconURL = embedData.footericon;
-    if(!text || text.length < 1) text = `${client.user.username} | By: Tomato#6966`;
+    if(!text || text.length < 1) text = `${client.user.username} | By: panzer chan`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
     
     //Change the lengths
@@ -290,7 +290,7 @@ module.exports = async (client) => {
     name = name.trim().substring(0, 2048);
     
     //verify the iconURL
-    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/milrato`;
+    if(!url.startsWith("https://") && !url.startsWith("http://")) url = `https://discord.gg/belugang`;
     if(!iconURL.startsWith("https://") && !iconURL.startsWith("http://")) iconURL = client.user.displayAvatarURL();
     if(![".png", ".jpg", ".wpeg", ".webm", ".gif"].some(d => iconURL.toLowerCase().endsWith(d))) iconURL = client.user.displayAvatarURL();
     //return the footerobject
@@ -378,7 +378,7 @@ module.exports = async (client) => {
     let ls = client.settings.get(guild.id, "language")
     let embed = new MessageEmbed()
       .setColor("GREEN")
-      .setTitle(`<a:Join_vc:863876115584385074> Joined a New Server`)
+      .setTitle(`<a:Blob_Join:947358736211652690> Joined a New Server`)
       .addField("Guild Info", `>>> \`\`\`${guild.name} (${guild.id})\`\`\``)
       .addField("Owner Info", `>>> \`\`\`${theowner ? `${theowner.tag} (${theowner.id})` : `${theowner} (${guild.ownerId})`}\`\`\``)
       .addField("Member Count", `>>> \`\`\`${guild.memberCount}\`\`\``)

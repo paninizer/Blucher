@@ -12,12 +12,12 @@ var {
   module.exports = (client) => {
       if (!clientID || !clientSecret || clientID.length < 5 || clientSecret.length < 5) {
         client.manager = new Manager({
-          nodes: collect(config.clientsettings.nodes),
+          nodes: config.clientsettings.nodes,
           plugins: [
             new Deezer(),
             new Facebook(),
           ],
-          send(id, payload) {
+          send: (id, payload) => {
             var guild = client.guilds.cache.get(id);
             if (guild) guild.shard.send(payload);
           },
@@ -33,7 +33,7 @@ var {
             new Deezer(),
             new Facebook(),
           ],
-          send(id, payload) {
+          send: (id, payload) => {
             var guild = client.guilds.cache.get(id);
             if (guild) guild.shard.send(payload);
           },

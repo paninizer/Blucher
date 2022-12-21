@@ -295,7 +295,7 @@ module.exports = {
                 menumsg1.edit({components: [], embeds: menumsg1.embeds}).catch(() => null);
                 menuselection(menu);
               }
-              else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+              else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
             }
           });
         }
