@@ -16,7 +16,7 @@ module.exports = {
   aliases: ["close", "manageticket"],
   cooldown: 2,
   usage: "ticket",
-  description: "Manages the Ticket, closes, deletes, createlog, etc. etc.",
+  description: "Closes and deletes a ticket, then creates ticket log.",
   type: "channel",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     

@@ -10,19 +10,19 @@ module.exports = {
     name: "createbackup",
     aliases: ["create-backup", "cbackup", "backup"],
     category: "🚫 Administration",
-    description: "Create a Backup of the Server",
+    description: "Creates a backup of this server",
     usage: "createbackup",
     type: "server",
     run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
         if(!message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-            return message.reply("<:no:833101993668771842> **I am missing the ADMINISTRATOR Permission!**")
+            return message.reply("<:no:833101993668771842> **I am missing the ADMINISTRATOR permission!**")
         }
         let owner = await message.guild.fetchOwner().catch(e=>{
             return message.reply("Could not get owner of target guild")
         })
         if(owner.id != cmduser.id) {
-            return message.reply(`<:no:833101993668771842> **You need to be the Owner of this Server!**`)
+            return message.reply(`<:no:833101993668771842> **You need to be the owner of this server!**`)
         }
         
         let adminroles = GuildSettings?.adminroles || [];
@@ -44,7 +44,7 @@ module.exports = {
                 }
             }
         }
-        if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
+        if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
             return message.reply({embeds : [new MessageEmbed()
                 .setColor(es.wrongcolor)
                 .setFooter(client.getFooter(es))
@@ -55,7 +55,7 @@ module.exports = {
             backups: [ ]
         })
         message.channel.send({
-            content: `⚠️ **THIS WILL SAVE ALL DATA** ⚠️\n> If there are more then 6 Backups, the oldest one will get deleted!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`,
+            content: `⚠️ **THIS WILL SAVE ALL DATA** ⚠️\n> If there are more than 6 backups, the oldest one will get deleted!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`,
             components: [new Discord.MessageActionRow().addComponents([new Discord.MessageButton().setStyle("DANGER").setLabel("Continue").setCustomId("verified")])]
         }).then(async (msg) => {
             //Create the collector
@@ -67,7 +67,7 @@ module.exports = {
             collector.on('collect', button => {
                 if (button?.user.id === cmduser.id) {
                     collector.stop();
-                    button?.reply({content: `<a:Loading:833101350623117342> **Now saving the Backup!**\nThis could take up to 2 Minutes (belongs to your data amount)`}).catch(() => null)
+                    button?.reply({content: `<a:Loading:833101350623117342> **Now saving the backup!**\nThis could take up to 2 minutes (depends on your data amount)`}).catch(() => null)
                     // Create the backup
                     backup.create(message.guild, {
                         maxMessagesPerChannel: 10,

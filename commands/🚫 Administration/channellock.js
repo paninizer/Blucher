@@ -10,10 +10,10 @@ const {
 module.exports = {
   name: "channellock",
   category: "🚫 Administration",
-  aliases: ["chlock", "lockchannel", "lockch"],
+  aliases: ["chlock", "lockchannel", "lockch", "lock"],
   cooldown: 2,
   usage: "channellock",
-  description: "Locks a Text Channel instantly",
+  description: "Locks a text channel instantly",
   type: "channel",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
@@ -40,7 +40,7 @@ module.exports = {
             }
           }
         }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS_ADMINISTRATOR]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS_ADMINISTRATOR]))
         return message.reply({embeds : [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -53,7 +53,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Channel is a Thread u can't Lock it!**`)
+          .setTitle(`<:no:833101993668771842> **This channel is a thread, use -lockthread instead!**`)
         ]});
       if(channel.permissionOverwrites.cache.size < 1){
         await channel.permissionOverwrites.set(

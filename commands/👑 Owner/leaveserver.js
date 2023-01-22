@@ -19,7 +19,7 @@ module.exports = {
   type: "info",
   category: `👑 Owner`,
   aliases: [`serverleave`, "kickbot"],
-  description: `Make the Bot Leave a specific Server`,
+  description: `Make the bot leave a specific server`,
   usage: `leaveserver <GUILDID>`,
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     

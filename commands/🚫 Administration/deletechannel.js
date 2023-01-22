@@ -12,13 +12,20 @@ module.exports = {
   name: `deletechannel`,
   category: `🚫 Administration`,
   aliases: [`deletech`],
-  description: `Make the Bot to delete a Channel`,
+  description: `Deletes a channel`,
   usage: `deletechannel [#channel / Inside of a Channel]`,
   type: "channel",
   memberpermissions: ["ADMINISTRATOR"],
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
-    
+    if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
+    	return message.reply({embeds : [new MessageEmbed()
+      	.setColor(es.wrongcolor)
+        .setFooter(client.getFooter(es))
+        .setTitle(eval(client.la[ls]["cmds"]["administration"]["giveaway"]["variable1"]))
+        .setDescription(eval(client.la[ls]["cmds"]["administration"]["giveaway"]["variable2"]))
+    ]});
+
 
     try {
       let channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0]) || message.channel;
@@ -26,9 +33,8 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Channel is a Thread**`)
+          .setTitle(`<:no:833101993668771842> **This channel is a thread, use -deletethread instead!**`)
         ]});
-      
         await channel.delete();
 
       if (GuildSettings && GuildSettings.adminlog && GuildSettings.adminlog != "no") {

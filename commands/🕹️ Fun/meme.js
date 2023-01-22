@@ -37,7 +37,7 @@ module.exports = {
     try {
       const url = `https://www.reddit.com/r/${getRandomInt(subreddits.length)}/hot/.json?limit=100`;
 
-	https.get(url, (result) => {
+			https.get(url, (result) => {
             var body = ''
             result.on('data', (chunk) => {
                 body += chunk
@@ -56,7 +56,7 @@ module.exports = {
                         .setDescription(`[${title}](${link})\n\n${text}`)
                         .setURL(`https://reddit.com/${subRedditName}`)
 
-                    interaction.channel.send(textembed);
+                    message.channel.send(textembed);
                 }
 
                 var image = index.preview.images[0].source.url.replace('&amp;', '&')
@@ -71,7 +71,7 @@ module.exports = {
                         .setDescription(`[${title}](${link})\n\n${text}`)
                         .setURL(`https://reddit.com/${subRedditName}`)
 
-                    interaction.channel.send(textembed)
+                    message.channel.send(textembed)
                 }
                 //console.log(image);
                 const imageembed = new Discord.MessageEmbed()
@@ -96,12 +96,7 @@ module.exports = {
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}

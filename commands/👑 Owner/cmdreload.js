@@ -1,12 +1,12 @@
-var {
+const {
   MessageEmbed
 } = require(`discord.js`);
-var Discord = require(`discord.js`);
-var config = require(`../../botconfig/config.json`);
-var ee = require(`../../botconfig/embed.json`);
-var emoji = require(`../../botconfig/emojis.json`);
+const Discord = require(`discord.js`);
+const config = require(`../../botconfig/config.json`);
+const ee = require(`../../botconfig/embed.json`);
+const emoji = require(`../../botconfig/emojis.json`);
 const fs = require('fs');
-var {
+const {
   dbEnsure,
   isValidURL
 } = require(`../../handlers/functions`);

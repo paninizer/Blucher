@@ -4,7 +4,7 @@ const ee = require(`${process.cwd()}/botconfig/embed.json`);
 const settings = require("../../botconfig/settings.json");
 module.exports = {
   name: "embed", //the command name for the Slash Command
-  description: "Send a embed into the Chat", //the command description for Slash Command Overview
+  description: "Send a embed into the chat", //the command description for Slash Command Overview
   cooldown: 5,
   options: [ //OPTIONAL OPTIONS, make the array empty / dont add this option if you don't need options!
 	//INFORMATIONS! You can add Options, but mind that the NAME MUST BE LOWERCASED! AND NO SPACES!!!, for the CHOCIES you need to add a array of arrays; [ ["",""] , ["",""] ] 

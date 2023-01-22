@@ -12,7 +12,7 @@ module.exports = {
   name: `clear`,
   aliases: [`purge`],
   category: `🚫 Administration`,
-  description: `Deletes messages in a text channel or specified number of messages in a text channel.\n\nIf you Ping a User / Type "BOTS" after it, the amount of messages you give, is the amount of messages that will be checked, not that will be cleared!`,
+  description: `Deletes messages in a text channel or specified number of messages in a text channel.\n\nIf you ping a user/type "BOTS", the amount of messages you give is the amount of messages that will be **checked**, not that will be cleared!`,
   usage: `clear <Amount of messages> [@USER/BOTS]`,
   type: "channel",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
@@ -43,7 +43,7 @@ module.exports = {
           }
         }
       }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))

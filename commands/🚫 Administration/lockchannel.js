@@ -12,7 +12,7 @@ module.exports = {
   name: `lockchannel`,
   category: `🚫 Administration`,
   aliases: [`lockch`, "lchannel"],
-  description: `Locks a Channel`,
+  description: `Locks a channel`,
   usage: `lockchannel [#channel / Inside of a a Channel]`,
   type: "channel",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
@@ -40,7 +40,7 @@ module.exports = {
           }
         }
       }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINSTRATOR]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerIDS).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINSTRATOR]))
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -54,7 +54,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Channel is a Thread u can't Lock it!**`)
+          .setTitle(`<:no:833101993668771842> **This channel is a thread, you can't lock it!**`)
         ]});
 
 
@@ -80,7 +80,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users.length} Users and ${roles.length} Roles**`)
+            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users.length} users and ${roles.length} roles**`)
           ]});
         } else {
           await channel.permissionOverwrites.set([{
@@ -114,7 +114,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users ? users.length : 0} Users and ${roles ? roles.length : 0} Roles**`)
+            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users ? users.length : 0} users and ${roles ? roles.length : 0} roles**`)
           ]});
         } else {
           if(channel.permissionOverwrites.cache.filter(permission => permission.allow.toArray().includes("SEND_MESSAGES")).size < 1)

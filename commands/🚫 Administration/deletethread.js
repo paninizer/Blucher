@@ -26,7 +26,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Channel is not a Thread**`)
+          .setTitle(`<:no:833101993668771842> **This channel is not a thread, use -deletechannel instead!**`)
         ]});
       await channel.delete();
       if (GuildSettings && GuildSettings.adminlog && GuildSettings.adminlog != "no") {

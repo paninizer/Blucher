@@ -10,10 +10,10 @@ const {
 module.exports = {
   name: "channelunlock",
   category: "🚫 Administration",
-  aliases: ["chunlock", "unlockchannel", "unlockch"],
+  aliases: ["chunlock", "unlockchannel", "unlockch", "unlock"],
   cooldown: 2,
   usage: "channelunlock",
-  description: "Unlocks a Text Channel instantly",
+  description: "Unlocks a text channel instantly",
   type: "channel",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
@@ -40,7 +40,7 @@ module.exports = {
             }
           }
         }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -52,14 +52,14 @@ module.exports = {
           return message.reply({embeds :[new MessageEmbed()
             .setColor(es.wrongcolor)
             .setFooter(client.getFooter(es))
-            .setTitle(`<:no:833101993668771842> **This Channel is a Thread u can't unlock it!**`)
+            .setTitle(`<:no:833101993668771842> **This Channel is a thread, use -unlockthread instead!**`)
           ]});
           if(channel.permissionOverwrites.cache.filter(permission => permission.deny.toArray().includes("SEND_MESSAGES")).size < 1)
             return message.reply({embeds :[new MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(client.getFooter(es))
-              .setTitle(`<:no:833101993668771842> **This Channel is not locked!**`)
-              .setDescription(`This usually means, that the Channel **PERMISSIONS** are so defined, that __all__ of them are ALLOWING to send a Message!`)
+              .setTitle(`<:no:833101993668771842> **This channel is not locked!**`)
+              .setDescription(`This usually means the channel **PERMISSIONS** are that that __everyone__ can send messages!`)
             ]});
             await channel.permissionOverwrites.set(
               channel.permissionOverwrites.cache.map(permission => {
