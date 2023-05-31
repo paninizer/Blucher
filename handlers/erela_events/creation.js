@@ -1,60 +1,29 @@
 
 var {
-    Manager
-  } = require("erela.js"),
-  
-    Spotify = require("erela.js-spotify"),
-    Deezer = require("erela.js-deezer"),
-    Facebook = require("erela.js-facebook"),
+    MoonlinkManager
+  } = require("moonlink.js"),
     config = require(`${process.cwd()}/botconfig/config.json`),
     clientID = process.env.clientID || config.spotify.clientID,
     clientSecret = process.env.clientSecret || config.spotify.clientSecret;
   module.exports = (client) => {
-      if (!clientID || !clientSecret || clientID.length < 5 || clientSecret.length < 5) {
-        client.manager = new Manager({
-          nodes: config.clientsettings.nodes,
-          plugins: [
-            new Deezer(),
-            new Facebook(),
-          ],
-          send: (id, payload) => {
-            var guild = client.guilds.cache.get(id);
-            if (guild) guild.shard.send(payload);
-          },
-        });
-      } else {
-        client.manager = new Manager({
-          nodes: collect(config.clientsettings.nodes),
-          plugins: [
-            new Spotify({
-              clientID, //get a clientid from there: https://developer.spotify.com/dashboard
-              clientSecret
-            }),
-            new Deezer(),
-            new Facebook(),
-          ],
-          send: (id, payload) => {
-            var guild = client.guilds.cache.get(id);
-            if (guild) guild.shard.send(payload);
-          },
-        });
-      }
-      //require the other events
+        client.manager = new MoonlinkManager([{ //1. Nodes
+  				host: 'node1.lewdhutao.tech', 
+  				port: 1183,
+  				secure: false,
+  				password: "lewdhutao"
+			}], { //2. Options
+  				shards: 1,
+				spotify: { clientId: config.spotify.clientID, clientSecret: config.spotify.clientSecret }
+				}, (guild, sPayload) => { //3. Function
+  				client.guilds.cache.get(guild).shard.send(JSON.parse(sPayload))
+				})      
+//require the other events
       require("./node_events")(client)
       require("./client_events")(client)
       require("./events")(client)
       require("./musicsystem")(client)
       
   };
-  /**
-   * @INFO
-   * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-   * @INFO
-   * Work for Milrato Development | https://milrato.eu
-   * @INFO
-   * Please mention Him / Milrato Development, when using this Code!
-   * @INFO
-   */
   
 
   function collect(node) {
@@ -78,3 +47,9 @@ var {
       };
     });
 }
+
+//coded by paninizer#0001
+/*
+ * @POTENTIAL BREAKPOINT
+ *
+ */

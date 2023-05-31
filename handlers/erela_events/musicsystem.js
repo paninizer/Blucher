@@ -48,7 +48,7 @@ module.exports = async (client) => {
                 content: `<:no:833101993668771842> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`,
                 ephemeral: true
             })
-        //here i use my check_if_dj function to check if he is a dj if not then it returns true, and it shall stop!
+        //here use check_if_dj function to check if he is a dj if not then it returns true, and it shall stop!
         const dj = await check_if_dj(client, member, player?.queue?.current);
         if(player && interaction?.customId != `Join` && interaction?.customId != `Lyrics` && dj) {
                 return interaction?.reply({embeds: [new MessageEmbed()
@@ -69,9 +69,11 @@ module.exports = async (client) => {
                     guild: guild.id,
                     voiceChannel: member.voice.channel.id,
                     textChannel: channel.id,
-                    selfDeafen: config.settings.selfDeaf,
                 });
-                await player.connect();
+                await player.connect({
+    				setDeaf: true,
+    				setMute: false
+  				});
                 await player.stop();
                  interaction?.reply({embeds: [new MessageEmbed()
                     .setColor(es.color)
@@ -112,7 +114,7 @@ module.exports = async (client) => {
                 //if ther is nothing more to skip then stop music and leave the Channel
                 if (!player.queue || !player?.queue?.size || player?.queue?.size === 0) {
                     //if its on autoplay mode, then do autoplay before leaving...
-                    if(player.get("autoplay")) return autoplay(client, player, "skip");
+                    if(player.autoPlay) return autoplay(client, player, "skip");
                     interaction?.reply({
                         embeds: [new MessageEmbed()
                         .setColor(ee.color)
@@ -161,7 +163,7 @@ module.exports = async (client) => {
             }break;
             case "Pause": {
                 if (!player.playing){
-                    player.pause(false);
+                    player.resume();
                     interaction?.reply({
                       embeds: [new MessageEmbed()
                       .setColor(ee.color)
@@ -433,7 +435,7 @@ async function generateQueueEmbed(client, guildId, leave){
         rewindbutton = rewindbutton.setDisabled(false);
         autoplaybutton = autoplaybutton.setDisabled(false)
         pausebutton = pausebutton.setDisabled(false)
-        if (player.get("autoplay")) {
+        if (player.autoPlay) {
             autoplaybutton = autoplaybutton.setStyle('SECONDARY')
         }
         if (!player.playing) {

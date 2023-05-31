@@ -75,7 +75,7 @@ module.exports = {
       const memberPosition = kickmember.roles?.highest.rawPosition;
       const moderationPosition = message.member.roles?.highest.rawPosition;
 
-      if (moderationPosition <= memberPosition)
+      if (moderationPosition <= memberPosition && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id))
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))

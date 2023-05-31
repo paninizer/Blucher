@@ -12,7 +12,8 @@ var {
 
 //function for playling song
 async function song(client, message, args, type, slashCommand, extras) {
-  let ls = await client.settings.get(message.guild.id+".language")
+  let guildSettings = await client.settings.get(message.guild.id);
+  let ls = guildSettings.language;
   var search = args.join(" ");
   var res;
   var player = client.manager.players.get(message.guild.id);
@@ -21,8 +22,8 @@ async function song(client, message, args, type, slashCommand, extras) {
   //if no player create it
   if (!player) {
     if (!message.member.voice.channel) throw "NOT IN A VC"
-    player = await client.manager.create({
-      guild: message.guild.id,
+    player = await client.manager.players.create({
+      guildId: message.guild.id,
       voiceChannel: message.member.voice.channel.id,
       textChannel: message.channel.id,
       selfDeafen: true,
@@ -34,25 +35,25 @@ async function song(client, message, args, type, slashCommand, extras) {
   if (state !== "CONNECTED") {
     //set the variables
     player.set("message", message);
-    player.set("playerauthor", message.author?.id);
-    player.connect();
-    try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
-    player.stop();
+    player.set("playerauthor", message.author.id);
+    await player.connect();
+    //try{message.react("863876115584385074").catch(() => {});}catch(e){console.log(String(e).grey)}
+    //await player.stop();
   }
   try {
     // Search for tracks using a query or url, using a query searches youtube automatically and the track requester object
     if (type.split(":")[1] === "youtube" || type.split(":")[1] === "soundcloud"){
       if(isValidURL(search)){
-        res = await client.manager.search(search, message.author);
+        res = await client.manager.search(search);
       } else {
         res = await client.manager.search({
           query: search,
           source: type.split(":")[1]
-        }, message.author);
+        });
       }
     }
     else {
-      res = await client.manager.search(search, message.author);
+      res = await client.manager.search(search);
     }
     // Check the load type as this command is not that advanced for basics
     if (res.loadType === "LOAD_FAILED") throw res.exception;
@@ -97,63 +98,69 @@ async function song(client, message, args, type, slashCommand, extras) {
         .setDescription(eval(client.la[ls]["handlers"]["playermanagers"]["song"]["variable3"]))
       ]}).then(msg => {
         setTimeout(()=>{
-          msg.delete().catch(() => null)
+          msg.delete().catch(() => {})
         }, 3000)
       })
     }
     //if the player is not connected, then connect and create things
-    if (player.state !== "CONNECTED") {
+    if (!player.connected) {
       //set the variables
       player.set("message", message);
-      player.set("playerauthor", message.author?.id);
+      player.set("playerauthor", message.author.id);
       //connect
-      player.connect();
-      try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
+      await player.connect();
+      //try{message.react("863876115584385074").catch(() => {});}catch(e){console.log(String(e).grey)}
       //add track
-      player.queue.add(res.tracks[0]);
+	  await res.tracks[0].setRequester(message.author);
+	  //console.log(res.tracks[0]);
+      await player.queue.add(res.tracks[0]);
+	  console.log("added 1");
       //play track
-      player.play();
-      player.pause(false);
-    } else if (!player.queue || !player.queue.current) {
+      //await player.pause(false);
+	  //console.log(res.tracks[0]);
+    } else if (!player.queue || !player.current) {
       //add track
-      player.queue.add(res.tracks[0]);
+	  await res.tracks[0].setRequester(message.author);
+      await player.queue.add(res.tracks[0]);
+	  console.log("added 2");
       //play track
-      player.play();
-      player.pause(false);
+      //await player.pause(false);
     } else {
       //add the latest track
-      player.queue.add(res.tracks[0]);
+	  res.tracks[0].setRequester(message.author);
+      await player.queue.add(res.tracks[0]);
+	  console.log("added 3");
       //send track information
       var playembed = new MessageEmbed()
-        .setDescription(eval(client.la[ls]["handlers"]["playermanagers"]["song"]["variable4"]))
+        .setDescription(client.la[ls]["handlers"]["playermanagers"]["song"]["variable4"])
         .setColor(ee.color)
         .setThumbnail(`https://img.youtube.com/vi/${res.tracks[0].identifier}/mqdefault.jpg`)
         .addField("⌛ Duration: ", `\`${res.tracks[0].isStream ? "LIVE STREAM" : format(res.tracks[0].duration)}\``, true)
         .addField("💯 Song By: ", `\`${res.tracks[0].author}\``, true)
         .addField("🔂 Queue length: ", `\`${player.queue.length} Songs\``, true)
-        .addField(":notes: Music Dashboard :new: ", `[**Check out the :new: Music Dashboard!**](https://milrato.com/dashboard/queue/${player.guild})\n> Live Music View, Live Music Requests, Live Music Control and more!`) 
       if(slashCommand) slashCommand.reply({ephemeral: true, embeds: [playembed]})
       else message.reply({embeds: [playembed]})
     }
-    const musicsettings = await client.musicsettings.get(player.guild)
-    if(musicsettings.channel && musicsettings.channel.length > 5){
-      let messageId = musicsettings.message;
-      let guild = await client.guilds.cache.get(player.guild)
-      if(guild && messageId) {
-        let channel = guild.channels.cache.get(musicsettings.channel);
-        let message = await channel.messages.fetch(messageId).catch(() => null);
-        if(message) {
-          //edit the message so that it's right!
-          var data = await require("../erela_events/musicsystem").generateQueueEmbed(client, player.guild)
-          message.edit(data).catch(() => null)
-          if(musicsettings.channel == player.textChannel){
-            return;
-          }
-        }
+	console.log(!player.playing);
+	if (!player.playing) await player.play();
+    if(client.musicsettings.get(player.guildId, "channel") && client.musicsettings.get(player.guildId, "channel").length > 5){
+      let messageId = client.musicsettings.get(player.guildId, "message");
+      let guild = client.guilds.cache.get(player.guildId);
+      if(!guild) return 
+      let channel = guild.channels.cache.get(client.musicsettings.get(player.guildId, "channel"));
+      if(!channel) return 
+      let message = channel.messages.cache.get(messageId);
+      if(!message) message = await channel.messages.fetch(messageId).catch(()=>{});
+      if(!message) return
+      //edit the message so that it's right!
+      var data = require("../erela_events/musicsystem").generateQueueEmbed(client, player.guildId)
+      message.edit(data).catch(() => {})
+      if(client.musicsettings.get(player.guildId, "channel") == player.textChannel){
+        return;
       }
     }
   }
-  //function ffor playist
+  //function for playist
   async function playlist_() {
     if (!res.tracks[0]){
       if(slashCommand) 
@@ -168,7 +175,7 @@ async function song(client, message, args, type, slashCommand, extras) {
         .setDescription(eval(client.la[ls]["handlers"]["playermanagers"]["song"]["variable5"]))
       ]}).then(msg => {
         setTimeout(()=>{
-          msg.delete().catch(() => null)
+          msg.delete().catch(() => {})
         }, 3000)
       })
     }
@@ -176,32 +183,32 @@ async function song(client, message, args, type, slashCommand, extras) {
     if (player.state !== "CONNECTED") {
       //set the variables
       player.set("message", message);
-      player.set("playerauthor", message.author?.id);
-      player.connect();
-      try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
+      player.set("playerauthor", message.author.id);
+      await player.connect();
+      //try{message.react("863876115584385074").catch(() => {});}catch(e){console.log(String(e).grey)}
       var firsttrack = res.tracks[0]
       //add track
       if (extras && extras === "songoftheday") {
-        player.queue.add(res.tracks.slice(1, res.tracks.length - 1));
-        player.queue.add(firsttrack);
+        await player.queue.add(res.tracks.slice(1, res.tracks.length - 1));
+        await player.queue.add(firsttrack);
       } else {
-        player.queue.add(res.tracks);
+        await player.queue.add(res.tracks);
       }
     } else if (!player.queue || !player.queue.current) {
       var firsttrack = res.tracks[0]
       //add track
       if (extras && extras === "songoftheday") {
-        player.queue.add(res.tracks.slice(1, res.tracks.length - 1));
-        player.queue.add(firsttrack);
+        await player.queue.add(res.tracks.slice(1, res.tracks.length - 1));
+        await player.queue.add(firsttrack);
       } else {
-        player.queue.add(res.tracks);
+        await player.queue.add(res.tracks);
       }
       //play track
-      player.play();
-      player.pause(false);
+      await player.play();
+      //player.pause(false);
     } else {
       //add the tracks
-      player.queue.add(res.tracks);
+      await player.queue.add(res.tracks);
     }
     //send information
     var playlistembed = new MessageEmbed()
@@ -210,29 +217,27 @@ async function song(client, message, args, type, slashCommand, extras) {
       .setThumbnail(`https://img.youtube.com/vi/${res.tracks[0].identifier}/mqdefault.jpg`)
       .addField("⌛ Duration: ", `\`${format(res.playlist.duration)}\``, true)
       .addField("🔂 Queue length: ", `\`${player.queue.length} Songs\``, true)
-      .addField(":notes: Music Dashboard :new: ", `[**Check out the :new: Music Dashboard!**](https://milrato.com/dashboard/queue/${player.guild})\n> Live Music View, Live Music Requests, Live Music Control and more!`) 
       .setFooter(client.getFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({
         dynamic: true
       })))
       if(slashCommand) slashCommand.reply({ephemeral: true, embeds: [playlistembed]})
       else message.reply({embeds: [playlistembed]})
-      const musicsettings = await client.musicsettings.get(player.guild)
-      if(musicsettings.channel && musicsettings.channel.length > 5){
-        let messageId = musicsettings.message;
-        let guild = await client.guilds.cache.get(player.guild)
-        if(guild && messageId) {
-          let channel = guild.channels.cache.get(musicsettings.channel);
-          let message = await channel.messages.fetch(messageId).catch(() => null);
-          if(message) {
-            //edit the message so that it's right!
-            var data = await require("../erela_events/musicsystem").generateQueueEmbed(client, player.guild)
-            message.edit(data).catch(() => null)
-            if(musicsettings.channel == player.textChannel){
-              return;
-            }
-          }
-        }
+    if(client.musicsettings.get(player.guildId, "channel") && client.musicsettings.get(player.guildId, "channel").length > 5){
+      let messageId = client.musicsettings.get(player.guildId, "message");
+      let guild = client.guilds.cache.get(player.guildId);
+      if(!guild) return 
+      let channel = guild.channels.cache.get(client.musicsettings.get(player.guildId, "channel"));
+      if(!channel) return 
+      let message = channel.messages.cache.get(messageId);
+      if(!message) message = await channel.messages.fetch(messageId).catch(()=>{});
+      if(!message) return
+      //edit the message so that it's right!
+      var data = require("../erela_events/musicsystem").generateQueueEmbed(client, player.guildId)
+      message.edit(data).catch(() => {})
+      if(client.musicsettings.get(player.guildId, "channel") == player.textChannel){
+        return;
       }
+    }
   }
 
 }

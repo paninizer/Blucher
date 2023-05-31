@@ -11,7 +11,7 @@ const { handlemsg } = require(`../../handlers/functions`);
   name: `play`,
   category: `🎶 Music`,
   aliases: [`p`],
-  description: `Plays a song from youtube`,
+  description: `Plays a song from YouTube`,
   usage: `play <Song / URL>`,
   parameters: {
     "type": "music",
@@ -39,11 +39,11 @@ const { handlemsg } = require(`../../handlers/functions`);
         ]});
 
       message.react("🔎").catch(() => null)
-      message.react("840260133686870036").catch(() => null)
+      //message.react("840260133686870036").catch(() => null)
       //play the SONG from YOUTUBE
-      playermanager(client, message, args, `song:youtube`);
+      playermanager(client, message, args, `song:spotify`);
     } catch (e) {
-      console.log(String(e.stack).dim.bgRed)
+      console.log(e.dim.bgRed)
       return message.reply({embeds : [new MessageEmbed()
         .setColor(es.wrongcolor)
         .setTitle(client.la[ls].common.erroroccur)
@@ -52,12 +52,3 @@ const { handlemsg } = require(`../../handlers/functions`);
     }
   }
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

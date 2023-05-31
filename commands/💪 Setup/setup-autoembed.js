@@ -30,12 +30,12 @@ module.exports = {
         let menuoptions = [{
             value: "Add a Channel",
             description: `Add a auto sending Embed Setup Channel`,
-            emoji: NumberEmojiIds[1]
+            emoji: "🔧"
           },
           {
             value: "Remove a Channel",
             description: `Remove a Channel from the Setup`,
-            emoji: NumberEmojiIds[2]
+            emoji: "🗑"
           },
           {
             value: "Show all Channels",
@@ -44,7 +44,7 @@ module.exports = {
           },
           {
             value: "Cancel",
-            description: `Cancel and stop the Auto-Nsfw-Setup!`,
+            description: `Cancel and stop the autoembed setup!`,
             emoji: "862306766338523166"
           }
         ]

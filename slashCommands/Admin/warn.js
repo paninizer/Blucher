@@ -58,7 +58,7 @@ module.exports = {
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["warn"]["variable1"]))
           .setDescription(eval(client.la[ls]["cmds"]["administration"]["warn"]["variable2"]))
         ]});
-      let warnmember = options.getUser("user") || options.getUser("id");
+      let warnmember = options.getMember("user") || interaction.guild.members.cache.get(options.getString("id"));
       if (!warnmember)
         return interaction.editReply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
@@ -134,7 +134,7 @@ module.exports = {
 
         interaction.editReply({embeds :[new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-          .setFooter(client.getFooter(`They have: ${warnings ? warnings.length : 0} Global Warns`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
+          .setFooter(client.getFooter(`They have: ${warnings ? warnData.length : 0} Global Warns`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
           
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["warn"]["variable7"]))
           .setThumbnail(warnmember.user.displayAvatarURL({

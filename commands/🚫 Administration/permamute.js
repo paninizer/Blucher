@@ -45,7 +45,7 @@ module.exports = {
           }
         }
       }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerid).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.MANAGE_ROLES]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.MANAGE_ROLES]))
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -96,7 +96,7 @@ module.exports = {
           ]});
         });
       }
-      //if the muted role position is bigger then the bots highest position
+      //if the muted role position is bigger than the bot's highest position
       if (mutedrole.position > message.guild.me.roles.highest.position)
         return message.reply({embeds : [new MessageEmbed()
           .setColor(es.wrongcolor)
@@ -119,7 +119,7 @@ module.exports = {
           console.error(e);
         }
       });
-      //try to add him the role
+      //try to add role to member
       try {
         await member.roles.add(mutedrole)
       } catch (e) {

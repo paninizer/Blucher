@@ -15,7 +15,7 @@ module.exports = {
   options: [
     { "String": { name: "text", description: "What should I send? [ +n+ = Newline ]", required: true } }, //to use in the code: interacton.getString("title")
   ],
-  run: async (client, interaction, cmduser, es, ls, prefix, player, message, GuildSettings) => {
+  run: async (client, interaction, cmduser, es, ls, prefix, player, GuildSettings) => {
 
     await interaction?.deferReply({ephemeral: false});
     //get the additional text

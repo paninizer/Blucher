@@ -72,9 +72,9 @@ async function clearDBData(client, key) {
   await cleardb(client.premium, key)
   await cleardb(client.snipes, key)
   await cleardb(client.afkDB, key)
-  await cleardb(client.stats, key) //dont clear stats
-  await cleardb(client.modActions, key) //dont clear modactions
-  await cleardb(client.userProfiles, key) //dont clear userprofiles
+  await cleardb(client.stats, key) //don't clear stats
+  await cleardb(client.modActions, key) //don't clear modactions
+  await cleardb(client.userProfiles, key) //don't clear userprofiles
   await cleardb(client.musicsettings, key)
   await cleardb(client.settings, key)
   await cleardb(client.jtcsettings, key)
@@ -1464,7 +1464,7 @@ async function swap_pages(client, message, description, TITLE) {
     } catch (e){console.error(e)}
   }
   if (embeds.length === 0) return message.channel.send({embeds: [new MessageEmbed()
-  .setTitle(`${emoji?.msg.ERROR} No Content added to the SWAP PAGES Function`)
+  .setTitle(`${emoji?.msg.ERROR} No content available for this command!`)
   .setColor(es.wrongcolor).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
   .setFooter(client.getFooter(es))]}).catch(() => null)
   if (embeds.length === 1) return message.channel.send({embeds: [embeds[0]]}).catch(() => null)
@@ -1573,7 +1573,7 @@ async function swap_pages_data(client, message, description, TITLE, T_cmd = "Unk
     } catch (e){console.error(e)}
   }
   if (embeds.length === 0) return message.channel.send({embeds: [new MessageEmbed()
-  .setTitle(`${emoji?.msg.ERROR} No Content added to the SWAP PAGES Function`)
+  .setTitle(`${emoji?.msg.ERROR} No content available for this command!`)
   .setColor("RED")]}).catch(() => null)
   if (embeds.length === 1) return message.channel.send({embeds: [embeds[0]]}).catch(() => null)
 
@@ -1825,15 +1825,6 @@ async function databasing(client, guildid, userid) {
         await dbEnsure(client.keyword, guildid, {
           commands: []
         })
-        /**
-         * @INFO
-         * Bot Coded by Tomato#6966 | https://discord.gg/milrato
-         * @INFO
-         * Work for Milrato Development | https://milrato.eu
-         * @INFO
-         * Please mention him / Milrato Development, when using this Code!
-         * @INFO
-         */
         await dbEnsure(client.social_log, guildid, {
           tiktok: {
             channels: [],
@@ -1941,16 +1932,6 @@ async function databasing(client, guildid, userid) {
               */
             ]
           },
-
-  /**
-   * @INFO
-   * Bot Coded by Tomato#6966 | https://discord.gg/milrato
-   * @INFO
-   * Work for Milrato Development | https://milrato.eu
-   * @INFO
-   * Please mention him / Milrato Development, when using this Code!
-   * @INFO
-   */
 
           showdisabled: true,
 
@@ -2061,8 +2042,8 @@ async function databasing(client, guildid, userid) {
               "giphy.com/gifs",
               "c.tenor.com",
               "tenor.com/view",
-              "milrato.dev",
-              "milrato.eu",
+              "dashboard-client.panzer-chan.repl.co",
+              "blucher.panzer-chan.repl.co",
               "github?.com",
               "mozilla.org",
               "w3schools.com",],
@@ -2398,15 +2379,7 @@ async function create_transcript(message, client, msglimit) {
   let msgs = messageCollection.map(this_Code_is_by_Tomato_6966 => this_Code_is_by_Tomato_6966).reverse(); //reverse the array to have it listed like the discord chat
   message.channel.send({files: [await create_transcript_buffer(msgs, message.channel, message.guild)]}).catch(() => null);
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */
+
 //usage: await dbEnsure(QuickMongoDatabase, "key", { foo: "bar", data: ...Data });
 async function dbEnsure(db, key, data, debug = false) {
   return new Promise(async (res) => {

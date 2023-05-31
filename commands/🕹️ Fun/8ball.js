@@ -5,6 +5,19 @@ const canvacord = require("canvacord");
 var ee = require(`../../botconfig/embed.json`);
 const request = require("request");
 const emoji = require(`../../botconfig/emojis.json`);
+
+const responses = [
+"Yes",
+"No",
+"Maybe",
+"Perhaps",
+"Ask later when I'm less busy",
+"||deez nuts||",
+"||bruh   no||",
+"Haha no",
+"I don't know, welp..."
+]
+
 module.exports = {
   name: "8ball",
   category: "🕹️ Fun",
@@ -31,29 +44,13 @@ module.exports = {
           .setTitle(eval(client.la[ls]["cmds"]["fun"]["8ball"]["variable1"]))
       if (!question)
         return message.reply({embeds : [embed2]});
-      request(`https://8ball.delegator.com/magic/JSON/${question}`, function (e, response, body) {
-        if (e) {
-          console.error(e);
-          message.reply({content : eval(client.la[ls]["cmds"]["fun"]["8ball"]["variable2"])});
-        }
-        body = JSON.parse(body);
-        let embedColor = `RANDOM`;
-        if (body.magic.type === "Affirmative") embedColor = "#0dba35";
-        if (body.magic.type === "Contrary") embedColor = "#ba0d0d";
-        if (body.magic.type === "Neutral") embedColor = "#6f7275";
-const embed3 = new Discord.MessageEmbed()
-          .setTitle("8ball")
-          .setColor(embedColor)
-          .setThumbnail(message.author.displayAvatarURL({
-            dynamic: true
-          }))
-          .addField("Question: ", question, false)
-          .addField("Asked by: ", message.author.tag, false)
-          .addField("Reply: ", body.magic.answer, false)
-          .setFooter(eval(client.la[ls]["cmds"]["fun"]["8ball"]["variable4"]))
-        
-        message.reply({embeds : [embed3]});
-      });
+	
+	const embed3 = new MessageEmbed()
+	.setTitle(question)
+	.setDescription(responses[getRandomInt(responses.length)])
+	.setColor("RANDOM")
+	
+	await message.channel.send({embeds: [embed3]})
     } catch (e) {
       console.log(String(e.stack).grey.bgRed)
       const embed4 = new MessageEmbed()
@@ -65,12 +62,7 @@ const embed3 = new Discord.MessageEmbed()
     }
   }
 }
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}

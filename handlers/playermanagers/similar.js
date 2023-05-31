@@ -20,7 +20,7 @@ async function similar(client, message, args, type, slashCommand) {
     //if no node, connect it 
     if (player && player.node && !player.node.connected) await player.node.connect()
     //search for similar tracks
-    var res = await client.manager.search(mixURL, message.author);
+    var res = await client.manager.search(mixURL);
     //if nothing is found, send error message, plus if there  is a delay for the empty QUEUE send error message TOO
     if (!res || res.loadType === 'LOAD_FAILED' || res.loadType !== 'PLAYLIST_LOADED') {
       return client.channels.cache.get(player.textChannel)?.send(new MessageEmbed()
@@ -134,7 +134,7 @@ async function similar(client, message, args, type, slashCommand) {
         // Connect to the voice channel and add the track to the queue
 
         player.connect();
-        try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
+        try{message.react("1093267456153374851").catch(() => null);}catch(e){console.log(String(e).grey)}
         player.queue.add(track);
         player.play();
         player.pause(false);

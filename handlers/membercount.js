@@ -19,7 +19,6 @@ module.exports = function (client, options) {
     }) || [];
     var logguilds = guilds;
     console.log(JSON.stringify(logguilds.map(guild => `${guild}`)).italic.yellow + " MEMBERCOUNTER ALL GUILDS")
-    //Loop through all guilds and send a random auto-generated-nsfw setup
     for await (const guildid of guilds.filter(g => client.guilds.cache.has(g))){
         memberCount(guildid)
         await delay(1000);

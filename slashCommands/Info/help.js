@@ -34,7 +34,7 @@ module.exports = {
     ] 
   }
     },
-    {"String": { name: "command", description: "Is there a specific Command you want to details from?", required: false }}, //to use in the code: interacton.getString("ping_amount")
+    {"String": { name: "command", description: "Is there a specific Command you want details from?", required: false }}, //to use in the code: interacton.getString("ping_amount")
    
     //{"User": { name: "which_user", description: "From Which User do you want to get the Avatar?", required: false }}, //to use in the code: interacton.getUser("ping_a_user")
 		//{"Channel": { name: "what_channel", description: "To Ping a Channel lol", required: false }}, //to use in the code: interacton.getChannel("what_channel")

@@ -47,7 +47,7 @@ module.exports = {
             {
               value: "setup-antidiscord",
               description: `Setup a Anit-DISCORD System to prevent DC-LINKS`,
-              emoji: "<:DiscordLogo:936723374644789370>"
+              emoji: "936723374644789370"
             },
             {
               value: "setup-antilink",
@@ -77,12 +77,7 @@ module.exports = {
             {
               value: "setup-automeme",
               description: `Define a Channel to post MEMES every Minute`,
-              emoji: "862749865460498524"
-            },
-            {
-              value: "setup-autonsfw",
-              description: `Define a Channel to post NSFW every Minute`,
-              emoji: "🔞"
+              emoji: "😄"
             },
             {
               value: "setup-blacklist",
@@ -185,21 +180,6 @@ module.exports = {
               emoji: "📨"
             },
             {
-              value: "setup-tiktok",
-              description: `Setup up to 3 different TikTok Logger Channels`,
-              emoji: "840503976315060225"
-            },
-            {
-              value: "setup-twitch",
-              description: `Setup up to 5 different Twitch Logger Channels`,
-              emoji: "840260133753061408"
-            },
-            {
-              value: "setup-twitter",
-              description: `Setup up to 2 different Twitter Logger Channels`,
-              emoji: "840255600851812393"
-            },
-            {
               value: "setup-validcode",
               description: `Setup the Valid-Code System`,
               emoji: "858405056238714930"
@@ -218,7 +198,7 @@ module.exports = {
               value: "setup-youtube",
               description: `Setup up to 5 different Youtube Logger Channels`,
               emoji: "🚫"
-            },
+            }
           ]
           let Selection1 = new MessageSelectMenu()
             .setPlaceholder('Click me to setup the (1/3) Systems [A-C]!').setCustomId('setup_cmd_MenuSelection') 
@@ -313,12 +293,3 @@ module.exports = {
     }
   },
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention him / Milrato Development, when using this Code!
- * @INFO
- */

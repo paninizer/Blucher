@@ -22,9 +22,9 @@ module.exports = async (client, message) => {
   try {
     let dbEvent = Date.now();
     //if the message is not in a guild (aka in dms), return aka ignore the inputs
-    if (!message.guild || message.guild.available === false || !message.channel || message.webhookId) return
+    if (!message.guild || message.guild.available === false || !message.channel || message.webhookId) return;
     //if the channel is on partial fetch it
-    message.author.id == "442355791412854784" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Received Message`.brightRed) : null
+    message.author.id == "744625722714357800" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Received Message`.brightRed) : null
     if (message.channel?.partial) await message.channel.fetch().catch(() => {});
     if (message.member?.partial) await message.member.fetch().catch(() => {});
     //ensure all databases for this server/user from the databasing function
@@ -34,15 +34,15 @@ module.exports = async (client, message) => {
       }
       return
     }
-    message.author.id == "442355791412854784" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] CheckingGuild`.brightRed) : null
+    message.author.id == "744625722714357800" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] CheckingGuild`.brightRed) : null
     
     if(!Object.keys(client.checking).includes(message.guild.id)) await CheckGuild(client, message.guild.id);
     
-    message.author.id == "442355791412854784" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Guild-Checked`.brightRed) : null
+    message.author.id == "744625722714357800" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Guild-Checked`.brightRed) : null
     var not_allowed = false;
     const guild_settings = await client.settings.get(message.guild.id);
     const guild_setups = await client.setups.get(message.guild.id);
-    message.author.id == "442355791412854784" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Settings received`.brightRed) : null
+    message.author.id == "744625722714357800" ? console.log(`[${Math.floor(Date.now() - dbEvent)}ms] Settings received`.brightRed) : null
     let messageCreateHandlers = [
       "aichat", "anticaps", "antidiscord", "antilinks", "antimention", "antiselfbot", "antispam", "autoembed", 
       "blacklist", "counter", "ghost_ping_detector", "keyword", "ranking", "suggest", "validcode"
@@ -80,7 +80,7 @@ module.exports = async (client, message) => {
     //CHECK IF IN A BOT CHANNEL OR NOT
     if (botchannel && botchannel.toString() !== "") {
       //if its not in a BotChannel, and user not an ADMINISTRATOR
-      if (!botchannel.includes(message.channel.id) && !message.member?.permissions?.has("ADMINISTRATOR")) {
+      if (!botchannel.includes(message.channel.id) && !message.member?.permissions?.has("ADMINISTRATOR") && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id)) {
         for(const channelId of botchannel){
           let channel = message.guild.channels.cache.get(channelId);
           if(!channel && channelId){
@@ -140,12 +140,12 @@ module.exports = async (client, message) => {
     } else {
       console.warn("CUSTOM COMMANDS INVALID SOURCE", cuc)
     }
-    message.author.id == "442355791412854784" ? console.log(`${message.author.id == "442355791412854784" ? `  [${Math.floor(Date.now() - dbEvent)}ms]  `.brightRed : ``}Found the Command ${command?.name} :: ${message.guild.name}`.dim) : null;
+    message.author.id == "744625722714357800" ? console.log(`${message.author.id == "744625722714357800" ? `  [${Math.floor(Date.now() - dbEvent)}ms]  `.brightRed : ``}Found the Command ${command?.name} :: ${message.guild.name}`.dim) : null;
     //if the command is now valid
     if (command && !customcmd) {
       var musicData = await client.musicsettings.get(message.guild.id);
       if(musicData && musicData.channel && musicData.channel == message.channel.id){
-        return message.reply("<:no:833101993668771842> **Please use a Command Somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => {});}catch(e){ }}, 3000)}).catch(console.error)
+        return message.reply("<:no:833101993668771842> **Please use a command somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => {});}catch(e){ }}, 3000)}).catch(console.error)
       }
       if (!command || command.length == 0) {
         if (unkowncmdmessage) {
@@ -188,10 +188,11 @@ module.exports = async (client, message) => {
       setTimeout(() => timestamps.delete(message.author?.id), cooldownAmount); //set a timeout function with the cooldown, so it gets deleted later on again
       try {
         client.stats.add(message.guild.id+".commands", 1); //counting our Database stats for SERVER
-        client.stats.add("global.commands", 1); //counting our Database Stats for GLOBA
-        //if Command has specific permission return error
+        client.stats.add("global.commands", 1); //counting our Database Stats for GLOBAL
+
+        //if Command has specific permission returns
         if (command.memberpermissions) {
-          if (!message.member?.permissions?.has(command.memberpermissions)) {
+          if (!message.member?.permissions?.has(command.memberpermissions) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id)) {
             not_allowed = true;
             try {
               message.react("833101993668771842").catch(() => {});
@@ -210,7 +211,6 @@ module.exports = async (client, message) => {
             }).catch(console.error)
           }
         }
-        //if Command has specific permission return error
 
         ///////////////////////////////
         ///////////////////////////////
@@ -279,7 +279,7 @@ module.exports = async (client, message) => {
                     .setFooter(client.getFooter(es))
                     .setTitle(client.la[ls].common.not_connected)]}).catch(console.error)
                 }
-                if(!player.queue || !player.queue.current){
+                if(!player.queue && !player.current){
                   return message.reply({embeds : [new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setTitle(":x: There is no current Queue / Song Playing!")
@@ -321,7 +321,7 @@ module.exports = async (client, message) => {
         //run the command with the parameters:  client, message, args, user, text, prefix,
         if (not_allowed) return;
 
-        message.author.id == "442355791412854784" ? console.log(`${message.author.id == "442355791412854784" ? `  [${Math.floor(Date.now() - dbEvent)}ms]  `.brightRed : ``}Execute the Command ${command.name} :: ${message.guild.name}`.dim) : null
+        message.author.id == "744625722714357800" ? console.log(`${message.author.id == "744625722714357800" ? `  [${Math.floor(Date.now() - dbEvent)}ms]  `.brightRed : ``}Execute the Command ${command.name} :: ${message.guild.name}`.dim) : null
         //Execute the Command
         command.run(client, message, args, message.member, args.join(" "), prefix, player, es, ls, guild_settings);
       } catch (e) {

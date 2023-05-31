@@ -38,14 +38,14 @@ const { handlemsg } = require(`../../handlers/functions`);
       if (!args[0])
         return message.reply({embeds : [new MessageEmbed()
           .setColor(es.wrongcolor)
-          .setTitle(handlemsg(client.la[ls].cmds.music.forward.allowed, {duration: player.queue.current.duration}))
+          .setTitle(handlemsg(client.la[ls].cmds.music.forward.allowed, {duration: player.current.duration}))
         ]});
       //get the seektime variable of the user input
       let seektime = Number(player.position) + Number(args[0]) * 1000;
       //if the userinput is smaller then 0, then set the seektime to just the player.position
       if (Number(args[0]) <= 0) seektime = Number(player.position);
       //if the seektime is too big, then set it 1 sec earlier
-      if (Number(seektime) >= player.queue.current.duration) seektime = player.queue.current.duration - 1000;
+      if (Number(seektime) >= player.current.duration) seektime = player.current.duration - 1000;
       //seek to the new Seek position
       player.seek(Number(seektime));
       //Send Success Message
@@ -65,12 +65,3 @@ const { handlemsg } = require(`../../handlers/functions`);
     }
   }
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

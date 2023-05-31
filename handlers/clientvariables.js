@@ -11,9 +11,9 @@ module.exports = (client) => {
   client.invites = {};
   client.checking = {}
   client.broadCastCache = new Discord.Collection();
-  client.commands = new Discord.Collection(); //an collection (like a digital map(database)) for all your commands
-  client.aliases = new Discord.Collection(); //an collection for all your command-aliases
-  client.slashCommands = new Discord.Collection(); //an collection for all the slash Commands
+  client.commands = new Discord.Collection(); //a collection (like a digital map(database)) for all your commands
+  client.aliases = new Discord.Collection(); //a collection for all your command-aliases
+  client.slashCommands = new Discord.Collection(); //a collection for all the slash Commands
   client.categories = fs.readdirSync("./commands/"); //load the categories asynchronusly
   client.cooldowns = new Discord.Collection(); //an collection for cooldown commands of each user
   /**

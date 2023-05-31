@@ -19,8 +19,8 @@ async function request(client, message, args, type, slashCommand) {
   if (player && player.node && !player.node.connected) await player.node.connect()
   //if no player create it
   if (!player) {
-    player = await client.manager.create({
-      guild: message.guild.id,
+    player = await client.manager.players.create({
+      guildId: message.guild.id,
       voiceChannel: message.member.voice.channel.id,
       textChannel: message.channel.id,
       selfDeafen: true,
@@ -30,8 +30,6 @@ async function request(client, message, args, type, slashCommand) {
   let state = player.state;
   if (state !== "CONNECTED") {
     //set the variables
-    player.set("message", message);
-    player.set("playerauthor", message.author?.id);
     player.connect();
     player.stop();
   }
@@ -67,8 +65,6 @@ async function request(client, message, args, type, slashCommand) {
     //if the player is not connected, then connect and create things
     if (player.state !== "CONNECTED") {
       //set the variables
-      player.set("message", message);
-      player.set("playerauthor", message.author?.id);
       player.connect();
       //add track
       player.queue.add(res.tracks[0]);

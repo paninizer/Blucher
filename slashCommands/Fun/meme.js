@@ -29,11 +29,11 @@ module.exports = {
   usage: `meme`,
   type: "user",
   description: "Sends a meme",
-  run: async (client, interaction, cmduser, es, ls, prefix, player, message, GuildSettings) => {
+  run: async (client, interaction, cmduser, es, ls, prefix, player, GuildSettings) => {
 
 	await interaction.deferReply();
 
-	const url = `https://www.reddit.com/r/${subreddits[getRandomInt(subreddits.length)]}/hot/.json?limit=100`;
+	const url = `https://www.reddit.com/r/${subreddits[getRandomInt(subreddits.length)]}/hot/.json?limit=50`;
 
 	https.get(url, async (result) => {
             var body = ''
@@ -43,7 +43,7 @@ module.exports = {
 
             result.on('end', async () => {
                 var response = JSON.parse(body)
-                var index = response.data.children[Math.floor(Math.random() * 99) + 1].data
+                var index = response.data.children[Math.floor(Math.random() * 50) + 1].data
 
                 if (index.post_hint !== 'image') {
 
@@ -54,10 +54,10 @@ module.exports = {
                         .setDescription(`[${title}](${link})\n\n${text}`)
                         .setURL(`https://reddit.com/${subRedditName}`)
 
-                    await interaction.editReply({embeds: [textembed], ephermeral: true});
+                    await interaction.editReply({embeds: [textembed]});
                 }
 
-                var image = index.preview.images[0].source.url.replace('&amp;', '&')
+                var image = index.preview.images[0].source.url.replace(/&amp;/g, '&')
                 var title = index.title
                 var link = 'https://reddit.com' + index.permalink
                 var subRedditName = index.subreddit_name_prefixed
@@ -69,7 +69,7 @@ module.exports = {
                         .setDescription(`[${title}](${link})\n\n${text}`)
                         .setURL(`https://reddit.com/${subRedditName}`)
 
-                    await interaction.editReply({embeds: [textembed], ephemeral: true})
+                    await interaction.editReply({embeds: [textembed]})
                 }
                 //console.log(image); debug
                 const imageembed = new Discord.MessageEmbed()
@@ -79,7 +79,7 @@ module.exports = {
                     .setDescription(`[${title}](${link})`)
                     .setURL(`https://reddit.com/${subRedditName}`)
 
-                await interaction.editReply({embeds: [imageembed], ephemeral: true})
+                await interaction.editReply({embeds: [imageembed]})
             }).on('error', function (e) {
                 console.log('Got an error: ', e)
             })

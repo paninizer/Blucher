@@ -6,7 +6,7 @@ var ee = require(`${process.cwd()}/botconfig/embed.json`);
 const emoji = require(`${process.cwd()}/botconfig/emojis.json`);
 const {
   TrackUtils
-} = require("erela.js");
+} = require("moonlink.js");
 const {
   format,
   delay,

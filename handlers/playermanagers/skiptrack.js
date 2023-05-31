@@ -20,8 +20,8 @@ async function skiptrack(client, message, args, type, slashCommand) {
     if (player && player.node && !player.node.connected) await player.node.connect()
     //if no player create it
     if (!player) {
-      player = await client.manager.create({
-        guild: message.guild.id,
+      player = await client.manager.players.create({
+        guildId: message.guild.id,
         voiceChannel: message.member.voice.channel.id,
         textChannel: message.channel.id,
         selfDeafen: true,
@@ -31,11 +31,8 @@ async function skiptrack(client, message, args, type, slashCommand) {
     let state = player.state;
     if (state !== "CONNECTED") {
       //set the variables
-      player.set("message", message);
-      player.set("messageid", message.id);
-      player.set("playerauthor", message.author?.id);
       player.connect();
-      try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
+      try{message.react("1093267456153374851").catch(() => null);}catch(e){console.log(String(e).grey)}
       player.stop();
     }
     try {
@@ -96,7 +93,7 @@ async function skiptrack(client, message, args, type, slashCommand) {
       player.set("message", message);
       player.set("playerauthor", message.author?.id);
       player.connect();
-      try{message.react("863876115584385074").catch(() => null);}catch(e){console.log(String(e).grey)}
+      try{message.react("1093267456153374851").catch(() => null);}catch(e){console.log(String(e).grey)}
       //add track
       player.queue.add(res.tracks[0]);
       //play track

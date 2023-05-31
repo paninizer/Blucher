@@ -1,6 +1,4 @@
 var {
-    Manager
-  } = require("erela.js"), {
       MessageEmbed, MessageButton, MessageActionRow
     } = require("discord.js"),
     ms = require("ms"),
@@ -18,7 +16,7 @@ var {
         client.manager.init(client.user.id);
       });
       
-      client.on("raw", (d) => client.manager.updateVoiceState(d));
+      client.on("raw", (d) => client.manager.packetUpdate(d));
       
       //Log if a Channel gets deleted, and the Bot was in, then delete the player if the player exists!
       client.on("channelDelete", async channel => {
@@ -35,7 +33,7 @@ var {
           }
         } catch {}
       })
-      //If the Bot gets Remove from the Guild and there is still a player, remove it ;)
+      //If the Bot gets Removed from the Guild and there is still a player, remove it ;)
       client.on("guildRemove", async guild => {
         try {
           var player = client.manager.players.get(guild.id);
@@ -74,13 +72,5 @@ var {
         }
       });
   };
-  /**
-   * @INFO
-   * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-   * @INFO
-   * Work for Milrato Development | https://milrato.eu
-   * @INFO
-   * Please mention Him / Milrato Development, when using this Code!
-   * @INFO
-   */
+  //moonlink.js
   

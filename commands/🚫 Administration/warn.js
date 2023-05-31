@@ -39,7 +39,7 @@ module.exports = {
             }
           }
         }
-      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !Array(message.guild.ownerId, config.ownerIDS).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
+      if (([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => cmdroles.includes(r.id))) && !cmdroles.includes(message.author?.id) && ([...message.member.roles.cache.values()] && !message.member.roles.cache.some(r => adminroles.includes(r ? r.id : r))) && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id) && !message.member?.permissions?.has([Permissions.FLAGS.ADMINISTRATOR]))
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -63,7 +63,7 @@ module.exports = {
       const memberPosition = warnmember.roles.highest.position;
       const moderationPosition = message.member.roles.highest.position;
 
-      if (moderationPosition <= memberPosition)
+      if (moderationPosition <= memberPosition && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id))
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
@@ -122,13 +122,13 @@ module.exports = {
 
         message.reply({embeds :[new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-          .setFooter(client.getFooter(`He has: ${warnings ? warnings.length : 0} Global Warns`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
+          .setFooter(client.getFooter(`He has: ${warnData ? warnData.length : 0} Global Warns`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
           
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["warn"]["variable7"]))
           .setThumbnail(warnmember.user.displayAvatarURL({
             dynamic: true
           }))
-          .setDescription(`**They now have: ${warnings.length} Warnings in ${message.guild.name}**`.substring(0, 2048))
+          .setDescription(`**They now have: ${warnings.length} warnings in ${message.guild.name}**`.substring(0, 2048))
         ]});
 
         let warnsettings = GuildSettings.warnsettings;

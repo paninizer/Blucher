@@ -5,7 +5,7 @@ const config = require(`../../botconfig/config.json`);
 var ee = require(`../../botconfig/embed.json`);
 const emoji = require(`../../botconfig/emojis.json`);
 const {
-  databasing
+  databasing, dbEnsure
 } = require(`../../handlers/functions`);
 module.exports = {
   name: `globalwarnings`,
@@ -45,27 +45,37 @@ module.exports = {
 
 
       try {
-        client.userProfiles.ensure(warnmember.id, {
+	await dbEnsure(client.userProfiles, message.author?.id, {
           id: message.author?.id,
           guild: message.guild.id,
           totalActions: 0,
           warnings: [],
           kicks: []
         });
-        const warnIDs = client.userProfiles.get(warnmember.id, 'warnings');
-        const warnData = warnIDs.map(id => client.modActions.get(id));
+
+        await dbEnsure(client.userProfiles, warnmember.id, {
+          id: warnmember.id,
+          guild: message.guild.id,
+          totalActions: 0,
+          warnings: [],
+          kicks: []
+        });   
+     
+	const modActions = await client.modActions.all();
+	const warnIDs = await client.userProfiles.get(warnmember.id + '.warnings');
+        const warnData = warnIDs.map(id => modActions.find(d => d.ID == id)?.data);
+        let warnings = warnData
         if (!warnIDs || !warnData || !warnIDs.length)
           return message.reply({embeds : [new MessageEmbed()
             .setColor(es.wrongcolor)
-            .setFooter(client.getFooter(`He/She has: ${client.userProfiles.get(warnmember.id, 'warnings') ? client.userProfiles.get(warnmember.id, 'warnings').filter(v=>v.guild == message.guild.id).length : 0} in ${message.guild.name}`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
+            .setFooter(client.getFooter(`He/She has: ${warnings ? warnings.length : 0} in ${message.guild.name}`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
             
             .setTitle(eval(client.la[ls]["cmds"]["administration"]["globalwarnings"]["variable5"]))
           ]});
 
-        let warnings = warnData
         let warnembed = new MessageEmbed()
           .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-          .setFooter(client.getFooter(`He/She has: ${client.userProfiles.get(warnmember.id, 'warnings') ? client.userProfiles.get(warnmember.id, 'warnings').filter(v=>v.guild == message.guild.id).length : 0} in ${message.guild.name}`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
+          .setFooter(client.getFooter(`He/She has: ${warnings ? warnings.length : 0} Globally`, "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/joypixels/275/globe-with-meridians_1f310.png"))
           
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["globalwarnings"]["variable6"]))
         let string = ``;

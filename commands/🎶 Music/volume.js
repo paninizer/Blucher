@@ -45,7 +45,7 @@ const { handlemsg } = require(`../../handlers/functions`);
           .setDescription(eval(client.la[ls]["cmds"]["music"]["volume"]["variable4"]))
         ]});
       //change the volume
-      player.setVolume(Number(args[0]));
+      await player.setVolume(Number(args[0]));
       //send success message
       return message.reply({embeds : [new MessageEmbed()
         .setTitle(eval(client.la[ls]["cmds"]["music"]["volume"]["variable5"]))
@@ -62,12 +62,3 @@ const { handlemsg } = require(`../../handlers/functions`);
     }
   }
 };
-/**
- * @INFO
- * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
- * @INFO
- * Work for Milrato Development | https://milrato.eu
- * @INFO
- * Please mention Him / Milrato Development, when using this Code!
- * @INFO
- */

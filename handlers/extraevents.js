@@ -2,6 +2,11 @@ const { MessageEmbed, MessageActionRow } = require("discord.js");
 const config = require(`${process.cwd()}/botconfig/config.json`);
 const { CheckGuild, clearDBData, swap_pages_data } = require(`./functions`);
 const { spawn } = require('child_process');
+const {
+  dbEnsure, dbRemove
+} = require(`./functions`);
+
+
 module.exports = async (client) => {
   
   client.disableComponentMessage = (C) => {
@@ -385,18 +390,20 @@ module.exports = async (client) => {
       .addField("Servers Bot is in", `>>> \`\`\`${client.guilds.cache.size}\`\`\``)
       .addField("Leave Server:", `>>> \`\`\`${config.prefix}leaveserver ${guild.id}\`\`\``)
       .setThumbnail(guild.iconURL({dynamic: true}));
-    for await (const owner of config.ownerIDS){
-      //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
-      if(owner == "442355791412854784"){
-        let milratoGuild = client.guilds.cache.get("773668217163218944");
-        if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){
-          continue; 
-        }
-      }
-      client.users.fetch(owner).then(user => {
-        user.send({ embeds: [embed] }).catch(() => null)
-      }).catch(() => null);
-    }
+
+		await dbEnsure(client.guildBlacklist, guild.id, {
+  		isBlacklisted: "no"
+		});
+
+
+		if (client.guildBlacklist.get(`${guild.id}.isBlacklisted`)=="yes") {
+			try {
+				theowner.send(`Nice try, but this server is blacklisted.`);
+				guild.leave();
+			} catch (e) {
+				console.error(e);
+			}
+		}
   });
 
   client.on("guildDelete", async guild => {

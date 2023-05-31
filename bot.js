@@ -153,7 +153,6 @@ async function requirehandlers(){
     "autobackup",
         "autoembed",
         "automeme",
-        "autonsfw",
         "blacklist",
         "boostlog",
         "counter",
@@ -201,6 +200,10 @@ client.tanks = new Discord.Collection();
 client.tanks.sort((tankA, tankB) => tankA.name-tankB.name);
 
 console.log(`Loaded ${client.tanks.size} tanks after ${Date.now()-now}ms.`.green);
+
+client.guilds.cache.forEach(guild => {
+  console.log(`${guild.name} | ${guild.id}`);
+})
 
  
  /**********************************************************

@@ -31,7 +31,7 @@ module.exports = async (client, interaction) => {
         guild
       } = member;
       if(!guild) {
-        return interaction?.reply({content: ":x: Interactions only Works inside of GUILDS!", ephemeral: true}).catch(()=>{});
+        return interaction?.reply({content: ":x: Interactions only work inside of GUILDS/SERVERS!", ephemeral: true}).catch(()=>{});
       }
       const CategoryName = interaction?.commandName;
       let command = false;
@@ -79,14 +79,14 @@ module.exports = async (client, interaction) => {
             )
           }
         }
-        if (!client.cooldowns.has(command.name)) { //if its not in the cooldown, set it too there
+        if (!client.cooldowns.has(command.name)) { //if its not in the cooldown, set it to there
           client.cooldowns.set(command.name, new Discord.Collection());
         }
         const now = Date.now(); //get the current time
         const timestamps = client.cooldowns.get(command.name); //get the timestamp of the last used commands
         const cooldownAmount = (command.cooldown || 1) * 1000; //get the cooldownamount of the command, if there is no cooldown there will be automatically 1 sec cooldown, so you cannot spam it^^
         if (timestamps.has(member.id)) { //if the user is on cooldown
-          const expirationTime = timestamps.get(member.id) + cooldownAmount; //get the amount of time he needs to wait until he can run the cmd again
+          const expirationTime = timestamps.get(member.id) + cooldownAmount; //get the amount of time needs to wait until can run the cmd again
           if (now < expirationTime) { //if he is still on cooldonw
             const timeLeft = (expirationTime - now) / 1000; //get the lefttime
             not_allowed = true;
@@ -103,7 +103,7 @@ module.exports = async (client, interaction) => {
           }
         }
         timestamps.set(member.id, now); //if he is not on cooldown, set it to the cooldown
-        setTimeout(() => timestamps.delete(member.id), cooldownAmount); //set a timeout function with the cooldown, so it gets deleted later on again
+        setTimeout(() => timestamps.delete(member.id), cooldownAmount); //set a timeout function with the cooldown, so it gets deleted later
         await client.stats.add(interaction.guild.id+".commands", 1); //counting our Database stats for SERVER
         await client.stats.add("global.commands", 1); //counting our Database Stats for GLOBA
         //if Command has specific permission return error
@@ -129,10 +129,6 @@ module.exports = async (client, interaction) => {
       await delay(350);
     }
     
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
     if(command.parameters) {
       if(command.parameters.type == "music"){
         //get the channel instance
@@ -208,11 +204,8 @@ module.exports = async (client, interaction) => {
         }
       }
     }
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-    //run the command with the parameters:  client, message, args, user, text, prefix,
+    
+    //run the command with the parameters
     if (not_allowed) return
     let message = {
       applicationId: interaction?.applicationId,
@@ -232,6 +225,6 @@ module.exports = async (client, interaction) => {
       guildId: interaction?.guildId,
     }
     //Execute the Command
-		command.run(client, interaction, interaction?.member.user, es, ls, prefix, player, message)
+		command.run(client, interaction, interaction?.member.user, es, ls, prefix, player, message, guild_settings)
 	}
 }

@@ -157,7 +157,3 @@ module.exports = (client) => {
 
   	console.log(`[x] :: `.magenta + `LOADED THE ${client.slashCommands.size} COMMANDS after: `.brightGreen + `${Date.now() - dateNow}ms`.green)
 };
-
-//Improved by paninizer#8583
-//Original by Tomato#6966
-//Panzer Shipyards Developments

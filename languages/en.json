@@ -5018,11 +5018,11 @@
 
 				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Missing Permissions to add Reactions\"",
 
-				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable5": "\"Which Channel do you want to use?\"",
+				"variable5": "\"Which channel do you want to use?\"",
 
-				"variable6": "`Please Ping the Channel now! / Send the **ID** the Channel/Category/Talk!!`",
+				"variable6": "`Please Ping the channel now! / Send the **ID** the Channel/Category/Talk!!`",
 
 				"variable7": "`<a:yes:947339988780064859> I will now send all logs into: \\`${channel.name}\\``",
 
@@ -5030,9 +5030,9 @@
 
 				"variable9": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable11": "`<a:yes:947339988780064859> Disabled Logger, I wont log anything anymore`",
+				"variable11": "`<a:yes:947339988780064859> Disabled Logger`",
 
 				"variable12": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
@@ -5092,19 +5092,19 @@
 
 				"variable5": "`<a:yes:947339988780064859> The Member Counter Setup is now ${d2p(client.setups.get(message.guild.id, `membercount.enabled`))}!`",
 
-				"variable6": "\"Which Channel do you want to use?\"",
+				"variable6": "\"Which channel do you want to use?\"",
 
-				"variable7": "`*Just ping the channel with #channel in the Chat / send the ID of the CHANNEL, (Text, Voice, ...)*`",
+				"variable7": "`*Just ping the channel with #channel in the chat / send the ID of the CHANNEL, (Text, Voice, ...)*`",
 
 				"variable8": "`<a:yes:947339988780064859> The Channel: \\`${channel.name}\\` is now registered as the Member Counter for Counter-${temptype}`",
 
-				"variable9": "\"What Should be the Name of the Channel?\"",
+				"variable9": "\"What Should be the name of the channel?\"",
 
 				"variable10": "`<a:yes:947339988780064859> The Channel: \\`${channel.name}\\` will now be renamed to: \\`${name}\\``",
 
-				"variable11": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable11": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable12": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable12": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
 				"variable13": "`<a:yes:947339988780064859> Settings of the Member Counter Setup`",
 
@@ -5120,17 +5120,17 @@
 
 				"variable2": "`<a:animated_wrong:947340139359789106> Not a valid radio station`",
 
-				"variable3": "`Please use a Number between \\`1\\` and \\`183\\``",
+				"variable3": "`Please use a number between \\`1\\` and \\`183\\``",
 
-				"variable4": "`<a:animated_wrong:947340139359789106> Volume Number out of Range`",
+				"variable4": "`<a:animated_wrong:947340139359789106> Volume number out of range`",
 
-				"variable5": "`Please use a Number between \\`1\\` and \\`150\\``",
+				"variable5": "`Please use a number between \\`1\\` and \\`150\\``",
 
-				"variable6": "`<a:animated_wrong:947340139359789106> Radio Station not found`",
+				"variable6": "`<a:animated_wrong:947340139359789106> Radio station not found`",
 
-				"variable7": "`Please use a Station between \\`1\\` and \\`183\\``",
+				"variable7": "`Please use a station between \\`1\\` and \\`183\\``",
 
-				"variable8": "`Bound to Channel: \\`${channel.name}\\``",
+				"variable8": "`Bound to channel: \\`${channel.name}\\``",
 
 				"variable9": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
 
@@ -5140,25 +5140,25 @@
 
 				"variable1": "\"What do you want to do?\"",
 
-				"variable2": "`1️⃣ **== Set Channel** to send Level Up Messages\\n\\n2️⃣ **== Reply** with Level Up Messages\\n\\n3️⃣ **== Disable** Level Up Messages\\n\\n4️⃣ **== Manage** Level-Up Roles!\\n\\n5️⃣ **== Show** the Rank Settings!\\n\\n\\n\\n*React with the Right Emoji according to the Right action*`",
+				"variable2": "`1️⃣ **== Set channel** to send level-up messages\\n\\n2️⃣ **== Reply** with level-up messages\\n\\n3️⃣ **== Disable** level-up messages\\n\\n4️⃣ **== Manage** level-up roles!\\n\\n5️⃣ **== Show** the Rank Settings!\\n\\n\\n\\n*React with the right emoji according to the right action*`",
 
-				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Missing Permissions to add Reactions\"",
+				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Missing permissions to add reactions\"",
 
-				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable5": "\"Which Channel do you want to use?\"",
+				"variable5": "\"Which channel do you want to use?\"",
 
-				"variable6": "`Please Ping the Channel now! / Send the **ID** the Channel/Category/Talk!!`",
+				"variable6": "`Please ping the channel now! / Send the **ID** of the Channel/Category/Talk!!`",
 
-				"variable7": "`<a:yes:947339988780064859> I will now send the Levelup Messages in \\`${channel.name}\\``",
+				"variable7": "`<a:yes:947339988780064859> I will now send the level-up messages in \\`${channel.name}\\``",
 
 				"variable8": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable9": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable11": "`<a:yes:947339988780064859> I will now reply with the Levelup Messages`",
+				"variable11": "`<a:yes:947339988780064859> I will now reply with the level-up messages`",
 
 				"variable12": "`To disable them, type: \\`${prefix}setup-rank disable\\`To send them into a channel, type: \\`${prefix}setup-rank channel #channel\\``",
 
@@ -5166,11 +5166,11 @@
 
 				"variable14": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable15": "\"<a:animated_wrong:947340139359789106> ERROR | Level Up Messages are Already Disabled\"",
+				"variable15": "\"<a:animated_wrong:947340139359789106> ERROR | Level-up messages are already disabled\"",
 
 				"variable16": "`To enable them again type: \\`${prefix}setup-rank reply\\``",
 
-				"variable17": "`<a:yes:947339988780064859> Disabled Levelup Messages`",
+				"variable17": "`<a:yes:947339988780064859> Disabled level-up messages`",
 
 				"variable18": "`To enable them again type: \\`${prefix}setup-rank reply\\``",
 
@@ -5178,29 +5178,29 @@
 
 				"variable20": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable21": "\"Which Image should i Use?\"",
+				"variable21": "\"Which image should I use?\"",
 
-				"variable22": "`*Just Send the Url*`",
+				"variable22": "`*Just send the URL*`",
 
-				"variable23": "`<a:yes:947339988780064859> Successfully, set your Background Image!`",
+				"variable23": "`<a:yes:947339988780064859> Successfully set your background image!`",
 
-				"variable24": "`Please make sure to **not** delete your Image from the Channel!`",
+				"variable24": "`Please make sure to **not** delete your image from the channel!`",
 
-				"variable25": "`<a:animated_wrong:947340139359789106> ERROR | Could not your message as a backgroundimage`",
+				"variable25": "`<a:animated_wrong:947340139359789106> ERROR | Could not use your message as a background image`",
 
-				"variable26": "`<a:yes:947339988780064859> Successfully, set your Background Image!`",
+				"variable26": "`<a:yes:947339988780064859> Successfully, set your background image!`",
 
-				"variable27": "`Please make sure to **not** delete your Image from the Channel!`",
+				"variable27": "`Please make sure to **not** delete your image from the channel!`",
 
-				"variable28": "`<a:animated_wrong:947340139359789106> ERROR | Could not your message as a backgroundimage`",
+				"variable28": "`<a:animated_wrong:947340139359789106> ERROR | Could not use your message as a background image`",
 
 				"variable29": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable30": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable31": "`<a:yes:947339988780064859> Resetted Levelup Message Image Background`",
+				"variable31": "`<a:yes:947339988780064859> Reset level-up message image background`",
 
-				"variable32": "`I will now use the Default Levelup Image`",
+				"variable32": "`I will now use the default level-up image`",
 
 				"variable33": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
@@ -5214,47 +5214,47 @@
 
 			"setup-reactionrole": {
 
-				"variable1": "\"What do u want to do?\"",
+				"variable1": "\"What do you want to do?\"",
 
-				"variable2": "\"THIS IS A INFORMATION EMBED!\"",
+				"variable2": "\"THIS IS AN INFORMATION EMBED!\"",
 
-				"variable3": "\"What's the next Emoji, which u want to use?\"",
+				"variable3": "\"What's the next emoji you want to use?\"",
 
-				"variable4": "\"Type `finish` when you're done\\n\\nReact with the **wished Emoji** to **this** Message\"",
+				"variable4": "\"Type `finish` when you're done\\n\\nReact with the **emoji** to **this** message\"",
 
-				"variable5": "'Operation canceled. and finished!'",
+				"variable5": "'Operation canceled and finished!'",
 
 				"variable6": "'No reaction after 30 seconds, operation canceled'",
 
 				"variable7": "'No reaction after 30 seconds, operation canceled'",
 
-				"variable8": "\"What Role do you want for that emoji?\"",
+				"variable8": "\"Which role do you want for that emoji?\"",
 
-				"variable9": "\"CANCELLED, u didn't Pingged a valid Role\"",
+				"variable9": "\"CANCELLED, you didn't ping a valid role\"",
 
 				"variable10": "'Operation canceled. and finished!'",
 
 				"variable11": "'No reaction after 30 seconds, operation canceled'",
 
-				"variable12": "\"What type of Reaction Role do you want?\"",
+				"variable12": "\"What type of reaction role do you want?\"",
 
-				"variable13": "\":one: === Multiple reaction Options\\n\\n:two: === Single reaction Options\"",
+				"variable13": "\":one: === Multiple reaction options\\n\\n:two: === Single reaction options\"",
 
-				"variable14": "\"NO CORRECT INPUT! So i will use `MULTIPLE REACTION OPTION`\"",
+				"variable14": "\"NO CORRECT INPUT! So I will use `MULTIPLE REACTION OPTION` as default configuration.\"",
 
-				"variable15": "\"What should be the **`Title`** of your Reaction Role?\"",
+				"variable15": "\"What should be the **`title`** of your reaction role?\"",
 
-				"variable16": "\"This will  be listed **above** the list of Emojis\\n\\n*Wich Emoji gives which Role*\\nEnter the Title **now** (max 256 Letters)\"",
+				"variable16": "\"This will be listed **above** the list of emojis\\n\\n*Set emoji to role*\\nEnter the description **now** (max 256 Letters)\"",
 
-				"variable17": "\"In which channel do you want your Reaction Role to Be?\"",
+				"variable17": "\"In which channel do you want your reaction role to be?\"",
 
-				"variable18": "\"Ping the Channel **now** with #channel\"",
+				"variable18": "\"Ping the channel **now** with #channel\"",
 
 				"variable19": "\"YOUR REACTION ROLE IS FINISHED AND READY TO USE! \\nIn: <#\" + msg.channel.id + \">\"",
 
-				"variable20": "'You didn\\'t Ping a CHANNEL, CANCELLED!'",
+				"variable20": "'You didn\\'t ping a CHANNEL! Operation cancelled!'",
 
-				"variable21": "\"Successfully resetted, ReactionRole Setup!\"",
+				"variable21": "\"Successfully reset reaction role setup!\"",
 
 				"variable22": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``"
 
@@ -5264,21 +5264,21 @@
 
 				"variable1": "\"What do you want to do? | REPORT LOG\"",
 
-				"variable2": "`1️⃣ **== \\`✔️ Enable\\` / Set** Channel\\n\\n2️⃣ **== \\`❌ Disable\\`** Log\\n\\n\\n\\n*React with the Right Emoji according to the Right action*`",
+				"variable2": "`1️⃣ **== \\`✔️ Enable\\` / Set** Channel\\n\\n2️⃣ **== \\`❌ Disable\\`** Log\\n\\n\\n\\n*React with the emoji that corresponds with the option.*`",
 
-				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Missing Permissions to add Reactions\"",
+				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Missing permissions to add reactions\"",
 
-				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable4": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable5": "\"Which Channel do you want to use?\"",
+				"variable5": "\"Which channel do you want to use?\"",
 
-				"variable6": "`*Just ping the channel with #channel in the Chat*`",
+				"variable6": "`*Just ping the channel with #channel in the chat*`",
 
-				"variable7": "`<a:yes:947339988780064859> The Channel: \\`${message.mentions.channels.filter(ch=>ch.guild.id==message.guild.id).first().name}\\` is now registered as the Admin logger`",
+				"variable7": "`<a:yes:947339988780064859> The channel: \\`${message.mentions.channels.filter(ch=>ch.guild.id==message.guild.id).first().name}\\` is now registered as the admin logger`",
 
-				"variable8": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable8": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable9": "`<a:yes:947339988780064859> Disabled the Admin logger`",
+				"variable9": "`<a:yes:947339988780064859> Disabled the admin logger`",
 
 				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | PLEASE CONTACT `paninizer#8583 `\"",
 
@@ -5290,71 +5290,71 @@
 
 				"variable1": "\"What do you want to do?\"",
 
-				"variable2": "\"<a:animated_wrong:947340139359789106> ERROR | Missing Permissions to add Reactions\"",
+				"variable2": "\"<a:animated_wrong:947340139359789106> ERROR | Missing permissions to add reactions\"",
 
-				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable3": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
 				"variable4": "`What do you want to do? | Roster: \\`${thedb.get(message.guild.id, \"rostertitle\")}\\` (\\`${rostercount}. Roster\\`)`.substr(0, 256)",
 
-				"variable5": "\"<a:animated_wrong:947340139359789106> ERROR | Missing Permissions to add Reactions\"",
+				"variable5": "\"<a:animated_wrong:947340139359789106> ERROR | Missing permissions to add reactions\"",
 
-				"variable6": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable6": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable7": "\"Which Channel do you want to use?\"",
+				"variable7": "\"Which channel do you want to use?\"",
 
-				"variable8": "`Please Ping the Channel now! / Send the **ID** the Channel/Category/Talk!!`",
+				"variable8": "`Please ping the channel now! / Send the **ID** the Channel/Category/Talk!!`",
 
-				"variable9": "`<a:yes:947339988780064859> The Roster is now locked to: \\`${channel.name}\\`. It is updating automatically!`",
+				"variable9": "`<a:yes:947339988780064859> The roster is now locked to: \\`${channel.name}\\`. It is updating automatically!`",
 
 				"variable10": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable11": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable12": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable12": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable13": "\"Which Role do you want to add?\"",
+				"variable13": "\"Which role do you want to add?\"",
 
-				"variable14": "`Please Ping the Role now!`",
+				"variable14": "`Please ping the role now!`",
 
-				"variable15": "`<a:animated_wrong:947340139359789106> ERROR | The role: \\`${role.name}\\` is already registered as an Admin Role`",
+				"variable15": "`<a:animated_wrong:947340139359789106> ERROR | The role: \\`${role.name}\\` is already registered as an admin role`",
 
 				"variable16": "`Remove it with: \\`${prefix}setup-roster\\``",
 
-				"variable17": "`<a:yes:947339988780064859> Added the Role: \\`${role.name}\\``",
+				"variable17": "`<a:yes:947339988780064859> Added the role: \\`${role.name}\\``",
 
-				"variable18": "`It will update in less then **5 Minutes**, *If it did not update yet*`",
+				"variable18": "`It will update in less than **5 Minutes**, if not already done.`",
 
 				"variable19": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable20": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable21": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable21": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable22": "\"Which Role do you want to add?\"",
+				"variable22": "\"Which role do you want to add?\"",
 
-				"variable23": "`Please Ping the Role now!`",
+				"variable23": "`Please ping the role now!`",
 
-				"variable24": "`<a:animated_wrong:947340139359789106> ERROR | The role: \\`${role.name}\\` is not registered as an Admin Role yet!`",
+				"variable24": "`<a:animated_wrong:947340139359789106> ERROR | The role: \\`${role.name}\\` is not registered as an admin role yet!`",
 
 				"variable25": "`Remove it with: \\`${prefix}setup-roster\\``",
 
-				"variable26": "`<a:yes:947339988780064859> Removed the Role: \\`${role.name}\\``",
+				"variable26": "`<a:yes:947339988780064859> Removed the role: \\`${role.name}\\``",
 
-				"variable27": "`It will update in less then **5 Minutes**, *If it did not update yet*`",
+				"variable27": "`It will update in less than **5 Minutes**, if not already done.`",
 
 				"variable28": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable29": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable30": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable30": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable31": "\"Those Roles will be listed in the Roster Embed:\"",
+				"variable31": "\"Those roles will be listed in the roster embed:\"",
 
 				"variable32": "`<@&${thedb.get(message.guild.id, \"rosterroles\").join(\">\\n<@&\")}>`",
 
-				"variable33": "\"What Type do you want to use??\"",
+				"variable33": "\"What type do you want to use??\"",
 
-				"variable34": "`1️⃣ **==** First Type Example: \\n> <@${message.author.id}> | \\`${message.author.tag}\\`\\n\\n2️⃣ **==** Second Type Example: \\n> <@${message.author.id}>\\n\\n3️⃣ **==** Third Type Example: \\n> **${message.author.tag}**\\n\\n4️⃣ **==** Fourth Type Example: \\n> **${message.author.username}**\\n\\n5️⃣ **==** Fifth Type Example: \\n> <@${message.author.id}> | \\`${message.author.id}\\`\\n\\n6️⃣ **==** Sixth Type Example: \\n> <@${message.author.id}> | **${message.author.username}**\\n\\n7️⃣ **==** Seventh Type Example: \\n> <@${message.author.id}> | **${message.author.tag}**\\n\\n\\n\\n*React with the Right Emoji according to the Right action*`",
+				"variable34": "`1️⃣ **==** First Type Example: \\n> <@${message.author.id}> | \\`${message.author.tag}\\`\\n\\n2️⃣ **==** Second Type Example: \\n> <@${message.author.id}>\\n\\n3️⃣ **==** Third Type Example: \\n> **${message.author.tag}**\\n\\n4️⃣ **==** Fourth Type Example: \\n> **${message.author.username}**\\n\\n5️⃣ **==** Fifth Type Example: \\n> <@${message.author.id}> | \\`${message.author.id}\\`\\n\\n6️⃣ **==** Sixth Type Example: \\n> <@${message.author.id}> | **${message.author.username}**\\n\\n7️⃣ **==** Seventh Type Example: \\n> <@${message.author.id}> | **${message.author.tag}**\\n\\n\\n\\n*React with the emoji that corresponds with the option.*`",
 
 				"variable35": "\"SUCCESS! | Changed the ROSTER TYPE!\"",
 
@@ -5370,29 +5370,29 @@
 
 				"variable41": "\"SUCCESS! | Changed the ROSTER TYPE!\"",
 
-				"variable42": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable42": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable43": "\"Which Emoji / Text do You want to use?\"",
+				"variable43": "\"Which emoji / text do you want to use?\"",
 
-				"variable44": "`Note, that the Maximum lenght is \\`5\\`!\\n\\nEnter the TEXT / EMOJI now!\\nType \\`noemoji\\` for no Emoji`",
+				"variable44": "`Note, that the maximum length is \\`5\\`!\\n\\nEnter the EMOJI / TEXT now!\\nType \\`noemoji\\` for no emoji`",
 
-				"variable45": "`<a:yes:947339988780064859> The Roster will now add ${msg} to each Listed Member!`",
+				"variable45": "`<a:yes:947339988780064859> The roster will now add ${msg} to each listed member!`",
 
-				"variable46": "`<a:yes:947339988780064859> The Roster will now add ${msg} to each Listed Member!`",
+				"variable46": "`<a:yes:947339988780064859> The roster will now add ${msg} to each listed member!`",
 
-				"variable47": "`<a:yes:947339988780064859> The Roster will now add ${msg.substr(0, 5)} to each Listed Member!`",
+				"variable47": "`<a:yes:947339988780064859> The roster will now add ${msg.substr(0, 5)} to each listed member!`",
 
 				"variable48": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
 				"variable49": "`\\`\\`\\` ${e.message ? e.message : e.stack ? String(e.stack).substr(0, 2000) : String(e).substr(0, 2000)}\\`\\`\\``",
 
-				"variable50": "\"<a:animated_wrong:947340139359789106> ERROR | Your Time ran out\"",
+				"variable50": "\"<a:animated_wrong:947340139359789106> ERROR | Your time ran out\"",
 
-				"variable51": "\"Which Title should your Roster have?\"",
+				"variable51": "\"Which title should your roster have?\"",
 
-				"variable52": "`Note, that the Maximum lenght is \\`256\\`!\\n\\nEnter the TEXT now!`",
+				"variable52": "`Note that the maximum length is \\`256\\`!\\n\\nEnter the TEXT now!`",
 
-				"variable53": "`<a:yes:947339988780064859> The Roster will now add ${msg.substr(0, 256)} to each Listed Member!`",
+				"variable53": "`<a:yes:947339988780064859> The roster will now add ${msg.substr(0, 256)} to each listed member!`",
 
 				"variable54": "\"<a:animated_wrong:947340139359789106> ERROR | An error occurred, please contact: `paninizer#8583 `\"",
 
@@ -5941,35 +5941,35 @@
 
 				"variable4": "`**Hey ${message.author.username}!**`",
 
-				"variable5": "`Please input the Amount of Warns someone should have when he should get kicked!\\nEnter \\`no\\` to disable it!\\n\\n*This will only work for the NEW WARNS*`",
+				"variable5": "`Please input the amount of warns someone should have when they get kicked!\\nEnter \\`no\\` to disable it!\\n\\n*This will only work for the NEW WARNS*`",
 
-				"variable6": "\"<a:animated_wrong:947340139359789106> You did not enter a Number/`no`\"",
+				"variable6": "\"<a:animated_wrong:947340139359789106> You did not enter a number/`no`\"",
 
-				"variable7": "\"<a:yes:947339988780064859> Disabled Kick on x Warns\"",
+				"variable7": "\"<a:yes:947339988780064859> Disabled kick on warns\"",
 
-				"variable8": "\"<a:animated_wrong:947340139359789106> You did not enter a valid Number\"",
+				"variable8": "\"<a:animated_wrong:947340139359789106> You did not enter a valid number\"",
 
-				"variable9": "\"<a:animated_wrong:947340139359789106> Your Number is 0 or smaller then 0, which is invalid\"",
+				"variable9": "\"<a:animated_wrong:947340139359789106> Your number is 0 or smaller then 0, which is invalid\"",
 
-				"variable10": "`<a:yes:947339988780064859> **Enabled a Kick on \\`${amount}+ Warns\\`**`",
+				"variable10": "`<a:yes:947339988780064859> **Enabled kick on \\`${amount}+ Warns\\`**`",
 
-				"variable11": "\"<a:animated_wrong:947340139359789106> Your Time ran out\"",
+				"variable11": "\"<a:animated_wrong:947340139359789106> Your time ran out\"",
 
 				"variable12": "`**Hey ${message.author.username}!**`",
 
-				"variable13": "`Please input the Amount of Warns someone should have when he should get banned!\\nEnter \\`no\\` to disable it!\\n\\n*This will only work for the NEW WARNS*`",
+				"variable13": "`Please input the amount of warns someone should have when they get banned!\\nEnter \\`no\\` to disable it!\\n\\n*This will only work for the NEW WARNS*`",
 
-				"variable14": "\"<a:animated_wrong:947340139359789106> You did not enter a Number/`no`\"",
+				"variable14": "\"<a:animated_wrong:947340139359789106> You did not enter a number/`no`\"",
 
-				"variable15": "\"<a:yes:947339988780064859> Disabled Ban on x Warns\"",
+				"variable15": "\"<a:yes:947339988780064859> Disabled ban on warns\"",
 
-				"variable16": "\"<a:animated_wrong:947340139359789106> You did not enter a valid Number\"",
+				"variable16": "\"<a:animated_wrong:947340139359789106> You did not enter a valid number\"",
 
-				"variable17": "\"<a:animated_wrong:947340139359789106> Your Number is 0 or smaller then 0, which is invalid\"",
+				"variable17": "\"<a:animated_wrong:947340139359789106> Your number is 0 or smaller then 0, which is invalid\"",
 
-				"variable18": "`<a:yes:947339988780064859> **Enabled a Ban on \\`${amount}+ Warns\\`**`",
+				"variable18": "`<a:yes:947339988780064859> **Enabled ban on \\`${amount}+ warns\\`**`",
 
-				"variable19": "\"<a:animated_wrong:947340139359789106> Your Time ran out\"",
+				"variable19": "\"<a:animated_wrong:947340139359789106> Your time ran out\"",
 
 				"variable20": "`**Hey ${message.author.username}!**`",
 
@@ -6001,9 +6001,9 @@
 
 				"variable34": "`<a:animated_wrong:947340139359789106> Your Number ${amount} is not added yet!`",
 
-				"variable35": "`<a:yes:947339988780064859> **I removed the Settings for \\`${yeee.roleid}\\` on \\`${yeee.warncount}+ Warns\\`**`",
+				"variable35": "`<a:yes:947339988780064859> **I removed the settings for \\`${yeee.roleid}\\` on \\`${yeee.warncount}+ Warns\\`**`",
 
-				"variable36": "\"<a:animated_wrong:947340139359789106> Your Time ran out\"",
+				"variable36": "\"<a:animated_wrong:947340139359789106> Your time ran out\"",
 
 				"variable37": "\"Settings for the Warn System\"",
 
@@ -8791,7 +8791,7 @@
 
 				"variable2": "`${adminroles.length > 0 ? \"You need one of those Roles: \" + adminroles.map(role => `<@&${role}>`).join(\" | \") + cmdrole.join(\"\")  : `No Admin Roles setup yet! Do it with: \\`${prefix}setup-admin\\``}`",
 
-				"variable3": "`<a:animated_wrong:947340139359789106> Please add a Member you want to unwarn!`",
+				"variable3": "`<a:animated_wrong:947340139359789106> Please add a member you want to unwarn!`",
 
 				"variable4": "`Usage: \\`${prefix}unwarn @User <WARN_ID>\\``",
 
@@ -8981,7 +8981,7 @@
 
 				"variable22": "`${channel}`",
 
-				"variable23": "`**✅ | Suggestion got \\`duplicated\\`!**`",
+				"variable23": "`**✅ | Suggestion is \\`a duplicate\\`!**`",
 
 				"variable24": "`${channel}`",
 
@@ -9121,7 +9121,7 @@
 
 				"variable2": "`${adminroles.length > 0 ? \"You need one of those Roles: \" + adminroles.map(role => `<@&${role}>`).join(\" | \") + cmdrole.join(\"\")  : `No Admin Roles setup yet! Do it with: \\`${prefix}setup-admin\\``}`",
 
-				"variable3": "`<a:animated_wrong:947340139359789106> Please add a Member you want to unwarn!`",
+				"variable3": "`<a:animated_wrong:947340139359789106> Please add a member you want to unwarn!`",
 
 				"variable4": "`Usage: \\`${prefix}unwarn @User <WARN_ID>\\``",
 
@@ -9131,7 +9131,7 @@
 
 				"variable7": "`<a:animated_wrong:947340139359789106> I cannot warn someone who is above/equal you`",
 
-				"variable8": "`<a:animated_wrong:947340139359789106> User has no Warnings`",
+				"variable8": "`<a:animated_wrong:947340139359789106> User has no warnings`",
 
 				"variable9": "`<a:animated_wrong:947340139359789106> Value out of range`",
 
@@ -9195,23 +9195,23 @@
 
 				"variable2": "`${adminroles.length > 0 ? \"You need one of those Roles: \" + adminroles.map(role => `<@&${role}>`).join(\" | \") + cmdrole.join(\"\")  : `No Admin Roles setup yet! Do it with: \\`${prefix}setup-admin\\``}`",
 
-				"variable3": "`<a:animated_wrong:947340139359789106> Please add a Member you want to warn!`",
+				"variable3": "`<a:animated_wrong:947340139359789106> Please add a member you want to warn!`",
 
 				"variable4": "`Usage: \\`${prefix}warn @User [Reason]\\``",
 
-				"variable5": "`<a:animated_wrong:947340139359789106> I cannot warn someone, who is above/equal you`",
+				"variable5": "`<a:animated_wrong:947340139359789106> I cannot warn someone who is above/equal to you`",
 
 				"variable6": "`**You now have: ${warnings.length} Warnings in ${message.guild.name}**\\n**__Reason__**:\\n> ${String(reason).substr(0, 1500)}`",
 
 				"variable7": "`<a:yes:947339988780064859> Warned ${warnmember.user.tag}`",
 
-				"variable8": "`<a:animated_wrong:947340139359789106> The Member is not kickable by me, sorry!`",
+				"variable8": "`<a:animated_wrong:947340139359789106> The member is not kickable by me, sorry!`",
 
-				"variable9": "`<a:yes:947339988780064859> You got kicked by from \\`${message.guild.name}\\` because you've reached ${warnings.length}`",
+				"variable9": "`<a:yes:947339988780064859> You got kicked from \\`${message.guild.name}\\` because you've reached ${warnings.length}`",
 
 				"variable10": "`Reason:\\n> ${reason}`",
 
-				"variable11": "`<a:animated_wrong:947340139359789106> Could not DM the Reason to: \\`${warnmember.user.tag}\\`, cancelled the KICK`",
+				"variable11": "`<a:animated_wrong:947340139359789106> Could not DM the reason to: \\`${warnmember.user.tag}\\`, cancelled the KICK`",
 
 				"variable12": "`${warnmember.user}`",
 
@@ -10565,7 +10565,7 @@
 
 				"variable7": "`Please retry!`",
 
-				"variable8": "`:thumbsup: **Queued :notes: [${track.title}](${track.uri})**`"
+				"variable8": "`:thumbs_up: **Queued** :notes: **[${res.tracks[0].title}](${res.tracks[0].uri})**`"
 
 			},
 
@@ -10587,7 +10587,7 @@
 
 				"variable3": "`Please retry!`",
 
-				"variable4": "`:thumbsup: **Queued :notes: [${res.tracks[0].title}](${res.tracks[0].uri})**`",
+				"variable4": "`:thumbs_up: **Queued** :notes: **[${res.tracks[0].title}](${res.tracks[0].uri})**`",
 
 				"variable5": "`Please retry!`"
 

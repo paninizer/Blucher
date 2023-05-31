@@ -23,7 +23,7 @@ module.exports = async client => {
 
 
         /*
-            if you have several Pools, mongo can use them to send data to them without "blocking" the sending from other datas
+            if you have several pools, mongo can use them to send data to them without "blocking" the sending from other datas
             Aka it will be faster, but needs more ram...
         */
         let dateNow = Date.now();
@@ -104,6 +104,8 @@ module.exports = async client => {
 
             client.backupDB = new client.database.table("backupDB");
 
+						client.guildBlacklist = new client.database.table("guild_blacklist");
+
             client.giveawayDB = new client.database.table("giveawayDB");
             await dbEnsure(client.stats, "global", {
                 commands: 0,
@@ -131,7 +133,7 @@ module.exports = async client => {
         client.database.on("error", async () => {
             console.log("DB ERRORED".bgRed)
             errortrys++;
-            if(errortrys == 5) return console.log(`Can't reconnect, it's above try limimt`.bgRed);
+            if(errortrys == 5) return console.log(`Can't reconnect, it's above try limits`.bgRed);
             await delay(2_000);
             await client.database.connect();
         })
@@ -140,7 +142,7 @@ module.exports = async client => {
         client.database.on("close", async () => {
             console.log("DB CLOSED".bgRed)
             closetrys++;
-            if(closetrys == 5) return console.log(`Can't reconnect, it's above try limimt`.bgRed);
+            if(closetrys == 5) return console.log(`Can't reconnect, it's above try limits`.bgRed);
             await delay(2_000);
             await client.database.connect();
         })
@@ -149,7 +151,7 @@ module.exports = async client => {
         client.database.on("disconnected", async () => {
             console.log("DB DISCONNECTED".bgRed)
             disconnecttrys++;
-            if(disconnecttrys == 5) return console.log(`Can't reconnect, it's above try limimt`.bgRed);
+            if(disconnecttrys == 5) return console.log(`Can't reconnect, it's above try limits`.bgRed);
             await delay(2_000);
             await client.database.connect();
         })

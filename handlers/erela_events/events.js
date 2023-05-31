@@ -19,26 +19,27 @@ playermanager = require("../../handlers/playermanager"),
 playercreated = new Map(),
 collector = false,
 mi;
+
 module.exports = (client) => {
   client.manager
     .on("playerCreate", async (player) => {
-      playercreated.set(player.guild)
+      playercreated.set(player.guildId)
     })
     .on("playerMove", async (player, oldChannel, newChannel) => {
       if (!newChannel) {
         await player.destroy();
       } else {
-        player.voiceChannel = newChannel;
+        player.setVoiceChannel(newChannel.id);
         if (player.paused) return;
         setTimeout(() => {
-          player.pause(true);
-          setTimeout(() => player.pause(false), client.ws.ping * 2);
+          player.pause();
+          setTimeout(() => player.resume(), client.ws.ping * 2);
         }, client.ws.ping * 2);
       }
     })
     .on("playerDestroy", async (player) => {
       
-      if(player.textChannel && player.guild){
+      if(player.textChannel && player.guildId){
         let Queuechannel = await client.getChannel(player.textChannel).catch(() => null)
 
         if(Queuechannel && Queuechannel.permissionsFor(Queuechannel.guild.me).has(Permissions.FLAGS.SEND_MESSAGES)){
@@ -51,16 +52,16 @@ module.exports = (client) => {
             }
           }).catch(() => null)
         }
-        const musicsettings = await client.musicsettings.get(player.guild)
+        const musicsettings = await client.musicsettings.get(player.guildId)
         if(musicsettings.channel && musicsettings.channel.length > 5){
           let messageId = musicsettings.message;
-          let guild = await client.guilds.cache.get(player.guild)
+          let guild = await client.guilds.cache.get(player.guildId)
           if(guild && messageId) {
             let channel = guild.channels.cache.get(musicsettings.channel);
             let message = await channel.messages.fetch(messageId).catch(() => null);
             if(message) {
               //edit the message so that it's right!
-              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guild, true)
+              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guildId, true)
               message.edit(data).catch(() => null)
               if(musicsettings.channel == player.textChannel){
                 return;
@@ -74,29 +75,30 @@ module.exports = (client) => {
     .on("trackStart", async (player, track) => {
       try {
         let edited = false;
-        const Settings = await client.settings.get(player.guild)
-        if(playercreated.has(player.guild)){
-          player.set("eq", "💣 None");
-          player.set("filter", "🧨 None");
+        const Settings = await client.settings.get(player.guildId)
+        if(playercreated.has(player.guildId)){
+          await player.set("eq", "💣 None");
+          await player.set("filter", "🧨 None");
           await player.setVolume(Settings.defaultvolume || 30)
           await player.set("autoplay", Settings.defaultap || false);
-          await player.set(`afk`, false)
+		  await player.setAutoPlay(Settings.defaultap || false);
+          await player.set(`afk`, false);
           if(Settings.defaulteq || false){
             await player.setEQ(client.eqs.music);
           }
-          databasing(client, player.guild, player.get("playerauthor"));
-          playercreated.delete(player.guild); // delete the playercreated state from the thing
+          databasing(client, player.guildId, player.get("playerauthor"));
+          playercreated.delete(player.guildId); // delete the playercreated state from the thing
         }
-        const musicsettings = await client.musicsettings.get(player.guild)
+        const musicsettings = await client.musicsettings.get(player.guildId)
         if(musicsettings.channel && musicsettings.channel.length > 5){
           let messageId = musicsettings.message;
-          let guild = await client.guilds.cache.get(player.guild)
+          let guild = await client.guilds.cache.get(player.guildId)
           if(guild && messageId) {
             let channel = guild.channels.cache.get(musicsettings.channel);
             let message = await channel.messages.fetch(messageId).catch(() => null);
             if(message) {
               //edit the message so that it's right!
-              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guild)
+              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guildId)
               message.edit(data).catch(() => null)
               if(musicsettings.channel == player.textChannel){
                 return;
@@ -125,8 +127,9 @@ module.exports = (client) => {
         }
         //votes for skip --> 0
         player.set("votes", "0");
-        //set the vote of every user to FALSE so if they voteskip it will vote skip and not remove voteskip if they have voted before bruh
-        const guild = client.guilds.cache.get(player.guild)
+        //set the vote of every user to FALSE so if they voteskip it will vote skip and not remove voteskip if they have voted before
+        const guild = client.guilds.cache.get(player.guildId);
+		//console.log(guild);
         for (var userid of guild.members.cache.map(member => member.user.id))
           player.set(`vote-${userid}`, false);
         //set the previous track just have it is used for the autoplay function!
@@ -136,7 +139,7 @@ module.exports = (client) => {
           return;
         }
         // playANewTrack(client,player,track);
-        let playdata = generateQueueEmbed(client, player, track)
+        let playdata = await generateQueueEmbed(client, player, track)
         //Send message with buttons
         let channel = await client.getChannel(player.textChannel).catch(() => null)
         if(channel && channel.permissionsFor(channel.guild.me).has(Permissions.FLAGS.SEND_MESSAGES)){
@@ -145,7 +148,7 @@ module.exports = (client) => {
             return msg;
           })
           //create a collector for the thinggy
-          collector = swapmsg.createMessageComponentCollector({filter: (i) => i?.isButton() && i?.user && i?.message.author?.id == client.user.id, time: track.duration > 0 ? track.duration : 600000 }); //collector for 5 seconds
+          collector = swapmsg.createMessageComponentCollector({filter: (i) => i?.isButton() && i?.user && i?.message.author?.id == client.user.id, time: track.duration > 0 ? track.duration : 600000 }); //collector for song
           //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
           collector.on('collect', async i => {
               let { member } = i;
@@ -182,7 +185,7 @@ module.exports = (client) => {
                 //if ther is nothing more to skip then stop music and leave the Channel
                 if (player.queue.size == 0) {
                   //if its on autoplay mode, then do autoplay before leaving...
-                  if(player.get("autoplay")) return autoplay(client, player, "skip");
+                  if(player.autoPlay) return autoplay(client, player, "skip");
                   i?.reply({
                     embeds: [new MessageEmbed()
                     .setColor(es.color)
@@ -225,9 +228,9 @@ module.exports = (client) => {
 
               //pause/resume
               if(i?.customId == "3") {
-                if (!player.playing){
-                  player.pause(false);
-                  i?.reply({
+                if (player.paused){
+                  await player.resume();
+                  await i?.reply({
                     embeds: [new MessageEmbed()
                     .setColor(es.color)
                     .setTimestamp()
@@ -236,9 +239,9 @@ module.exports = (client) => {
                   })
                 } else{
                   //pause the player
-                  player.pause(true);
-
-                  i?.reply({
+                  await player.pause(true);
+				  //console.log(player.paused);
+                  await i?.reply({
                     embeds: [new MessageEmbed()
                     .setColor(es.color)
                     .setTimestamp()
@@ -257,8 +260,9 @@ module.exports = (client) => {
               //autoplay
               if(i?.customId == "4") {
                 //pause the player
-                player.set(`autoplay`, !player.get(`autoplay`))
-                var data = generateQueueEmbed(client, player, track)
+                player.set(`autoplay`, !player.autoPlay);
+				player.setAutoPlay(!player.autoPlay);
+                var data = await generateQueueEmbed(client, player, track)
                 swapmsg.edit(data).catch((e) => {
                   //console.error(e)
                 })
@@ -266,7 +270,7 @@ module.exports = (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(es.color)
                   .setTimestamp()
-                  .setTitle(`${player.get(`autoplay`) ? `<a:yes:833101995723194437> **Enabled Autoplay**`: `<:no:833101993668771842> **Disabled Autoplay**`}`)
+                  .setTitle(`${player.autoPlay ? `<a:yes:833101995723194437> **Enabled Autoplay**`: `<:no:833101993668771842> **Disabled Autoplay**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
               }
@@ -291,17 +295,13 @@ module.exports = (client) => {
 
               //Songloop
               if(i?.customId == `6`){
-                //if there is active queue loop, disable it + add embed information
-                if (player.queueRepeat) {
-                  player.setQueueRepeat(false);
-                }
-                //set track repeat to revers of old track repeat
-                player.setTrackRepeat(!player.trackRepeat);
+               //set track repeat to revers of old track repeat
+                player.setLoop(!player.loop);
                 i?.reply({
                   embeds: [new MessageEmbed()
                   .setColor(es.color)
                   .setTimestamp()
-                  .setTitle(`${player.trackRepeat ? `<a:yes:833101995723194437> **Enabled Song Loop**`: `<:no:833101993668771842> **Disabled Song Loop**`}`)
+                  .setTitle(`${player.loop ? `<a:yes:947339988780064859> **Enabled Song Loop**`: `<:no:947340139359789106> **Disabled Song Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 var data = generateQueueEmbed(client, player, track)
@@ -323,7 +323,7 @@ module.exports = (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(es.color)
                   .setTimestamp()
-                  .setTitle(`${player.queueRepeat ? `<a:yes:833101995723194437> **Enabled Queue Loop**`: `<:no:833101993668771842> **Disabled Queue Loop**`}`)
+                  .setTitle(`${player.queueRepeat ? `<a:yes:947339988780064859> **Enabled Queue Loop**`: `<a:animated_wrong:947340139359789106> **Disabled Queue Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 var data = generateQueueEmbed(client, player, track)
@@ -338,12 +338,14 @@ module.exports = (client) => {
                 //get the seektime variable of the user input
                 let seektime = Number(player.position) + 10 * 1000;
                 //if the userinput is smaller then 0, then set the seektime to just the player.position
-                if (10 <= 0) seektime = Number(player.position);
+                if (seektime <= player.current.duration - player.position || seektime < 0) {
+                  seektime = 0;
+                }
                 //if the seektime is too big, then set it 1 sec earlier
-                if (Number(seektime) >= player.queue.current.duration) seektime = player.queue.current.duration - 1000;
+                if (Number(seektime) >= player.current.duration) seektime = player.current.duration - 1000;
                 //seek to the new Seek position
                 player.seek(Number(seektime));
-                collector.resetTimer({time: (player.queue.current.duration - player.position) * 1000})
+                collector.resetTimer({time: (player.current.duration - player.position) * 1000})
                 i?.reply({
                   embeds: [new MessageEmbed()
                     .setColor(es.color)
@@ -357,12 +359,12 @@ module.exports = (client) => {
               //Rewind
               if(i?.customId == `9`){
                 let seektime = player.position - 10 * 1000;
-                if (seektime >= player.queue.current.duration - player.position || seektime < 0) {
+                if (seektime >= player.current.duration - player.position || seektime < 0) {
                   seektime = 0;
                 }
                 //seek to the new Seek position
                 player.seek(Number(seektime));
-                collector.resetTimer({time: (player.queue.current.duration - player.position) * 1000})
+                collector.resetTimer({time: (player.current.duration - player.position) * 1000})
                 i?.reply({
                   embeds: [new MessageEmbed()
                     .setColor(es.color)
@@ -392,16 +394,16 @@ module.exports = (client) => {
             }
           }).catch(() => null)
         }
-        const musicsettings = await client.musicsettings.get(player.guild)
+        const musicsettings = await client.musicsettings.get(player.guildId)
         if(musicsettings.channel && musicsettings.channel.length > 5){
           let messageId = musicsettings.message;
-          let guild = await client.guilds.cache.get(player.guild)
+          let guild = await client.guilds.cache.get(player.guildId)
           if(guild && messageId) {
             let channel = guild.channels.cache.get(musicsettings.channel);
             let message = await channel.messages.fetch(messageId).catch(() => null);
             if(message) {
               //edit the message so that it's right!
-              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guild)
+              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guildId)
               message.edit(data).catch(() => null)
               if(musicsettings.channel == player.textChannel){
                 return;
@@ -425,16 +427,16 @@ module.exports = (client) => {
             }
           }).catch(() => null)
         }
-        const musicsettings = await client.musicsettings.get(player.guild)
+        const musicsettings = await client.musicsettings.get(player.guildId)
         if(musicsettings.channel && musicsettings.channel.length > 5){
           let messageId = musicsettings.message;
-          let guild = await client.guilds.cache.get(player.guild)
+          let guild = await client.guilds.cache.get(player.guildId)
           if(guild && messageId) {
             let channel = guild.channels.cache.get(musicsettings.channel);
             let message = await channel.messages.fetch(messageId).catch(() => null);
             if(message) {
               //edit the message so that it's right!
-              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guild)
+              var data = await  require("./musicsystem").generateQueueEmbed(client, player.guildId)
               message.edit(data).catch(() => null)
               if(musicsettings.channel == player.textChannel){
                 return;
@@ -445,23 +447,23 @@ module.exports = (client) => {
       }
     })
     .on("queueEnd", async (player) => {
-      databasing(client, player.guild, player.get("playerauthor"));
+      databasing(client, player.guildId, player.get("playerauthor"));
       if (player.get("autoplay")) return autoplay(client, player);
       //DEvar TIME OUT
       try {
-        player = client.manager.players.get(player.guild);
-        if (!player.queue || !player.queue.current) {
+        player = client.manager.players.get(player.guildId);
+        if (!player.queue || !player.current) {
           
-        const musicsettings = await client.musicsettings.get(player.guild)
+        const musicsettings = await client.musicsettings.get(player.guildId)
         if(musicsettings.channel && musicsettings.channel.length > 5){
           let messageId = musicsettings.message;
-          let guild = await client.guilds.cache.get(player.guild)
+          let guild = await client.guilds.cache.get(player.guildId)
           if(guild && messageId) {
             let channel = guild.channels.cache.get(musicsettings.channel);
             let message = await channel.messages.fetch(messageId).catch(() => null);
             if(message) {
               //edit the message so that it's right!
-              var data = await  await  require("./musicsystem").generateQueueEmbed(client, player.guild, true)
+              var data = await  await  require("./musicsystem").generateQueueEmbed(client, player.guildId, true)
               message.edit(data).catch(() => null)
               if(musicsettings.channel == player.textChannel){
                 return;
@@ -470,8 +472,8 @@ module.exports = (client) => {
           }
         }
           //if afk is enbaled return and not destroy the PLAYER
-          if (player.get(`afk`)){
-            return 
+          if (player.get("afk")){
+            return;
           }
           await player.destroy();
           
@@ -481,31 +483,27 @@ module.exports = (client) => {
       }
     });
 };
-/**
-* @INFO
-* Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
-* @INFO
-* Work for Milrato Development | https://milrato.eu
-* @INFO
-* Please mention Him / Milrato Development, when using this Code!
-* @INFO
-*/
 
 
-function generateQueueEmbed(client, player, track){
+async function generateQueueEmbed(client, player, track){
+  //console.log(track.requester.tag);
+  let author = await client.users.fetch(track.requester.id);
+  //console.log(author.tag);
   var embed = new MessageEmbed().setColor(ee.color)
     embed.setAuthor(client.getAuthor(`${track.title}`, "https://images-ext-1.discordapp.net/external/DkPCBVBHBDJC8xHHCF2G7-rJXnTwj_qs78udThL8Cy0/%3Fv%3D1/https/cdn.discordapp.com/emojis/859459305152708630.gif", track.uri))
     embed.setThumbnail(`https://img.youtube.com/vi/${track.identifier}/mqdefault.jpg`)
-    embed.setFooter(client.getFooter(`Requested by: ${track.requester.tag}`, track.requester.displayAvatarURL({dynamic: true})));
+    embed.setFooter(client.getFooter(`Requested by: ${track.requester.tag}`, author.displayAvatarURL({dynamic: true})));
   let skip = new MessageButton().setStyle('PRIMARY').setCustomId('1').setEmoji(`⏭`).setLabel(`Skip`)
   let stop = new MessageButton().setStyle('DANGER').setCustomId('2').setEmoji(`🏠`).setLabel(`Stop`)
   let pause = new MessageButton().setStyle('SECONDARY').setCustomId('3').setEmoji('⏸').setLabel(`Pause`)
   let autoplay = new MessageButton().setStyle('SUCCESS').setCustomId('4').setEmoji('🔁').setLabel(`Autoplay`)
   let shuffle = new MessageButton().setStyle('PRIMARY').setCustomId('5').setEmoji('🔀').setLabel(`Shuffle`)
-  if (!player.playing) {
+  //console.log(player.paused);
+
+  if (player.paused) {
     pause = pause.setStyle('SUCCESS').setEmoji('▶️').setLabel(`Resume`)
   }
-  if (player.get("autoplay")) {
+  if (player.autoPlay) {
     autoplay = autoplay.setStyle('SECONDARY')
   }
   let songloop = new MessageButton().setStyle('SUCCESS').setCustomId('6').setEmoji(`🔁`).setLabel(`Song`)

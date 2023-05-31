@@ -7,6 +7,8 @@ var ee = require(`../../botconfig/embed.json`);
 const request = require("request");
 const emoji = require(`../../botconfig/emojis.json`);
 const https = require('https');
+
+const axios = require("axios");
 const subreddits = [
   "memes",
   "dankmemes",
@@ -35,56 +37,48 @@ module.exports = {
           ]});
         }
     try {
-      const url = `https://www.reddit.com/r/${getRandomInt(subreddits.length)}/hot/.json?limit=100`;
+		const url = `https://www.reddit.com/r/${subreddits[getRandomInt(subreddits.length)]}/hot/.json?limit=50`;
+		const response = await axios.get(url)
 
-			https.get(url, (result) => {
-            var body = ''
-            result.on('data', (chunk) => {
-                body += chunk
-            })
+		
+							//console.log(response.data);
+                  			var index = response.data.data.children[Math.floor(Math.random() * 49) + 1].data
+                			var image = index.preview.images[0].source.url.replace(/&amp;/g, "&");
+                			var title = index.title
+                			var link = 'https://reddit.com' + index.permalink
+                			var subRedditName = index.subreddit_name_prefixed
 
-            result.on('end', () => {
-                var response = JSON.parse(body)
-                var index = response.data.children[Math.floor(Math.random() * 99) + 1].data
 
-                if (index.post_hint !== 'image') {
+                			if (index.post_hint !== 'image') {
 
-                    var text = index.selftext
-                    const textembed = new Discord.MessageEmbed()
-                        .setTitle(subRedditName)
-                        .setColor(9384170)
-                        .setDescription(`[${title}](${link})\n\n${text}`)
-                        .setURL(`https://reddit.com/${subRedditName}`)
+                    				var text = index.selftext
+                    				const textembed = new Discord.MessageEmbed()
+                        			.setTitle(subRedditName)
+                        			.setColor(9384170)
+                        			.setDescription(`[${title}](${link})\n\n${text}`)
+                        			.setURL(`https://reddit.com/${subRedditName}`)
 
-                    message.channel.send(textembed);
-                }
+                    				await message.channel.send({embeds: [textembed]});
+                			}
 
-                var image = index.preview.images[0].source.url.replace('&amp;', '&')
-                var title = index.title
-                var link = 'https://reddit.com' + index.permalink
-                var subRedditName = index.subreddit_name_prefixed
+                			if (index.post_hint !== 'image') {
+                    				const textembed = new Discord.MessageEmbed()
+                        			.setTitle(subRedditName)
+                        			.setColor(9384170)
+                        			.setDescription(`[${title}](${link})\n\n${text}`)
+                        			.setURL(`https://reddit.com/${subRedditName}`)
 
-                if (index.post_hint !== 'image') {
-                    const textembed = new Discord.RichEmbed()
-                        .setTitle(subRedditName)
-                        .setColor(9384170)
-                        .setDescription(`[${title}](${link})\n\n${text}`)
-                        .setURL(`https://reddit.com/${subRedditName}`)
+                    				await message.channel.send({embeds: [textembed]})
+                			}
+                			//console.log(image);
+                			const imageembed = new Discord.MessageEmbed()
+                    			.setTitle(subRedditName)
+                    			.setImage(image)
+                    			.setColor(9384170)
+                    			.setDescription(`[${title}](${link})`)
+                    			.setURL(`https://reddit.com/${subRedditName}`)
+                			await message.channel.send({embeds: [imageembed]})
 
-                    message.channel.send(textembed)
-                }
-                //console.log(image);
-                const imageembed = new Discord.MessageEmbed()
-                    .setTitle(subRedditName)
-                    .setImage(image)
-                    .setColor(9384170)
-                    .setDescription(`[${title}](${link})`)
-                    .setURL(`https://reddit.com/${subRedditName}`)
-                message.channel.send(imageembed)
-            }).on('error', function (e) {
-                console.log('Got an error: ', e)
-            })
-        })  
     } catch (e) {
       console.log(String(e.stack).grey.bgRed)
       return message.reply({embeds : [new MessageEmbed()

@@ -61,10 +61,10 @@ module.exports = {
                 .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                 .addField(client.la[ls].cmds.info.botinfo.field1.title, `\`\`\`yml\nServers: ${nFormatter(totalGuilds, 2)}\nUsers: ${nFormatter(totalMembers, 2)}\nConnections: ${connectedchannelsamount}\nClusters: ${client.cluster.count}\nShards: ${client.cluster.info.TOTAL_SHARDS}\`\`\``, true)
                 .addField(client.la[ls].cmds.info.botinfo.field2.title, `\`\`\`yml\nNode.js: ${process.version}\nDiscord.js: v${Discord.version}\nEnmap-DB: v5.8.4\`\`\``, true)
-                .addField(client.la[ls].cmds.info.botinfo.field4.title, `\`\`\`yml\nName: Sed#3367\nID: [758696736997900300]\`\`\``, true)
+                .addField(client.la[ls].cmds.info.botinfo.field4.title, `\`\`\`yml\nName: paninizer#8583\nID: [744625722714357800]\`\`\``, true)
                 .setFooter(client.getFooter(es.footertext+ ` ︲ You're on Cluster #${client.cluster.id} and Shard #${message.guild.shard.id}`, es.footericon))
                 .addField(
-                  `${uptime[index] < 1000 || members[index] < 1 || guilds[index] < 1 ? `<:error:862306766338523166>` : `<:online:862306785007632385>`} Cluster #${cluster[index]}${cluster[index] == client.cluster.id ? ` | **Cluster of __this Guild__**` : ``}`, 
+                  `${uptime[index] < 1000 || members[index] < 1 || guilds[index] < 1 ? `<:error:1093260985168576594>` : `<:online:1093261214487937206>`} Cluster #${cluster[index]}${cluster[index] == client.cluster.id ? ` | **Cluster of __this Guild__**` : ``}`, 
                   `\`\`\`yml\n Shards: ${shards[index]}\nServers: ${guilds[index]}\nMembers: ${nFormatter(members[index], 1)}\n Memory: ${ram[index]}mb / ${rssRam[index]}mb\n   Ping: ${ping[index]}ms\nDB-Ping: ${dbPing[index]}ms\nPlayers: ${players[index] ? players[index] : "'None'"}\n Uptime: ${duration(uptime[index]).map(d => d.split(" ")[1] ? d.split(" ")[0] + d.split(" ")[1].slice(0, 1).toLowerCase() : "0m").join("")}\n\`\`\``,
                   false
                 )

@@ -73,13 +73,13 @@ module.exports = {
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["addrole"]["variable6"]))
           .setDescription(eval(client.la[ls]["cmds"]["administration"]["addrole"]["variable7"]))
         ]});
-      if (member.roles.highest.position >= message.member.roles.highest.position)
+      if (member.roles.highest.position >= message.member.roles.highest.position && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id))
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
           .setTitle(eval(client.la[ls]["cmds"]["administration"]["addrole"]["variable8"]))
         ]});
-      if (message.member.roles.highest.position <= role.position)
+      if (message.member.roles.highest.position <= role.position && !config.ownerIDS.concat(message.guild.ownerId).includes(message.author?.id))
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
