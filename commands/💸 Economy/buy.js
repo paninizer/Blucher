@@ -50,7 +50,7 @@ module.exports = {
           case "house": prize = 8000; break;
           case "dirthut": prize = 150; break;
 
-          case "pensil": prize = 20; break;
+          case "pencil": prize = 20; break;
           case "pen": prize = 10; break;
           case "condom": prize = 30; break;
           case "bottle": prize = 50; break;
@@ -63,7 +63,7 @@ module.exports = {
         itemsvalue += prize * data.items[`${itemarray}`];
       }
       //function for yes or no, if its buyable!
-      const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:833101993668771842>" : "<a:yes:833101995723194437>";
+      const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<a:animated_wrong:947340139359789106>" : "<a:yes:947339988780064859>";
       //return some message!
       if (!args[0])
         return message.reply({embeds: [new MessageEmbed()
@@ -72,7 +72,7 @@ module.exports = {
           .setTitle(eval(client.la[ls]["cmds"]["economy"]["buy"]["variable2"]))
           .setDescription(eval(client.la[ls]["cmds"]["economy"]["buy"]["variable3"]))
 .addField("✏️ Useables", ">>> " + 
-`✏️ **\`Pensil [10 💸]\`** | ${p2b(10)}
+`✏️ **\`pencil [10 💸]\`** | ${p2b(10)}
 🖊️ **\`Pen [20 💸]\`** | ${p2b(20)}
 🟪 **\`Condom [30 💸]\`** | ${p2b(30)}
 🍼 **\`Bottle [50 💸]\`** | ${p2b(50)}`
@@ -122,7 +122,7 @@ module.exports = {
         case "house": prize = 8000; break;
         case "dirthut": prize = 150; break;
 
-        case "pensil": prize = 20; break;
+        case "pencil": prize = 20; break;
         case "pen": prize = 10; break;
         case "condom": prize = 30; break;
         case "bottle": prize = 50; break;
@@ -139,8 +139,8 @@ module.exports = {
           .setFooter(user.tag + " | ❌ .. Unable to buy | ✅ ... Possible to buy", user.displayAvatarURL({ dynamic: true }))
           .setTitle(eval(client.la[ls]["cmds"]["economy"]["buy"]["variable6"]))
           .setDescription(eval(client.la[ls]["cmds"]["economy"]["buy"]["variable7"]))
-.addField("✏️ Useables", ">>> " + 
-`✏️ **\`Pensil [10 💸]\`** | ${p2b(10)}
+.addField("✏️ Usables", ">>> " + 
+`✏️ **\`pencil [10 💸]\`** | ${p2b(10)}
 🖊️ **\`Pen [20 💸]\`** | ${p2b(20)}
 🟪 **\`Condom [30 💸]\`** | ${p2b(30)}
 🍼 **\`Bottle [50 💸]\`** | ${p2b(50)}`
@@ -162,7 +162,7 @@ module.exports = {
 🏍️ **\`Motorbike [1500 💸]\`** | ${p2b(1500)}
 🚲 **\`Bicycle [500 💸]\`** | ${p2b(500)}`
 )
-.addField("🏠 Livingarea", ">>> " + 
+.addField("🏠 Living Area", ">>> " + 
 `🏘️ **\`Mansion [45000 💸]\`** | ${p2b(45000)}
 🏠 **\`House [8000 💸]\`** | ${p2b(8000)}
 🟫 **\`Dirthut [150 💸]\`** | ${p2b(150)}`
@@ -197,10 +197,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by Tomato#6966 | https://discord.gg/milrato
+* Bot Coded by paninizer#8583 | Bara no Kōtei
 * @INFO
-* Work for Milrato Development | https://milrato.eu
+* Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
 * @INFO
-* Please mention him / Milrato Development, when using this Code!
+* Please mention them / Panzer Shipyards Development, when using this Code!
 * @INFO
 */

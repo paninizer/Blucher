@@ -115,7 +115,7 @@ module.exports = async (client) => {
                     ]
                 })
             }
-            let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("833101995723194437")
+            let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("947339988780064859")
             interaction.deferUpdate().catch(() => null);
             channel.send({
                 content: `<@${buttonuser.id}>`,
@@ -130,7 +130,7 @@ module.exports = async (client) => {
                 }); //collector for 5 seconds
                 collector.on('collect', async b => {
                     if (b?.user.id !== user.id)
-                        return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                        return b?.reply(`<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
                     //page forward
                     if (b?.customId == "ticket_verify") {
@@ -262,14 +262,14 @@ module.exports = async (client) => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to delete this Ticket")
+                        .setTitle("<a:animated_wrong:947340139359789106> You are not allowed to delete this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                         .addField("Ticket Specific Role(s)/User(s):", `${ticketspecific.join(", ")}`.substring(0, 1024))
                     ]
                 });
             }
             interaction.deferUpdate().catch(() => null);
-            let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("833101995723194437")
+            let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("947339988780064859")
             let msg = await channel.send({
                 content: `<@${buttonuser.id}>`,
                 embeds: [new Discord.MessageEmbed()
@@ -283,7 +283,7 @@ module.exports = async (client) => {
             }); //collector for 5 seconds
             collector.on('collect', async b => {
                 if (b?.user.id !== user.id)
-                    return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                    return b?.reply(`<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
                 //page forward
                 if (b?.customId == "ticket_verify") {
@@ -532,7 +532,7 @@ module.exports = async (client) => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to add/remove Users to/from this Ticket")
+                        .setTitle("<a:animated_wrong:947340139359789106> You are not allowed to add/remove Users to/from this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -728,7 +728,7 @@ module.exports = async (client) => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to add/remove Roles to/from this Ticket")
+                        .setTitle("<a:animated_wrong:947340139359789106> You are not allowed to add/remove Roles to/from this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -921,7 +921,7 @@ module.exports = async (client) => {
                     embeds: [new MessageEmbed()
                         .setColor(es.wrongcolor)
                         .setFooter(client.getFooter(es))
-                        .setTitle("<:no:833101993668771842> You are not allowed to claim this Ticket")
+                        .setTitle("<a:animated_wrong:947340139359789106> You are not allowed to claim this Ticket")
                         .setDescription(`${adminroles.length > 0 ? "You need one of those Roles: " + adminroles.map(role => `<@&${role}>`).join(" | ") + cmdrole.join(" | ") + theadminroles.join(" | ")  : `No Admin Roles Setupped yet! Do it with: \`${prefix}setup-admin\` You can also add Ticket only Roles with \`${prefix}setup-ticket\``}`)
                     ]
                 });
@@ -1037,7 +1037,7 @@ module.exports = async (client) => {
                       if(data)
                       {
                         if(data.state != "closed" && data.menutickettype == 3){
-                          return interaction?.reply({content: `<:no:833101993668771842> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true});
+                          return interaction?.reply({content: `<a:animated_wrong:947340139359789106> **You already have an Ticket!** <#${ticketchannel.id}>`, ephemeral: true});
                         }
                       }
                     } catch (e){
@@ -1178,14 +1178,14 @@ module.exports = async (client) => {
                     .setFooter(client.getFooter(`To close/manage this ticket react with the buttons\nYou can also type: ${guild_settings.prefix || config.prefix}ticket`, es.footericon))
                     .setAuthor(client.getAuthor(`Ticket for: ${user.tag}`, user.displayAvatarURL({
                     dynamic: true
-                    }), "https://discord.gg/milrato"))
+                    }), "Bara no Kōtei"))
                     .setDescription(replyMsg.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
                 var ticketembeds = [ticketembed]
                 if(settings.claim.enabled){
                     var claimEmbed = new MessageEmbed()
                     .setColor("ORANGE").setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
                     .setFooter(client.getFooter(es))
-                    .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "https://discord.gg/milrato"))
+                    .setAuthor(client.getAuthor(`A Staff Member will claim the Ticket soon!`, "https://cdn.discordapp.com/emojis/833101350623117342.gif?size=44", "Bara no Kōtei"))
                     .setDescription(settings.claim.messageOpen.replace(/\{user\}/igu, `${user}`).substring(0, 2000))
                     ticketembeds.push(claimEmbed)
                 }
@@ -1223,7 +1223,7 @@ module.exports = async (client) => {
                         })
                     }
                 }
-                await interaction?.editReply({content: `<a:yes:833101995723194437> **Your Ticket is created!** <#${ch.id}>`, ephemeral: true});
+                await interaction?.editReply({content: `<a:yes:947339988780064859> **Your Ticket is created!** <#${ch.id}>`, ephemeral: true});
                 })
             }
         }

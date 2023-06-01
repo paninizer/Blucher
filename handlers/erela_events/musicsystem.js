@@ -34,18 +34,18 @@ module.exports = async (client) => {
         //now its time to start the music system
         if (!member.voice.channel)
             return interaction?.reply({
-                content: `<:no:833101993668771842> **Please join a Voice Channel first!**`,
+                content: `<a:animated_wrong:947340139359789106> **Please join a Voice Channel first!**`,
                 ephemeral: true
             })      
             
         var player = client.manager.players.get(interaction?.guild.id);
         if (interaction?.customId != "Join" && interaction?.customId != "Leave" && (!player || !player.queue || !player?.queue?.current))
-            return interaction?.reply({content: "<:no:833101993668771842> Nothing Playing yet", ephemeral: true})
+            return interaction?.reply({content: "<a:animated_wrong:947340139359789106> Nothing Playing yet", ephemeral: true})
                         
         //if not connected to the same voice channel, then make sure to connect to it!
         if (player && member.voice.channel.id !== player.voiceChannel)
             return interaction?.reply({
-                content: `<:no:833101993668771842> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`,
+                content: `<a:animated_wrong:947340139359789106> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`,
                 ephemeral: true
             })
         //here use check_if_dj function to check if he is a dj if not then it returns true, and it shall stop!
@@ -54,7 +54,7 @@ module.exports = async (client) => {
                 return interaction?.reply({embeds: [new MessageEmbed()
                   .setColor(ee.wrongcolor)
                   .setFooter({text: `${ee.footertext}`, iconURL: `${ee.footericon}`})
-                  .setTitle(`<:no:833101993668771842> **You are not a DJ and not the Song Requester!**`)
+                  .setTitle(`<a:animated_wrong:947340139359789106> **You are not a DJ and not the Song Requester!**`)
                   .setDescription(`**DJ-ROLES:**\n${dj}`)
                 ],
                 ephemeral: true});
@@ -196,7 +196,7 @@ module.exports = async (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.get(`autoplay`) ? `<a:yes:833101995723194437> **Enabled Autoplay**`: `<:no:833101993668771842> **Disabled Autoplay**`}`)
+                  .setTitle(`${player.get(`autoplay`) ? `<a:yes:947339988780064859> **Enabled Autoplay**`: `<a:animated_wrong:947340139359789106> **Disabled Autoplay**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!
@@ -235,7 +235,7 @@ module.exports = async (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.trackRepeat ? `<a:yes:833101995723194437> **Enabled Song Loop**`: `<:no:833101993668771842> **Disabled Song Loop**`}`)
+                  .setTitle(`${player.trackRepeat ? `<a:yes:947339988780064859> **Enabled Song Loop**`: `<a:animated_wrong:947340139359789106> **Disabled Song Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!
@@ -255,7 +255,7 @@ module.exports = async (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(ee.color)
                   .setTimestamp()
-                  .setTitle(`${player.queueRepeat ? `<a:yes:833101995723194437> **Enabled Queue Loop**`: `<:no:833101993668771842> **Disabled Queue Loop**`}`)
+                  .setTitle(`${player.queueRepeat ? `<a:yes:947339988780064859> **Enabled Queue Loop**`: `<a:animated_wrong:947340139359789106> **Disabled Queue Loop**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
                 //edit the message so that it's right!
@@ -339,13 +339,13 @@ module.exports = async (client) => {
             const [, matchedPrefix] = message.content.match(prefixRegex); //now define the right prefix either ping or not ping
             args = message.content.slice(matchedPrefix.length).trim().split(/ +/); //create the arguments with sliceing of of the rightprefix length
             cmd = args.shift().toLowerCase(); //creating the cmd argument by shifting the args by 1
-            if (cmd || cmd.length === 0) return// message.reply("<:no:833101993668771842> **Please use a Command Somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
+            if (cmd || cmd.length === 0) return// message.reply("<a:animated_wrong:947340139359789106> **Please use a Command Somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
         
             var command = client.commands.get(cmd); //get the command from the collection
             if (!command) command = client.commands.get(client.aliases.get(cmd)); //if the command does not exist, try to get it by his alias
             if (command) //if the command is now valid
             {
-                return// message.reply("<:no:833101993668771842> **Please use a Command Somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
+                return// message.reply("<a:animated_wrong:947340139359789106> **Please use a Command Somewhere else!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
             }
         }
         //getting the Voice Channel Data of the Message Member
@@ -353,11 +353,11 @@ module.exports = async (client) => {
           channel
         } = message.member.voice;
         //if not in a Voice Channel return!
-        if (!channel) return message.reply("<:no:833101993668771842> **Please join a Voice Channel first!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 5000)})
+        if (!channel) return message.reply("<a:animated_wrong:947340139359789106> **Please join a Voice Channel first!**").then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 5000)})
         //get the lavalink erela.js player information
         const player = client.manager.players.get(message.guild.id);
         //if there is a player and the user is not in the same channel as the Bot return information message
-        if (player && channel.id !== player.voiceChannel) return message.reply(`<:no:833101993668771842> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`).then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
+        if (player && channel.id !== player.voiceChannel) return message.reply(`<a:animated_wrong:947340139359789106> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`).then(msg=>{setTimeout(()=>{try{msg.delete().catch(() => null);}catch(e){ }}, 3000)})
 
         
         else {

@@ -37,7 +37,7 @@ module.exports = {
       if(player.get(`autoplay`)){
         try{
           message.react("♾").catch(() => null)
-          message.react("833101995723194437").catch(() => null)
+          message.react("947339988780064859").catch(() => null)
         }catch{ }
       }else {
         try{
@@ -64,10 +64,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by paninizer#8583 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention Him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

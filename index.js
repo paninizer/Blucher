@@ -36,7 +36,7 @@ manager.on("clusterCreate", cluster => {
     })
 
     cluster.on("error", e => {
-        console.log(`${colors.red.bold(`Cluster ${cluster.id} errored ..`)}`);
+        console.log(`${colors.red.bold(`Cluster ${cluster.id} errored..`)}`);
         console.error(e);
     })
     

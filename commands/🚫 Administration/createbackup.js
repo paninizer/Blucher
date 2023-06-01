@@ -16,13 +16,13 @@ module.exports = {
     run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
         if(!message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-            return message.reply("<:no:833101993668771842> **I am missing the ADMINISTRATOR permission!**")
+            return message.reply("<a:animated_wrong:947340139359789106> **I am missing the ADMINISTRATOR permission!**")
         }
         let owner = await message.guild.fetchOwner().catch(e=>{
             return message.reply("Could not get owner of target guild")
         })
         if(owner.id != cmduser.id) {
-            return message.reply(`<:no:833101993668771842> **You need to be the owner of this server!**`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **You need to be the owner of this server!**`)
         }
         
         let adminroles = GuildSettings?.adminroles || [];
@@ -81,10 +81,10 @@ module.exports = {
                         if(backups.length > 5) backups = backups.slice(0, 5);
                         await client.backupDB.set(message.guild.id+".backups",backups)
                         // And send informations to the backup owner
-                        message.author.send(`<a:yes:833101995723194437> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1 is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`).catch(e=>{
-                            message.channel.send(`<a:yes:833101995723194437> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
+                        message.author.send(`<a:yes:947339988780064859> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1 is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`).catch(e=>{
+                            message.channel.send(`<a:yes:947339988780064859> **Backup successfully created.**\n\n**To Load it type:**\n> \`${prefix}loadbackup ${message.guild.id} 1\` ... note 1is the latest backup, the higher the number the older (5 is the highest) \`${prefix}listbackups ${message.guild.id}\`!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
                         }).then(()=>{
-                            message.channel.send(`<a:yes:833101995723194437> **Backup successfully created.** The backup ID was sent in dm!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
+                            message.channel.send(`<a:yes:947339988780064859> **Backup successfully created.** The backup ID was sent in dm!\n\n> *Have you tried: \`${prefix}setup-autobackup\`, to enable auto backups?*`);
                         })
                     }).catch(e=>{
                         console.error(e)

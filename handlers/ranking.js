@@ -1733,7 +1733,7 @@ module.exports = async function (client) {
     })
 
 }
-//Coded by Tomato#6966!
+//Coded by paninizer#8583!
 function shortenLargeNumber(num, digits) {
     var units = ["k", "M", "G", "T", "P", "E", "Z", "Y"],
         decimal;

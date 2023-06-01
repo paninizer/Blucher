@@ -50,14 +50,14 @@ module.exports = {
             await dbEnsure(client.settings, message.guild.id, {
               suggest: {
                 channel: "",
-                approvemsg: `<a:yes:833101995723194437> Accepted Idea! Expect this soon.`,
-                denymsg: `<:no:833101993668771842> Thank you for the feedback, but we are not interested in this idea at this time.`,
+                approvemsg: `<a:yes:947339988780064859> Accepted Idea! Expect this soon.`,
+                denymsg: `<a:animated_wrong:947340139359789106> Thank you for the feedback, but we are not interested in this idea at this time.`,
                 maybemsg: `💡 We are thinking about this idea!`,
                 duplicatemsg: `💢 This is a duplicated Suggestion`,
                 soonmsg: `👌 Expect this Feature Soon!`,
                 statustext: `<a:Loading:833101350623117342> Waiting for Community Feedback, please vote!`,
                 footertext: `Want to suggest / Feedback something? Simply type in this channel!`,
-                approveemoji: `833101995723194437`,
+                approveemoji: `947339988780064859`,
                 denyemoji: `833101993668771842`,
               }
             });

@@ -48,7 +48,7 @@ module.exports = {
       if(!notes || notes.length == 0){
           embeds.push(new MessageEmbed().setColor(es.color)
           .setFooter(client.getFooter(message.author.tag+ ` Page | 0/0`, message.author.displayAvatarURL({dynamic: true})))
-          .setTitle(`<:no:833101993668771842> No Notes created yet`)
+          .setTitle(`<a:animated_wrong:947340139359789106> No Notes created yet`)
           .setDescription(`To create your first Note click on the green Button "\`📋 Create New Note\`"`)
           )
           button_forward.setDisabled(true);
@@ -143,7 +143,7 @@ module.exports = {
                   if(!notes || notes.length == 0){
                       embeds.push(new MessageEmbed().setColor(es.color)
                       .setFooter(client.getFooter(message.author.tag+ ` Page | 0/0`, message.author.displayAvatarURL({dynamic: true})))
-                      .setTitle(`<:no:833101993668771842> No Notes created yet`)
+                      .setTitle(`<a:animated_wrong:947340139359789106> No Notes created yet`)
                       .setDescription(`To create your first Note click on the green Button "\`📋 Create New Note\`"`)
                       )
                       button_forward.setDisabled(true);
@@ -292,7 +292,7 @@ module.exports = {
             var buttonRow1 = new MessageActionRow().addComponents([button_back, button_forward, button_jump, button_empty1, button_list])
             var buttonRow2 = new MessageActionRow().addComponents([button_create, button_edit, button_Delete, button_disable])
             allbuttons = [buttonRow1, buttonRow2]
-            await b?.reply("<:no:833101993668771842> **Disabled the Buttons**", true);
+            await b?.reply("<a:animated_wrong:947340139359789106> **Disabled the Buttons**", true);
             await notemsg.edit({content: `***NOTE BUTTONS DISABLED***`,embeds: [embeds[currentPage]], components: allbuttons}).catch(e=>{console.log(String(e).grey)});
           } 
           //Number Jump
@@ -307,7 +307,7 @@ module.exports = {
               try{mmmmm.delete()}catch(e){console.log(String(e).grey)}
               try{collected.first().delete()}catch(e){console.log(String(e).grey)}
               if(Page < 0 || Page > embeds.length - 1){
-                return message.reply("<:no:833101993668771842> **Value out of Range!**").then(msg=>{
+                return message.reply("<a:animated_wrong:947340139359789106> **Value out of Range!**").then(msg=>{
                   setTimeout(()=>{
                     try{msg.delete()}catch(e){console.log(String(e).grey)}
                   }, 2500)
@@ -362,7 +362,7 @@ module.exports = {
             if(!notes || notes.length == 0){
                 embeds.push(new MessageEmbed().setColor(es.color)
                 .setFooter(client.getFooter(message.author.tag+ ` Page | 0/0`, message.author.displayAvatarURL({dynamic: true})))
-                .setTitle(`<:no:833101993668771842> No Notes created yet`)
+                .setTitle(`<a:animated_wrong:947340139359789106> No Notes created yet`)
                 .setDescription(`To create your first Note click on the green Button "\`📋 Create New Note\`"`)
                 )
                 button_forward.setDisabled(true);
@@ -547,10 +547,10 @@ module.exports = {
 }
 /*
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

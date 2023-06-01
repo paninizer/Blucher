@@ -40,7 +40,7 @@ module.exports = {
         return message.reply({embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Role is not a DJ-Role!**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **This Role is not a DJ-Role!**`)
         ]});
       //remove it from the Database
       let index = djroles.indexOf(role.id);
@@ -70,10 +70,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+  * Bot Coded by paninizer#8583 | Bara no Kōtei
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention them / Panzer Shipyards Development, when using this Code!
   * @INFO
 */

@@ -54,7 +54,7 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This channel is a thread, you can't lock it!**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **This channel is a thread, you can't lock it!**`)
         ]});
 
 
@@ -80,7 +80,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users.length} users and ${roles.length} roles**`)
+            .setTitle(`<a:yes:947339988780064859> **Successfully locked \`${channel.name}\` for ${users.length} users and ${roles.length} roles**`)
           ]});
         } else {
           await channel.permissionOverwrites.set([{
@@ -90,7 +90,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\`**`)
+            .setTitle(`<a:yes:947339988780064859> **Successfully locked \`${channel.name}\`**`)
           ]});
         }
       } else {
@@ -114,14 +114,14 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\` for ${users ? users.length : 0} users and ${roles ? roles.length : 0} roles**`)
+            .setTitle(`<a:yes:947339988780064859> **Successfully locked \`${channel.name}\` for ${users ? users.length : 0} users and ${roles ? roles.length : 0} roles**`)
           ]});
         } else {
           if(channel.permissionOverwrites.cache.filter(permission => permission.allow.toArray().includes("SEND_MESSAGES")).size < 1)
             return message.reply({embeds :[new MessageEmbed()
               .setColor(es.wrongcolor)
               .setFooter(client.getFooter(es))
-              .setTitle(`<:no:833101993668771842> **This Channel is locked!**`)
+              .setTitle(`<a:animated_wrong:947340139359789106> **This Channel is locked!**`)
               .setDescription(`This usually means, that the Channel **PERMISSIONS** are so defined, that __none__ of them are NOT ALLOWING to send a Message!`)
             ]});
           await channel.permissionOverwrites.set(
@@ -150,7 +150,7 @@ module.exports = {
           message.reply({embeds :[new MessageEmbed()
             .setColor(es.color)
             .setFooter(client.getFooter(es))
-            .setTitle(`<a:yes:833101995723194437> **Successfully locked \`${channel.name}\`**`)
+            .setTitle(`<a:yes:947339988780064859> **Successfully locked \`${channel.name}\`**`)
           ]});
         }
       }
@@ -191,10 +191,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

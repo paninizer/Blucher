@@ -84,5 +84,5 @@ async function change_status(client){
   }
 }
 //Improved by paninizer#8583
-//Original by Tomato#6966
+//Original by paninizer#8583
 //Panzer Shipyards Development

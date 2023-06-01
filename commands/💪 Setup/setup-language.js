@@ -46,7 +46,7 @@ module.exports = {
           {
             value: `Change Language`,
             description: "Change the Language of the Bot",
-            emoji: "833101995723194437"
+            emoji: "947339988780064859"
           },
           {
             value: `Reset Language`,
@@ -82,7 +82,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor(client.getAuthor("Language System Setup", 
           "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/flag-united-kingdom_1f1ec-1f1e7.png",
-          "https://discord.gg/milrato"))
+          "Bara no Kōtei"))
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-language"]["variable1"]))
         let used1 = false;
         //send the menu msg
@@ -99,10 +99,10 @@ module.exports = {
         client.on('interactionCreate', async (menu) => {
           if (menu?.message.id === menumsg.id) {
             if (menu?.user.id === cmduser.id) {
-              if(used1) return menu?.reply({content: `<:no:833101993668771842> You already selected something, this Selection is now disabled!`, ephemeral: true})
+              if(used1) return menu?.reply({content: `<a:animated_wrong:947340139359789106> You already selected something, this Selection is now disabled!`, ephemeral: true})
               menuselection(menu);
             }
-            else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+            else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
           }
         });
       }
@@ -159,7 +159,7 @@ module.exports = {
             let currentPage = 0;
             collector.on('collect', async b => {
                 if(b?.user.id !== message.author?.id)
-                  return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}setup-language is allowed to react!**`, true)
+                  return b?.reply(`<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}setup-language is allowed to react!**`, true)
                 if(b?.user.id == message.author?.id && b?.message.id == helpmsg.id && b?.customId.includes("language_")){
                   b?.deferUpdate();
                   console.log(b?.user.id)
@@ -223,10 +223,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

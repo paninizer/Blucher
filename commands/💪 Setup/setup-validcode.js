@@ -37,7 +37,7 @@ module.exports = {
           {
             value: `${GuildSettings.validcode ? "Disable" : "Enable"} Valid Code`,
             description: GuildSettings.validcode ? "Don't do anything with Messages containing Code" : "React to messages containing a Valid Code Snippet",
-            emoji: GuildSettings.validcode ? "833101993668771842" : "833101995723194437"
+            emoji: GuildSettings.validcode ? "833101993668771842" : "947339988780064859"
           },
           {
             value: "Settings",
@@ -68,7 +68,7 @@ module.exports = {
           .setColor(es.color)
           .setAuthor(client.getAuthor("Valid-Code System Setup", 
           "https://cdn.discordapp.com/emojis/858405056238714930.gif?v=1",
-          "https://discord.gg/milrato"))
+          "Bara no Kōtei"))
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-validcode"]["variable1"]))
         let used1 = false;
         //send the menu msg
@@ -85,10 +85,10 @@ module.exports = {
         client.on('interactionCreate', async (menu) => {
           if (menu?.message.id === menumsg.id) {
             if (menu?.user.id === cmduser.id) {
-              if(used1) return menu?.reply({content: `<:no:833101993668771842> You already selected something, this Selection is now disabled!`, ephemeral: true})
+              if(used1) return menu?.reply({content: `<a:animated_wrong:947340139359789106> You already selected something, this Selection is now disabled!`, ephemeral: true})
               menuselection(menu);
             }
-            else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+            else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
           }
         });
       }
@@ -132,10 +132,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

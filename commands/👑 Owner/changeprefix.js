@@ -48,14 +48,14 @@ module.exports = {
         return message.channel.send({embeds: [new MessageEmbed()
           .setFooter(client.getFooter(es))
           .setColor(es.wrongcolor)
-          .setTitle(`<:no:833101993668771842> Something went wrong`)
+          .setTitle(`<a:animated_wrong:947340139359789106> Something went wrong`)
           .setDescription(`\`\`\`${String(e.message ? e.message : e).substring(0, 2000)}\`\`\``)
         ]})
       }
       return message.channel.send({embeds: [new MessageEmbed()
         .setFooter(client.getFooter(es))
         .setColor(es.color)
-        .setTitle(`<a:yes:833101995723194437> Successfully changed the Prefix`)
+        .setTitle(`<a:yes:947339988780064859> Successfully changed the Prefix`)
         .setDescription(`**To change it in this Server use the: \`${prefix}prefix <newprefix>\` Command!**`)
         ]})
     });
@@ -72,10 +72,10 @@ module.exports = {
 };
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+  * Bot Coded by paninizer#8583 | Bara no Kōtei
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention them / Panzer Shipyards Development, when using this Code!
   * @INFO
 */

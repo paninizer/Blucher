@@ -66,7 +66,7 @@ module.exports = {
           .setDescription(eval(client.la[ls]["cmds"]["administration"]["close"]["variable4"]))
         ]});
         let buttonuser = cmduser.user;
-        let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("833101995723194437")
+        let button_ticket_verify = new MessageButton().setStyle('SUCCESS').setCustomId('ticket_verify').setLabel("Verify this Step").setEmoji("947339988780064859")
         let msg = await message.reply({
             content: `<@${buttonuser.id}>`,
             embeds: [new Discord.MessageEmbed()
@@ -80,7 +80,7 @@ module.exports = {
         }); //collector for 5 seconds
         collector.on('collect', async b => {
             if (b?.user.id !== buttonuser.id)
-                return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+                return b?.reply(`<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
 
             //page forward
@@ -257,10 +257,10 @@ module.exports = {
 
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
+ * Bot Coded by paninizer#8583 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

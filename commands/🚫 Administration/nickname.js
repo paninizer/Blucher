@@ -23,7 +23,7 @@ module.exports = {
       if(!message.guild.me.permissions.has([Permissions.FLAGS.MANAGE_NICKNAMES]))      
         return message.reply({embeds : [new MessageEmbed()
           .setColor(es.wrongcolor).setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **I am missing the Permission to Manage Nicknames of others**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **I am missing the Permission to Manage Nicknames of others**`)
         ]})
       //databasing(client, message.guild.id, message.author?.id);
       let adminroles = GuildSettings?.adminroles || [];
@@ -57,14 +57,14 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **You forgot to ping a Member**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **You forgot to ping a Member**`)
           .setDescription(`Usage: \`${prefix}nickname @User newnickname\``)
         ]});
       if(!args[1])
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **You forgot to add a Nickname**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **You forgot to add a Nickname**`)
           .setDescription(`Usage: \`${prefix}nickname @User newnickname\``)
         ]});
       let nickname = args.slice(1).join(" ");
@@ -72,14 +72,14 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **The Nickname must have smaller then 32 Characters**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **The Nickname must have smaller then 32 Characters**`)
           .setDescription(`Usage: \`${prefix}nickname @User newnickname\``)
         ]});
       kickmember.setNickname(nickname).then(member => {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.color)
           .setFooter(client.getFooter(es))
-          .setTitle(`<a:yes:833101995723194437> **Successfully changed the username of \`${kickmember.user.tag}\` to \`${nickname}\`**`)
+          .setTitle(`<a:yes:947339988780064859> **Successfully changed the username of \`${kickmember.user.tag}\` to \`${nickname}\`**`)
         ]});
       }).catch(e=>{
         console.log(String(e.stack).grey.bgRed)
@@ -101,10 +101,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

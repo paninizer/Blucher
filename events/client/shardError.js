@@ -4,10 +4,10 @@ module.exports = (client, error, id) => {
 }
 /**
   * @INFO
-  * Bot Coded by Tomato#6966 | https://discord.gg/dcdev
+  * Bot Coded by paninizer#8583 | https://discord.gg/dcdev
   * @INFO
-  * Work for Milrato Development | https://milrato.eu
+  * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
   * @INFO
-  * Please mention him / Milrato Development, when using this Code!
+  * Please mention them / Panzer Shipyards Development, when using this Code!
   * @INFO
 */

@@ -25,7 +25,7 @@ module.exports = {
 			.setTimestamp()
 			.setThumbnail("https://cdn.discordapp.com/avatars/442355791412854784/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
 			.setTitle(client.la[ls].cmds.info.github?.title)
-			.setURL("https://milrato.eu")
+			.setURL("https://blucher.panzer-chan.repl.co/")
 			.addField("🆕 NEW GITHUB", `> There is now an **Open Source** Version of this Bot on [\`panzer chan\`'s Github](https://github.com/panzer-chan)\n> [Link](https://github.com/panzer-chan/Blucher) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://blucher-web.panzer-chan.repl.co/) and the [WIKI / FAQ](https://blucher-docs.panzer-chan.repl.co/) carefully before opening an [ISSUE](https://github.com/panzer-chan/Blucher/issues/new)`)
 			.setDescription(client.la[ls].cmds.info.github?.description)],
 			components: allbuttons
@@ -34,10 +34,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

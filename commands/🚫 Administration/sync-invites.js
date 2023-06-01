@@ -34,7 +34,7 @@ module.exports = {
         ]})
 
       }
-      let approve = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("833101995723194437").setLabel("YES DO IT!")
+      let approve = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("947339988780064859").setLabel("YES DO IT!")
       let deny = new MessageButton().setStyle('PRIMARY').setCustomId('2').setEmoji("833101993668771842").setLabel("Cancel")
       let awaitedmsg = await message.reply({   
           embeds: [new MessageEmbed()
@@ -152,10 +152,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

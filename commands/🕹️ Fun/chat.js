@@ -53,10 +53,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://milrato.eue
+ * Bot Coded by paninizer#8583 | https://blucher.panzer-chan.repl.co/e
  * @INFO
- * Work for Milrato Development | https://discord.gg/milrato
+ * Work for Panzer Shipyards Development | Bara no Kōtei
  * @INFO
- * Please mention Him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

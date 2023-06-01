@@ -74,7 +74,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
         .setColor(es.color)
-        .setAuthor(client.getAuthor('Owner Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/prohibited_1f6ab.png',  'https://discord.gg/milrato'))
+        .setAuthor(client.getAuthor('Owner Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/prohibited_1f6ab.png',  'Bara no Kōtei'))
         .setDescription(eval(client.la[ls]["cmds"]["owner"]["setup-advertise"]["variable4"]))
         let used1 = false;
         //send the menu msg
@@ -93,10 +93,10 @@ module.exports = {
         client.on('interactionCreate', async (menu) => {
           if (menu?.message.id === menumsg.id) {
             if (menu?.user.id === cmduser.id) {
-              if(used1) return menu?.reply({content : `<:no:833101993668771842> You already selected something, this Selection is now disabled!`, ephermal : true});
+              if(used1) return menu?.reply({content : `<a:animated_wrong:947340139359789106> You already selected something, this Selection is now disabled!`, ephermal : true});
               menuselection(menu);
             }
-            else menu?.reply({content : `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephermal : true});
+            else menu?.reply({content : `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephermal : true});
           }
         });
       }
@@ -289,10 +289,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

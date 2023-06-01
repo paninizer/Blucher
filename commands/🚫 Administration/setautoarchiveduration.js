@@ -51,13 +51,13 @@ module.exports = {
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **This Channel is not a Thread**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **This Channel is not a Thread**`)
         ]});
       if(!args[0])
         return message.reply({embeds :[new MessageEmbed()
           .setColor(es.wrongcolor)
           .setFooter(client.getFooter(es))
-          .setTitle(`<:no:833101993668771842> **You forgot to add a Cooldown amount**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **You forgot to add a Cooldown amount**`)
           .setDescription(`Usage: \`${prefix}setautoarchiveduration <Time in Minutes> [#Thread]\``)
         ]});
       let duration = parseInt(args[0]);
@@ -65,7 +65,7 @@ module.exports = {
       message.reply({embeds :[new MessageEmbed()
         .setColor(es.color)
         .setFooter(client.getFooter(es))
-        .setTitle(`<a:yes:833101995723194437> **Successfully changed the autoarchive Duration to \`${duration}\` of ${channel.name}**`)
+        .setTitle(`<a:yes:947339988780064859> **Successfully changed the autoarchive Duration to \`${duration}\` of ${channel.name}**`)
       ]});
       if (GuildSettings && GuildSettings.adminlog && GuildSettings.adminlog != "no") {
         try {
@@ -97,10 +97,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

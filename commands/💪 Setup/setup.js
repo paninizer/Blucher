@@ -250,7 +250,7 @@ module.exports = {
             .setColor(es.color)
             .setAuthor(client.getAuthor("Setup-Systems", 
             "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/gear_2699.png",
-            "https://discord.gg/milrato"))
+            "Bara no Kōtei"))
             .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup"]["variable1"]))
          
           //send the menu msg

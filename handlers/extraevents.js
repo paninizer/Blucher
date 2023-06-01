@@ -1,4 +1,4 @@
-const { MessageEmbed, MessageActionRow } = require("discord.js");
+﻿const { MessageEmbed, MessageActionRow } = require("discord.js");
 const config = require(`${process.cwd()}/botconfig/config.json`);
 const { CheckGuild, clearDBData, swap_pages_data } = require(`./functions`);
 const { spawn } = require('child_process');
@@ -286,9 +286,9 @@ module.exports = async (client) => {
     let iconURL = authoricon;
     let url = authorurl;
 
-    if(!name || name.length < 1) name = `${client.user.username} | By: Tomato#6966`;
+    if(!name || name.length < 1) name = `${client.user.username} | By: paninizer#8583`;
     if(!iconURL || iconURL.length < 1) iconURL = `${client.user.displayAvatarURL()}`;
-    if(!url || url.length < 1) url = `https://discord.gg/milrato`;
+    if(!url || url.length < 1) url = `Bara no Kōtei`;
 
     //Change the lengths
     iconURL = iconURL.trim();
@@ -423,7 +423,7 @@ module.exports = async (client) => {
       .addField("Servers Bot is in", `>>> \`\`\`${client.guilds.cache.size}\`\`\``)
       .setThumbnail(guild.iconURL({dynamic: true}));
     for await (const owner of config.ownerIDS){
-      //If the Owner is Tomato, and the Bot is in not a Milrato Development, Public Bot, then dont send information!
+      //If the Owner is Tomato, and the Bot is in not a Panzer Shipyards Development, Public Bot, then dont send information!
       if(owner == "442355791412854784"){
         let milratoGuild = client.guilds.cache.get("773668217163218944");
         if(milratoGuild && !milratoGuild.me.roles.cache.has("779021235790807050")){

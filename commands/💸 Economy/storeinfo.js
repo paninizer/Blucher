@@ -48,7 +48,7 @@ module.exports = {
         case "house": prize = 8000; break;
         case "dirthut": prize = 150; break;
     
-        case "pensil": prize = 20; break;
+        case "pencil": prize = 20; break;
         case "pen": prize = 10; break;
         case "condom": prize = 30; break;
         case "bottle": prize = 50; break;
@@ -60,7 +60,7 @@ module.exports = {
       }
       itemsvalue += prize * data.items[`${itemarray}`];
     }
-    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<:no:833101993668771842>" : "<a:yes:833101995723194437>";
+    const p2b = (costs) => (Number(costs) > Number(data.balance)) ? "<a:animated_wrong:947340139359789106>" : "<a:yes:947339988780064859>";
     //return some message!
     return message.reply({embeds: [new MessageEmbed()
       .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
@@ -68,7 +68,7 @@ module.exports = {
       .setTitle(eval(client.la[ls]["cmds"]["economy"]["storeinfo"]["variable3"]))
       .setDescription(eval(client.la[ls]["cmds"]["economy"]["storeinfo"]["variable4"]))
       .addField("✏️ Useables", ">>> " + 
-`✏️ **\`Pensil [10 💸]\`** | ${p2b(10)}
+`✏️ **\`pencil [10 💸]\`** | ${p2b(10)}
 🖊️ **\`Pen [20 💸]\`** | ${p2b(20)}
 🟪 **\`Condom [30 💸]\`** | ${p2b(30)}
 🍼 **\`Bottle [50 💸]\`** | ${p2b(50)}`
@@ -109,10 +109,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by Tomato#6966 | https://discord.gg/milrato
+* Bot Coded by paninizer#8583 | Bara no Kōtei
 * @INFO
-* Work for Milrato Development | https://milrato.eu
+* Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
 * @INFO
-* Please mention him / Milrato Development, when using this Code!
+* Please mention them / Panzer Shipyards Development, when using this Code!
 * @INFO
 */

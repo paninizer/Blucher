@@ -57,7 +57,7 @@ module.exports = {
       if (!role || role == null || role == undefined || role.name == null || role.name == undefined)
         return message.reply({embeds : [
         ]});
-      let button_verify = new MessageButton().setStyle('SUCCESS').setCustomId('deleterole_verify').setLabel("Verify this Step").setEmoji("833101995723194437")
+      let button_verify = new MessageButton().setStyle('SUCCESS').setCustomId('deleterole_verify').setLabel("Verify this Step").setEmoji("947339988780064859")
       let msg = await message.channel.send({
           content: `<@${message.author?.id}>`,
           embeds: [
@@ -73,7 +73,7 @@ module.exports = {
       }); //collector for 5 seconds
       collector.on('collect', async b => {
           if (b?.user.id !== message.author?.id)
-              return b?.reply(`<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, true)
+              return b?.reply(`<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, true)
 
           edited = true;
           msg.edit({
@@ -155,10 +155,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

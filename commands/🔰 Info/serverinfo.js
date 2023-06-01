@@ -62,9 +62,9 @@ module.exports = {
       embed.addField(client.la[ls].cmds.info.serverinfo.field9, "🤖 \`" + message.guild.members.cache.filter(member => member.user.bot).size + "\`", true)
       
 
-      embed.addField("**<:arrow:832598861813776394> Rules Channel:**", `${message.guild.rulesChannel ? `<#${message.guild.rulesChannelId}>`: "<:no:833101993668771842> \`No Channel\`"}`, true)
-      embed.addField("**<:arrow:832598861813776394> Public Updates Channel:**", `${message.guild.publicUpdatesChannel ? `<#${message.guild.publicUpdatesChannelId}>`: "<:no:833101993668771842> \`No Channel\`"}`, true)
-      embed.addField("**<:arrow:832598861813776394> AFK Channel:**", `${message.guild.afkChannel ? `<#${message.guild.afkChannelId}>`: "<:no:833101993668771842> \`No Channel\`"}`, true)
+      embed.addField("**<:arrow:832598861813776394> Rules Channel:**", `${message.guild.rulesChannel ? `<#${message.guild.rulesChannelId}>`: "<a:animated_wrong:947340139359789106> \`No Channel\`"}`, true)
+      embed.addField("**<:arrow:832598861813776394> Public Updates Channel:**", `${message.guild.publicUpdatesChannel ? `<#${message.guild.publicUpdatesChannelId}>`: "<a:animated_wrong:947340139359789106> \`No Channel\`"}`, true)
+      embed.addField("**<:arrow:832598861813776394> AFK Channel:**", `${message.guild.afkChannel ? `<#${message.guild.afkChannelId}>`: "<a:animated_wrong:947340139359789106> \`No Channel\`"}`, true)
 
       embed.addField("**<:arrow:832598861813776394> NSFW Level:**", `\`${message.guild.nsfwLevel}\``, true)
       embed.addField("**<:arrow:832598861813776394> Verifcation Level:**", `\`${message.guild.verificationLevel}\``, true)
@@ -77,7 +77,7 @@ module.exports = {
       embed.addField(client.la[ls].cmds.info.serverinfo.field13, `<a:nitro:833402717506502707> \`${boostlevel}\``, true)
       embed.addField(client.la[ls].cmds.info.serverinfo.field14, "👾 \`" + maxbitrate + " kbps\`", true)
       if(boosts >= 14){
-          embed.addField(`**<:arrow:832598861813776394> Vanity:**`, `${message.guild.vanityURLCode ? `https://discord.gg/${message.guild.vanityURLCode}` : "<:no:833101993668771842> No Vanity-Invite"}`)
+          embed.addField(`**<:arrow:832598861813776394> Vanity:**`, `${message.guild.vanityURLCode ? `https://discord.gg/${message.guild.vanityURLCode}` : "<a:animated_wrong:947340139359789106> No Vanity-Invite"}`)
       }
 
       let embeds = [];
@@ -139,10 +139,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

@@ -216,7 +216,7 @@ module.exports = async client => {
                             new MessageEmbed()
                                 .setColor(ee.color)
                                 .setThumbnail(member.guild.iconURL({ dynamic: true }))
-                                .setAuthor(client.getAuthor(`Giveaway Entry Confirmed`, `https://cdn.discordapp.com/emojis/833101995723194437.gif?size=128`))
+                                .setAuthor(client.getAuthor(`Giveaway Entry Confirmed`, `https://cdn.discordapp.com/emojis/947339988780064859.gif?size=128`))
                                 .setDescription(`> **Your entry for [this Giveaway](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) has been confirmed.**\n\n**Prize:**\n> ${giveaway.prize}\n\n**Winnersamount:**\n> \`${giveaway.winnerCount}\`\n\n**Your Bonus Entries**\n> \`${BonusEntries}\`\n\n> Go back to the Channel: <#${giveaway.channelId}>`)
                                 .setFooter(client.getFooter(member.guild.name, member.guild.iconURL({ dynamic: true })))
                         ]
@@ -233,7 +233,7 @@ module.exports = async client => {
                             new MessageEmbed()
                                 .setColor(ee.wrongcolor)
                                 .setThumbnail(member.guild.iconURL({ dynamic: true }))
-                                .setAuthor(client.getAuthor(`Giveaway Left!`, `https://cdn.discordapp.com/emojis/833101995723194437.gif?size=128`))
+                                .setAuthor(client.getAuthor(`Giveaway Left!`, `https://cdn.discordapp.com/emojis/947339988780064859.gif?size=128`))
                                 .setDescription(`> **You left [this Giveaway](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) and aren't participating anymore.**\n\n> Go back to the Channel: <#${giveaway.channelId}>`)
                                 .setFooter(client.getFooter(member.guild.name, member.guild.iconURL({ dynamic: true })))
                         ]
@@ -251,7 +251,7 @@ module.exports = async client => {
                             new MessageEmbed()
                                 .setColor(ee.color)
                                 .setThumbnail(winner.guild.iconURL({ dynamic: true }))
-                                .setAuthor(client.getAuthor(`Giveaway Won!`, `https://cdn.discordapp.com/emojis/833101995723194437.gif?size=128`))
+                                .setAuthor(client.getAuthor(`Giveaway Won!`, `https://cdn.discordapp.com/emojis/947339988780064859.gif?size=128`))
                                 .setDescription(`> **You won [this Giveaway](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}), congrats!**\n\n> Go to the Channel: <#${giveaway.channelId}>\n\n**Prize:**\n> ${giveaway.prize}`)
                                 .setFooter(client.getFooter(winner.guild.name, winner.guild.iconURL({ dynamic: true })))
                         ]
@@ -267,7 +267,7 @@ module.exports = async client => {
                             new MessageEmbed()
                                 .setColor(ee.wrongcolor)
                                 .setThumbnail(winner.guild.iconURL({ dynamic: true }))
-                                .setAuthor(client.getAuthor(`Giveaway Won!`, `https://cdn.discordapp.com/emojis/833101995723194437.gif?size=128`))
+                                .setAuthor(client.getAuthor(`Giveaway Won!`, `https://cdn.discordapp.com/emojis/947339988780064859.gif?size=128`))
                                 .setDescription(`> **You won [this Giveaway](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}), congrats!**\n\n> Go to the Channel: <#${giveaway.channelId}>\n\n**Prize:**\n> ${giveaway.prize}`)
                                 .setFooter(client.getFooter(winner.guild.name, winner.guild.iconURL({ dynamic: true })))
                         ]

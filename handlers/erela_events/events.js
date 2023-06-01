@@ -155,16 +155,16 @@ module.exports = (client) => {
               const { channel } = member.voice
               const player = client.manager.players.get(i?.guild.id);
               if (!player)
-                return i?.reply({content: "<:no:833101993668771842> Nothing Playing yet", ephemeral: true})
+                return i?.reply({content: "<a:animated_wrong:947340139359789106> Nothing Playing yet", ephemeral: true})
                 
               if (!channel)
                 return i?.reply({
-                  content: `<:no:833101993668771842> **Please join a Voice Channel first!**`,
+                  content: `<a:animated_wrong:947340139359789106> **Please join a Voice Channel first!**`,
                   ephemeral: true
                 })                  
               if (channel.id !== player.voiceChannel)
                 return i?.reply({
-                  content: `<:no:833101993668771842> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`,
+                  content: `<a:animated_wrong:947340139359789106> **Please join __my__ Voice Channel first! <#${player.voiceChannel}>**`,
                   ephemeral: true
                 })
               const es = Settings.embed || ee;
@@ -173,7 +173,7 @@ module.exports = (client) => {
                 return i?.reply({embeds: [new MessageEmbed()
                   .setColor(es.wrongcolor)
                   .setFooter(client.getFooter(es))
-                  .setTitle(`<:no:833101993668771842> **You are not a DJ and not the Song Requester!**`)
+                  .setTitle(`<a:animated_wrong:947340139359789106> **You are not a DJ and not the Song Requester!**`)
                   .setDescription(`**DJ-ROLES:**\n${dj}`)
                 ],
                 ephemeral: true});
@@ -270,7 +270,7 @@ module.exports = (client) => {
                   embeds: [new MessageEmbed()
                   .setColor(es.color)
                   .setTimestamp()
-                  .setTitle(`${player.autoPlay ? `<a:yes:833101995723194437> **Enabled Autoplay**`: `<:no:833101993668771842> **Disabled Autoplay**`}`)
+                  .setTitle(`${player.autoPlay ? `<a:yes:947339988780064859> **Enabled Autoplay**`: `<a:animated_wrong:947340139359789106> **Disabled Autoplay**`}`)
                   .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({dynamic: true})))]
                 })
               }

@@ -18,7 +18,7 @@ module.exports = {
         
         let server = client.guilds.cache.get(args[0]) || message.guild;
         if(!server.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-            return message.reply(`<:no:833101993668771842> **I am missing the ADMINISTRATOR Permission in ${server.name}!**`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **I am missing the ADMINISTRATOR Permission in ${server.name}!**`)
         }
         let adminroles = GuildSettings?.adminroles || [];
         let cmdroles = GuildSettings?.cmdadminroles?.listbackups || [];
@@ -51,7 +51,7 @@ module.exports = {
         })
         let backups = client.backupDB.get(server.id, "backups")
         if(!backups || backups.length == 0) {
-            return message.reply(`<:no:833101993668771842> **There are no Backups in ${server.name}**`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **There are no Backups in ${server.name}**`)
         }
         message.reply({embeds: [
             new MessageEmbed()

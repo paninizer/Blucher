@@ -220,7 +220,7 @@ function isValidURL(string) {
   return url;
 };
 async function GetUser(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that User...";
+  var errormessage = "<a:animated_wrong:947340139359789106> I failed finding that User...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -233,11 +233,11 @@ async function GetUser(message, arg){
     }
     /**
      * @INFO
-     * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+     * Bot Coded by paninizer#8583 | Bara no Kōtei
      * @INFO
-     * Work for Milrato Development | https://milrato.eu
+     * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
      * @INFO
-     * Please mention him / Milrato Development, when using this Code!
+     * Please mention them / Panzer Shipyards Development, when using this Code!
      * @INFO
      */
     
@@ -262,7 +262,7 @@ async function GetUser(message, arg){
   })
 }
 async function GetRole(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that Role...";
+  var errormessage = "<a:animated_wrong:947340139359789106> I failed finding that Role...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -289,7 +289,7 @@ async function GetRole(message, arg){
 }
 
 async function GetGlobalUser(message, arg){
-  var errormessage = "<:no:833101993668771842> I failed finding that User...";
+  var errormessage = "<a:animated_wrong:947340139359789106> I failed finding that User...";
   return new Promise(async (resolve, reject) => {
     var args = arg, client = message.client;
     if(!client || !message) return reject("CLIENT IS NOT DEFINED")
@@ -480,11 +480,11 @@ async function edit_Roster_msg(client, guild, the_roster_db, pre) {
         }
         /**
          * @INFO
-         * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+         * Bot Coded by paninizer#8583 | Bara no Kōtei
          * @INFO
-         * Work for Milrato Development | https://milrato.eu
+         * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
          * @INFO
-         * Please mention him / Milrato Development, when using this Code!
+         * Please mention them / Panzer Shipyards Development, when using this Code!
          * @INFO
          */
         
@@ -1420,11 +1420,11 @@ async function swap_pages(client, message, description, TITLE) {
   let cmduser = message.author;
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */
 
@@ -1486,7 +1486,7 @@ async function swap_pages(client, message, description, TITLE) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== message.author?.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1593,7 +1593,7 @@ async function swap_pages_data(client, message, description, TITLE, T_cmd = "Unk
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== message.author?.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed the cmd is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<a:animated_wrong:947340139359789106> **Only the one who typed the cmd is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1679,7 +1679,7 @@ async function swap_pages2(client, message, embeds, tempmsg = false) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== message.author?.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -1761,7 +1761,7 @@ async function swap_pages2_interaction(client, interaction, embeds) {
   //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
   collector.on('collect', async b => {
       if(b?.user.id !== cmduser.id)
-        return b?.reply({content: `<:no:833101993668771842> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
+        return b?.reply({content: `<a:animated_wrong:947340139359789106> **Only the one who typed ${prefix}help is allowed to react!**`, ephemeral: true})
         //page forward
         if(b?.customId == "1") {
           collector.resetTimer();
@@ -2676,7 +2676,7 @@ async function ensure_economy_user(client, guildid, userid){
         yacht: 0, lamborghini: 0, car: 0, motorbike: 0,  bicycle: 0,
         nike: 0, tshirt: 0,
         mansion: 0, house: 0, dirthut: 0,
-        pensil: 0, pen: 0, condom: 0, bottle: 0,
+        pencil: 0, pen: 0, condom: 0, bottle: 0,
         fish: 0, hamster: 0, dog: 0, cat: 0,     
       },
       black_market: {
@@ -2842,11 +2842,11 @@ const channelInfo = (url, options = {}) => __awaiter(void 0, void 0, void 0, fun
     }
     /**
      * @INFO
-     * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+     * Bot Coded by paninizer#8583 | Bara no Kōtei
      * @INFO
-     * Work for Milrato Development | https://milrato.eu
+     * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
      * @INFO
-     * Please mention him / Milrato Development, when using this Code!
+     * Please mention them / Panzer Shipyards Development, when using this Code!
      * @INFO
      */
     

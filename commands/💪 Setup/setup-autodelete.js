@@ -63,7 +63,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
           .setColor(es.color)
-          .setAuthor(client.getAuthor('Auto Delete Setup', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'https://discord.gg/milrato'))
+          .setAuthor(client.getAuthor('Auto Delete Setup', 'https://cdn.discordapp.com/emojis/834052497492410388.gif?size=96', 'Bara no Kōtei'))
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         let used1 = false;
         //send the menu msg
@@ -83,11 +83,11 @@ module.exports = {
             used1 = true;
             handle_the_picks(menu?.values[0], menuoptiondata)
           }
-          else menu?.reply({content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
+          else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
         collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:833101995723194437> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
         });
       }
       async function handle_the_picks(optionhandletype, menuoptiondata) {
@@ -122,7 +122,7 @@ module.exports = {
                     a = await client.setups.get(message.guild.id+".autodelete") || [];
                     if(a.map(d => d.id).includes(channel.id))
                       return message.reply({embeds: [new Discord.MessageEmbed()
-                        .setTitle(`<:no:833101993668771842> This Channel is already Setupped!`)
+                        .setTitle(`<a:animated_wrong:947340139359789106> This Channel is already Setupped!`)
                         .setDescription(`Remove it first with \`${prefix}setup-autodelete\` --> Then Pick Remove!`)
                         .setColor(es.color)
                         .setFooter(client.getFooter(es))
@@ -131,21 +131,21 @@ module.exports = {
                     var time = Number(args[1])
                     if(!time || isNaN(time))
                       return message.reply({embeds: [new Discord.MessageEmbed()
-                        .setTitle(`<:no:833101993668771842> Invalid Input | Time wrong`)
+                        .setTitle(`<a:animated_wrong:947340139359789106> Invalid Input | Time wrong`)
                         .setDescription(`You probably forgot / didn't add a Time!\nTry this: \`${channel.id} 30\``)
                         .setColor(es.color)
                         .setFooter(client.getFooter(es))
                       ]});
                     if(time > 60*60 || time < 3)
                       return message.reply({embeds: [new Discord.MessageEmbed()
-                        .setTitle(`<:no:833101993668771842> Time out of Range!`)
+                        .setTitle(`<a:animated_wrong:947340139359789106> Time out of Range!`)
                         .setDescription(`The longest Amount is 1 hour aka 3600 Seconds and the Time must be at least 3 Seconds long!`)
                         .setColor(es.color)
                         .setFooter(client.getFooter(es))
                       ]});
                     await client.setups.push(message.guild.id+".autodelete", { id: channel.id, delay: time * 1000 })
                     return message.reply({embeds: [new Discord.MessageEmbed()
-                      .setTitle(`<a:yes:833101995723194437> I will now delete Messages after \`${time} Seconds\` in **${channel.name}**`)
+                      .setTitle(`<a:yes:947339988780064859> I will now delete Messages after \`${time} Seconds\` in **${channel.name}**`)
                       .setColor(es.color)
                       .setFooter(client.getFooter(es))
                     ]});
@@ -200,13 +200,13 @@ module.exports = {
                     a = await client.setups.get(message.guild.id+".autodelete") || [];
                     if(!a.map(d => d.id).includes(channel.id))
                     return message.reply({embeds: [new Discord.MessageEmbed()
-                      .setTitle(`<:no:833101993668771842> This Channel has not been Setup yet!`)
+                      .setTitle(`<a:animated_wrong:947340139359789106> This Channel has not been Setup yet!`)
                       .setColor(es.color)
                       .setFooter(client.getFooter(es))
                     ]});
                     await dbRemove(client.setups, message.guild.id+".autodelete", d => d.id == channel.id)
                     return message.reply({embeds: [new Discord.MessageEmbed()
-                      .setTitle(`<a:yes:833101995723194437> Successfully removed **${channel.name}** out of the Setup!`)
+                      .setTitle(`<a:yes:947339988780064859> Successfully removed **${channel.name}** out of the Setup!`)
                       .setColor(es.color)
                       .setFooter(client.getFooter(es))
                     ]});
@@ -294,10 +294,10 @@ function getNumberEmojis() {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

@@ -44,3 +44,8 @@ databaseUri.json
 
 /botconfig
 config.json
+.vs/Blucher/FileContentIndex/ca876a16-0588-4fa0-8eec-e378e3bfb557.vsidx
+*.vsidx
+*.lock
+.vs/Blucher/v17/.wsuo
+.vs/ProjectSettings.json

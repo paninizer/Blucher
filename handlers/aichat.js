@@ -38,7 +38,7 @@ module.exports = async (client) => {
                   message.channel.send({content: data.cnt}).catch(() => null)
                 });
               }catch (e){
-                message.channel.send({content: "<:no:833101993668771842> AI CHAT API IS DOWN"}).catch(() => null)
+                message.channel.send({content: "<a:animated_wrong:947340139359789106> AI CHAT API IS DOWN"}).catch(() => null)
               }
             }
         }catch(e){console.log(String(e).grey)}
@@ -140,6 +140,6 @@ module.exports = async (client) => {
     })
 }
 
-//Improved by paninizer#8583
-//Original by Tomato#6966
+//Improved by Tomato#6966
+//Original by paninizer#8583
 //Panzer Shipyards Development

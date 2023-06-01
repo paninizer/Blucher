@@ -17,12 +17,12 @@ module.exports = {
     run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     
         let server = await client.getGuildData(args[0]);
-        if(!server) return message.reply(`<:no:833101993668771842> **You forgot to add from which Server i should load the Backup in here**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
+        if(!server) return message.reply(`<a:animated_wrong:947340139359789106> **You forgot to add from which Server i should load the Backup in here**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
         if(message.guild.me && !message.guild.me.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
-            return message.reply(`<:no:833101993668771842> **I am missing the ADMINISTRATOR Permission in ${message.guild.name}!**`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **I am missing the ADMINISTRATOR Permission in ${message.guild.name}!**`)
         }
         if(server.ownerId != cmduser.id || message.guild.ownerId != cmduser.id) {
-            return message.reply(`<:no:833101993668771842> **You need to be Owner in both Servers!**`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **You need to be Owner in both Servers!**`)
         }
         
         let adminroles = GuildSettings?.adminroles || [];
@@ -56,16 +56,16 @@ module.exports = {
         })
         let backups = await client.backupDB.get(server.id+".backups")
         if(!backups || backups.length == 0) {
-            return message.reply(`<:no:833101993668771842> **There are no Backups in ${server.name}**\nCreate one with: \`${prefix}createbackup\``)
+            return message.reply(`<a:animated_wrong:947340139359789106> **There are no Backups in ${server.name}**\nCreate one with: \`${prefix}createbackup\``)
         }
-        if(!args[1]) return message.reply(`<:no:833101993668771842> **You forgot to add the Backup Id**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
-        if(isNaN(args[1]) || Number(args[1]) < 1 || Number(args[1]) > 5) return message.reply(`<:no:833101993668771842> **The Backup Id Must be a Number between 1 and 5**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
+        if(!args[1]) return message.reply(`<a:animated_wrong:947340139359789106> **You forgot to add the Backup Id**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
+        if(isNaN(args[1]) || Number(args[1]) < 1 || Number(args[1]) > 5) return message.reply(`<a:animated_wrong:947340139359789106> **The Backup Id Must be a Number between 1 and 5**\n> Type: \`${prefix}loadbackup <ServerId> <BackupId>\``)
         if(backups.length < Number(args[1])) {
-            return message.reply(`<:no:833101993668771842> **The Provided Backup Id does not exist!**\n> Type: \`${prefix}listbackups\` to see all Backups`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **The Provided Backup Id does not exist!**\n> Type: \`${prefix}listbackups\` to see all Backups`)
         }
         let backupData = backups[Number(args[1]) - 1];
         if(!backupData) {
-            return message.reply(`<:no:833101993668771842> **The __Provided__ Backup Id does not exist!**\n> Type: \`${prefix}listbackups\` to see all Backups`)
+            return message.reply(`<a:animated_wrong:947340139359789106> **The __Provided__ Backup Id does not exist!**\n> Type: \`${prefix}listbackups\` to see all Backups`)
         }
         if(Array.isArray(backupData)) backupData = backupData[0];
         message.channel.send({

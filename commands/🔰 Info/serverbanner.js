@@ -26,7 +26,7 @@ module.exports = {
         message.reply({embeds: [embed]})
       } else {
         let embed = new Discord.MessageEmbed()
-          .setTitle(`<:no:833101993668771842> **This Server has no Banner!**`)
+          .setTitle(`<a:animated_wrong:947340139359789106> **This Server has no Banner!**`)
           .setColor(es.color)
           .setFooter(client.getFooter(es))
           .setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
@@ -45,10 +45,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

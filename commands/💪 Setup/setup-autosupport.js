@@ -112,7 +112,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
           .setColor(es.color)
-          .setAuthor(client.getAuthor('Auto Support Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/envelope_2709-fe0f.png', 'https://discord.gg/milrato'))
+          .setAuthor(client.getAuthor('Auto Support Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/envelope_2709-fe0f.png', 'Bara no Kōtei'))
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
           
         //send the menu msg
@@ -137,7 +137,7 @@ module.exports = {
             theDB = client.autosupport; //change to the right database
             second_layer()
           } else menu?.reply({
-            content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -146,7 +146,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<a:yes:833101995723194437> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<a:yes:947339988780064859> **Selected: \`${collected && collected.first() && collected.first().values ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -209,7 +209,7 @@ module.exports = {
         //define the embed
         let MenuEmbed = new Discord.MessageEmbed()
           .setColor(es.color)
-          .setAuthor(client.getAuthor('Auto Support Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/question-mark_2753.png', 'https://discord.gg/milrato'))
+          .setAuthor(client.getAuthor('Auto Support Setup', 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/298/question-mark_2753.png', 'Bara no Kōtei'))
           .setDescription(eval(client.la[ls]["cmds"]["setup"]["setup-ticket"]["variable2"]))
         //send the menu msg
         let menumsg = await message.reply({
@@ -230,7 +230,7 @@ module.exports = {
             client.disableComponentMessage(menu);
             handle_the_picks(menu?.values[0], menuoptiondata)
           } else menu?.reply({
-            content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`,
+            content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`,
             ephemeral: true
           });
         });
@@ -239,7 +239,7 @@ module.exports = {
           menumsg.edit({
             embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
             components: [],
-            content: `<a:yes:833101995723194437> **Selected: \`${collected && collected.first() && collected.first().values.length > 0 ? collected.first().values[0] : "Nothing"}\`**`
+            content: `<a:yes:947339988780064859> **Selected: \`${collected && collected.first() && collected.first().values.length > 0 ? collected.first().values[0] : "Nothing"}\`**`
           })
         });
       }
@@ -249,7 +249,7 @@ module.exports = {
             let settings = await theDB.get(`${message.guild.id}.${pre}`);
             let data = settings?.data;
             if (!data || data.length < 1) {
-              return message.reply("<:no:833101993668771842> **You need to add at least 1 Auto-Support-Option**")
+              return message.reply("<a:animated_wrong:947340139359789106> **You need to add at least 1 Auto-Support-Option**")
             }
             let tempmsg = await message.reply({
               embeds: [
@@ -338,10 +338,10 @@ module.exports = {
                   message.reply(`Successfully Setupped the Auto-Support-System in <#${channel.id}>`)
                 });
               } else {
-                return message.reply("<:no:833101993668771842> **You did not ping a valid Channel!**")
+                return message.reply("<a:animated_wrong:947340139359789106> **You did not ping a valid Channel!**")
               }
             } else {
-              return message.reply("<:no:833101993668771842> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<a:animated_wrong:947340139359789106> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
@@ -349,7 +349,7 @@ module.exports = {
             let settings = await theDB.get(`${message.guild.id}.${pre}`);
             let data = settings?.data;
             if (data.length >= 25) {
-              return message.reply("<:no:833101993668771842> **You reached the limit of 25 different Options!** Remove another Option first!")
+              return message.reply("<a:animated_wrong:947340139359789106> **You reached the limit of 25 different Options!** Remove another Option first!")
             }
             //ask for value and description
             let tempmsg = await message.reply({
@@ -366,11 +366,11 @@ module.exports = {
               time: 90000, errors: ["time"]
             });
             if (collected && collected.first().content) {
-              if (!collected.first().content.includes("++")) return message.reply("<:no:833101993668771842> **Invalid Usage! Please mind the Usage and check the Example**")
+              if (!collected.first().content.includes("++")) return message.reply("<a:animated_wrong:947340139359789106> **Invalid Usage! Please mind the Usage and check the Example**")
               let value = collected.first().content.split("++")[0].trim().substring(0, 25);
               let index2 = data.findIndex(v => v.value == value);
               if(index2 >= 0 && index != index2) {
-                  return message.reply("<:no:833101993668771842> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
+                  return message.reply("<a:animated_wrong:947340139359789106> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
               }
               let description = collected.first().content.split("++")[1].trim().substring(0, 50);
               let tempmsg = await message.reply({
@@ -481,7 +481,7 @@ module.exports = {
                   }
                   
                 } else {
-                  return message.reply("<:no:833101993668771842> **You did not enter a Valid Message in Time! CANCELLED!**")
+                  return message.reply("<a:animated_wrong:947340139359789106> **You did not enter a Valid Message in Time! CANCELLED!**")
                 }
               }
             })
@@ -490,11 +490,11 @@ module.exports = {
               tempmsg.edit({
                 embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)],
                 components: [],
-                content: `<a:yes:833101995723194437> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
+                content: `<a:yes:947339988780064859> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
               })
             });
             } else {
-              return message.reply("<:no:833101993668771842> **You did not enter a Valid Message in Time! CANCELLED!**")
+              return message.reply("<a:animated_wrong:947340139359789106> **You did not enter a Valid Message in Time! CANCELLED!**")
             }
           }
           break;
@@ -502,7 +502,7 @@ module.exports = {
             let settings = await theDB.get(`${message.guild.id}.${pre}`);
             let data = settings?.data;
             if (!data || data.length < 1) {
-              return message.reply("<:no:833101993668771842> **There are no Open-Ticket-Options to edit**")
+              return message.reply("<a:animated_wrong:947340139359789106> **There are no Open-Ticket-Options to edit**")
             }
             let embed = new MessageEmbed()
               .setColor(es.color)
@@ -578,11 +578,11 @@ module.exports = {
                   time: 90000, errors: ["time"]
                 });
                 if (collected && collected.first().content) {
-                  if (!collected.first().content.includes("++")) return message.reply("<:no:833101993668771842> **Invalid Usage! Please mind the Usage and check the Example**")
+                  if (!collected.first().content.includes("++")) return message.reply("<a:animated_wrong:947340139359789106> **Invalid Usage! Please mind the Usage and check the Example**")
                   let value = collected.first().content.split("++")[0].trim().substring(0, 25);
                   let index2 = data.findIndex(v => v.value == value);
                   if(index2 >= 0 && index != index2) {
-                      return message.reply("<:no:833101993668771842> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
+                      return message.reply("<a:animated_wrong:947340139359789106> **Options can't have the SAME VALUE!** There is already an Option with that Value!");
                   }
                   let description = collected.first().content.split("++")[1].trim().substring(0, 50);
                   let tempmsg = await message.reply({
@@ -687,7 +687,7 @@ module.exports = {
                       }
                       
                     } else {
-                      return message.reply("<:no:833101993668771842> **You did not enter a Valid Message in Time! CANCELLED!**")
+                      return message.reply("<a:animated_wrong:947340139359789106> **You did not enter a Valid Message in Time! CANCELLED!**")
                     }
                   }
                 })
@@ -696,14 +696,14 @@ module.exports = {
                   tempmsg.edit({
                     embeds: [tempmsg.embeds[0].setDescription(`~~${tempmsg.embeds[0].description}~~`)],
                     components: [],
-                    content: `<a:yes:833101995723194437> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
+                    content: `<a:yes:947339988780064859> **Selected: \`${collected ? collected.customId : "Nothing | CANCELLED"}\`**`
                   })
                 });
                 } else {
-                  return message.reply("<:no:833101993668771842> **You did not enter a Valid Message in Time! CANCELLED!**")
+                  return message.reply("<a:animated_wrong:947340139359789106> **You did not enter a Valid Message in Time! CANCELLED!**")
                 }
               } else menu?.reply({
-                content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`,
+                content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`,
                 ephemeral: true
               });
             });
@@ -712,7 +712,7 @@ module.exports = {
               menumsg.edit({
                 embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
                 components: [],
-                content: `<a:yes:833101995723194437> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
+                content: `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
               })
             });
           }
@@ -721,7 +721,7 @@ module.exports = {
           let settings = await theDB.get(`${message.guild.id}.${pre}`);
           let data = settings?.data;
           if (!data || data.length < 1) {
-            return message.reply("<:no:833101993668771842> **There are no Auto-Responding-Support-Options to remove**")
+            return message.reply("<a:animated_wrong:947340139359789106> **There are no Auto-Responding-Support-Options to remove**")
           }
           let embed = new MessageEmbed()
             .setColor(es.color)
@@ -787,7 +787,7 @@ module.exports = {
               await theDB.set(`${message.guild.id}.${pre}.data`, data);
               message.reply(`**Successfully removed:**\n>>> ${menu?.values.map(i => `\`${i}\``).join(", ")}\n\nDon't forget to resend the Auto Support Config-Message!`)
             } else menu?.reply({
-              content: `<:no:833101993668771842> You are not allowed to do that! Only: <@${cmduser.id}>`,
+              content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`,
               ephemeral: true
             });
           });
@@ -796,7 +796,7 @@ module.exports = {
             menumsg.edit({
               embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)],
               components: [],
-              content: `<a:yes:833101995723194437> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
+              content: `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**`
             })
           });
         }
@@ -859,10 +859,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by Tomato#6966 | https://discord.gg/milrato
+ * Bot Coded by paninizer#8583 | Bara no Kōtei
  * @INFO
- * Work for Milrato Development | https://milrato.eu
+ * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
  * @INFO
- * Please mention him / Milrato Development, when using this Code!
+ * Please mention them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */
