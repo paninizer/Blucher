@@ -49,3 +49,5 @@ config.json
 *.lock
 .vs/Blucher/v17/.wsuo
 .vs/ProjectSettings.json
+*.bin
+.vs/VSWorkspaceState.json
