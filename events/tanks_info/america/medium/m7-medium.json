@@ -1,0 +1,11 @@
+{
+  "name": "M7 Medium",
+  "description": "The Medium Tank M7, initially Light Tank T7, was an American tank, originally conceived as an up-gunned replacement for the Light Tank M3/M5 (\"Stuart\"). The project developed to mount the same 75mm armament as the M4 Sherman while retaining the light weight and maneuverability of the M3 Stuart; however, during development the weight of the prototype surpassed the US Army's standard for light tanks and crossed into the medium tank category and was renamed. The M7 had significantly less armor than the M4 Sherman, no greater firepower, and held only a slight advantage in top speed. For these reasons, and because the M4 was already battle-tested and in full production, the M7 was cancelled in 1943.",
+  "armaments": "75 mm M3 in M47 mount, 71 rounds",
+  "armour": "13-64mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/M7_Aberdeen.JPG/300px-M7_Aberdeen.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

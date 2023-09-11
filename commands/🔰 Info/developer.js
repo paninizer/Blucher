@@ -22,7 +22,7 @@ module.exports = {
 			.setColor(es.color)
 			.setFooter(client.getFooter(es))
 			.setTimestamp()
-			.setThumbnail("https://cdn.discordapp.com/avatars/442355791412854784/df7b527a701d9a1ab6d73213576fe295.webp?size=1024")
+			.setThumbnail("https://cdn.discordapp.com/avatars/744625722714357800/552ee94e5eb04801c5a71240f482b7e9.webp?size=1024")
 			.setTitle(client.la[ls].cmds.info.developer.title)
 			.setURL("https://blucher-web.panzer-chan.repl.co")
 			.addField("🆕 NEW GITHUB", `> There is now an **Open Source** Version of this Bot on [\`panzer chan\`'s Github](https://github.com/panzer-chan)\n> [Link](https://github.com/panzer-chan/Blucher) but please make sure to **give __Credits__** if you use it!\n> Make sure to read the [README](https://blucher.panzer-chan.repl.co) and the [WIKI / FAQ](https://blucher-docs.panzer-chan.repl.co) carefully before opening an [ISSUE](https://github.com/panzer-chan/Blucher/issues/new/choose)`)
@@ -34,10 +34,10 @@ module.exports = {
 //758696736997900300
 /**
  * @INFO
- * Bot Coded by paninizer#8583 | Bara no Kōtei
+ * Bot Coded by paninizer | Bara no Kōtei
  * @INFO
- * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+ * Work for Panzer Shipyards Development | https://panzer-chan.repl.co
  * @INFO
- * Please mention them / Panzer Shipyards Development, when using this Code!
+ * Please mention Them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

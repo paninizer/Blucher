@@ -1,0 +1,11 @@
+{
+  "name": "M44",
+  "description": "The M44 was an American-made self-propelled 155 mm howitzer based on the M41 Walker Bulldog tank chassis, first introduced in the early 1950s. Flaws in its design prevented it from seeing action in the Korean War, but the type went on to serve in the U.S., West German, Italian and British Armies into the 1960s, and even longer in Turkish service.\n\nTowards the end of the Korean War the US Army sought to replace the M41 Howitzer Motor Carriage with the M44, which used the drive train of the recently introduced M41 light tank, giving it increased battlefield mobility. Unlike the M41 and the earlier M12 Gun Motor Carriage, the M44 was to have an enclosed gun compartment, giving the five man crew some armor protection even when firing the cannon. The 155mm cannon was a version of the M114 designated the M45 Howitzer with a modified recoil system that was more compact and put all the cannon under armor except the top and the barrel, along with 24 rounds of ammunition.\nThe initial prototype was designated the T99E1, but production began before testing was complete. After 250 had already been produced by the Massey Harris company, it was discovered that firing the howitzer discharged poisonous fumes into the gun compartment, leading to the cancellation of the order. Engineers offered a revised design called the T194E1 with a modified howitzer and open crew compartment that successfully vented the fumes, though at the cost of crew protection. The already produced vehicles were upgraded to the new standard, and deployed to front line units in 1954, too late to see action in the Korean War, with the designation M44. The M44 fleet was later upgraded with AOS-895-6 engines, and thus designated the M44A1. The M44 served on until 1963, when it was replaced by the M109.\n\nThe M44 was exported to West Germany, Italy, the UK (where it was called \"Cardinal\" under the ecclesiastical naming convention for self-propelled artillery) and Turkey.",
+  "armaments": "M114 155mm howitzer",
+  "armour": "12mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/M44_Howitzer.jpg/300px-M44_Howitzer.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

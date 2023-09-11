@@ -1,0 +1,11 @@
+{
+  "name": "NI Tank",
+  "description": "The NI tank (/ˈniː/; Russian: Танк НИ tank NI, abbr. На испуг, Na ispug, literally \"for fright\"), was an improvised Soviet armoured fighting vehicle, based on an STZ-3 agricultural tractor, manufactured in Odessa during the Siege of Odessa in World War II.\n\nAt the beginning of the war between the Axis and the Soviet Union, a majority of the factories were evacuated, including most of the equipment from the January Uprising Factory. There was machinery left and it was decided that it would be used to service battle-damaged tanks arriving from the front.\n\nWhen the army fighting on the outskirts of Odessa (the city defences held out for seventy-two days before the army pulled back) started experiencing shortages in tanks, the workers from the factory decided to build a fighting vehicle of their own design. Aided by the workers from other factories, the workers of the January Uprising factory built a large metal box and mounted it on the tractor. Also added was a traversable turret with either a mountain gun or a large-calibre machine gun. The armour was a sandwich of thin naval steel or boiler plate and wood or rubber sheeting to improve protection against small arms. The resulting machine was one of the many different improvised fighting vehicles developed during the war; however it was unlike any other fighting vehicle of the time due to its sizeable production and loud noise when it moved.\n\nArmament was varied to whatever was on hand during the siege, including machine guns, the ShVAK cannon, sub-turrets from T-26 Model 1931 tanks, new turrets with 37 mm Model 15R mountain guns or 45 mm anti-tank guns.",
+  "armaments": "Varied",
+  "armour": "6-23mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Na_KhTZ-16.jpg/300px-Na_KhTZ-16.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "light",
+  "nation": "ussr"
+}

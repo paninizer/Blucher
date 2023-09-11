@@ -1,0 +1,11 @@
+{
+  "name": "T7 Combat Car",
+  "description": "T7 Combat Car was a prototype United States light tank design of the interwar period. It could run on rubber-tired wheels on roads or mount tracks for cross-country use. Although adequate in some areas, it lacked armament compared to contemporary vehicles and the project was cancelled after only one was built.\n\nIn November 1936, the US Army's cavalry branch decided to modernize and needed a fully armored vehicle, capable of keeping up with the cavalry and of fulfilling regular combat duties. Prohibited from developing tanks by the National Defense Act of 1920 which defined \"tanks\" as the responsibility of the infantry, the phrase \"combat car\" was used as a legal formality. The T5 Combat Car had been built on similar lines to the infantry's T2 Light Tank, leading to the M1 Combat Car. After the T4 Combat Car had been tested, the Ordnance Committee recommended working on a road-track convertible tank design. The T6 Combat Car design was cancelled but in November 1936 the Chief of Cavalry ordered that work continue on designing a convertible tank. Designed and built at the Rock Island Arsenal between 1937 and 1938, the T7 Combat Car was based on the M1 Combat Car but with an extended chassis and a convertible suspension – the ability to travel using wheels or tracks. Theoretically, it was more versatile than a conventional tank, having the ability to move with and without tracks on roads, much like the Christie designed tanks. The main gun of the project was traditional – one .50 cal (12.7 mm) M2 Browning heavy machine gun and three .30 caliber (7.62 mm) M1919 machine guns. However, this armament was useful only against infantry, and was inadequate for use against other tanks of the period.",
+  "armaments": "0.5 in (12.7 mm) M2 Browning machine gun",
+  "armour": "16mm max.",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Convertible_Combat_Car_T7.jpg/300px-Convertible_Combat_Car_T7.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

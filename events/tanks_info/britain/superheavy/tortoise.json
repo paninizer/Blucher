@@ -1,0 +1,11 @@
+{
+  "name": "Tortoise",
+  "description": "The Tortoise heavy assault tank (A39) was a British heavy assault gun design developed during the Second World War, but never put into mass production. It was developed for the task of clearing heavily fortified areas such as the Siegfried Line and as a result favoured armour protection over mobility.\n\nAlthough heavy, at 78 tons, and not readily transported, it was considered reliable and a good gun platform.\n\nOnly a few prototypes of the Tortoise had been produced by the end of the war. After testing was complete, one was retained for preservation and the others disposed of.",
+  "armaments": "QF 32 pounder",
+  "armour": "178-228mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Bovington_146_Tortoise_1.jpg/220px-Bovington_146_Tortoise_1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "superheavy",
+  "nation": "britain"
+}

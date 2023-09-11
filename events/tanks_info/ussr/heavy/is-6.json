@@ -1,0 +1,11 @@
+{
+  "name": "IS-6",
+  "description": "There existed two different IS-6s: the Object 253 was an attempt to develop a practical electrical transmission system for heavy tanks. Similar systems had been tested previously in France and the United States and had been used with limited success in the German Elefant/Ferdinand tank destroyer during World War II. The experimental transmission proved unreliable and was dangerously prone to overheating, and development was discontinued. The alternative Object 252 shared the same hull and turret as the Object 253, but used a different suspension with no return rollers, and a conventional mechanical transmission. The design was deemed to offer no significant advantages over the IS-2, just the reload time was less, and the IS-6 project was halted.",
+  "armaments": "D25-T 122 mm gun (28 rounds)",
+  "armour": "***IS-2 Model 1944:***\n**Hull front:** 100 mm at 60° angle\n**Lower glacis:** 100 mm at 30° angle\n**Turret front:** 100 mm (rounded)\n**Mantlet:** 155 mm (rounded)\n**Hull side:** 90–130 mm at 9-25°\n**Turret side:** 90 mm at 20° angle.",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/IS-2_Model_1943_-_Sevastopol.png/300px-IS-2_Model_1943_-_Sevastopol.png",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "heavy",
+  "nation": "ussr"
+}

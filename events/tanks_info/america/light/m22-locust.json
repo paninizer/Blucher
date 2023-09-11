@@ -1,0 +1,11 @@
+{
+  "name": "M22 Locust",
+  "description": "The M22 Locust, officially Light Tank (Airborne), M22, was an American-designed airborne light tank which was produced during World War II. The Locust began development in 1941 after the British War Office requested that the American government design a purpose-built airborne light tank which could be transported by glider into battle to support British airborne forces. The War Office had originally selected the Light Tank Mark VII Tetrarch light tank for use by the airborne forces, but it had not been designed with that exact purpose in mind so the War Office believed that a purpose-built tank would be required to replace it. The United States Ordnance Department was asked to produce this replacement, which in turn selected Marmon-Herrington to design and build a prototype airborne tank in May 1941. The prototype was designated the Light Tank T9 (Airborne), and was designed so that it could be transported underneath a Douglas C-54 Skymaster transport aircraft, although its dimensions also allowed it to fit inside a General Aircraft Hamilcar glider.",
+  "armaments": "37mm gun M6, 50 rounds",
+  "armour": "9.5mm-12.5mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/M22_Locust_light_tank_at_Bovington.jpg/250px-M22_Locust_light_tank_at_Bovington.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

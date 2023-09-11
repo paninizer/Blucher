@@ -1,0 +1,11 @@
+{
+  "name": "M46 Patton",
+  "description": "The M46 Patton was an American medium tank designed to replace the M26 Pershing and M4 Sherman. It was one of the U.S Army's principal medium tanks of the early Cold War, with models in service from 1949 until the mid-1950s. It was not widely used by U.S. Cold War allies, being exported only to Belgium, and only in small numbers to train crews on the upcoming M47 Patton.\n\nAfter World War II, most U.S. Army armored units were equipped with a mix of M4 Sherman and M26 Pershing tanks. Designed initially as a heavy tank, the M26 Pershing tank was reclassified as a medium tank after the war. The M26 was a significant improvement over the M4 Sherman in firepower and protection. Its mobility, however, was deemed unsatisfactory for a medium tank, as it used the same engine as the much lighter M4A3 and was plagued with an unreliable transmission.\nWork began in January 1948 on replacing the original power plant with the Continental AV1790-3 engine and Allison CD-850-1 cross-drive transmission. This design was initially called the M26E2, but modifications continued to accumulate; eventually, the Bureau of Ordnance decided that the tank needed its own unique designation, the M46. The upgraded M26 received a new power plant and a main gun with a bore evacuator.\nUpon completion of the first model of the Detroit Tank Arsenal production line in November 1948, the M46 was christened after the late General George S. Patton. By December the Army had ordered several hundred. In July 1950 Detroit Arsenal was producing Pershings and M46s at a rate of over a dozen a day. In August 1950 President Harry S. Truman authorized funding for increased M46 production as part an expansion of heavy tank development program.\nA total of 1,160 M46s of all variants were built.",
+  "armaments": "90mm gun M4A1, 70 rounds",
+  "armour": "Up to 102mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Marines-tank-Korea-19530705.JPEG/300px-Marines-tank-Korea-19530705.JPEG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

@@ -51,7 +51,7 @@ module.exports = {
               case "house": prizea += a.items[`${itemarray}`] *  8000; break;
               case "dirthut": prizea += a.items[`${itemarray}`] *  150; break;
           
-              case "pencil": prizea += a.items[`${itemarray}`] *  20; break;
+              case "pensil": prizea += a.items[`${itemarray}`] *  20; break;
               case "pen": prizea += a.items[`${itemarray}`] *  10; break;
               case "condom": prizea += a.items[`${itemarray}`] *  30; break;
               case "bottle": prizea += a.items[`${itemarray}`] *  50; break;
@@ -78,7 +78,7 @@ module.exports = {
               case "house": prizeb += b?.items[`${itemarray}`] *  8000; break;
               case "dirthut": prizeb += b?.items[`${itemarray}`] *  150; break;
           
-              case "pencil": prizeb += b?.items[`${itemarray}`] *  20; break;
+              case "pensil": prizeb += b?.items[`${itemarray}`] *  20; break;
               case "pen": prizeb += b?.items[`${itemarray}`] *  10; break;
               case "condom": prizeb += b?.items[`${itemarray}`] *  30; break;
               case "bottle": prizeb += b?.items[`${itemarray}`] *  50; break;
@@ -123,7 +123,7 @@ module.exports = {
               case "house": prize = 8000; break;
               case "dirthut": prize = 150; break;
           
-              case "pencil": prize = 20; break;
+              case "pensil": prize = 20; break;
               case "pen": prize = 10; break;
               case "condom": prize = 30; break;
               case "bottle": prize = 50; break;
@@ -215,10 +215,10 @@ module.exports = {
 };
 /**
  * @INFO
- * Bot Coded by paninizer#8583 | Bara no Kōtei
+ * Bot Coded by paninizer | Bara no Kōtei
  * @INFO
- * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+ * Work for Panzer Shipyards Development | https://panzer-chan.repl.co
  * @INFO
- * Please mention them / Panzer Shipyards Development, when using this Code!
+ * Please mention Them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

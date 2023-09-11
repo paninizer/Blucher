@@ -1,0 +1,11 @@
+{
+  "name": "T-18 (MS-1)",
+  "description": "The T-18 light tank (also called MS-1, Russian: малый сопровождения, первый, tr. maliy soprovozhdeniya, perviy, \"Small [Vehicle for] Support, First [type/example]\") was the first Soviet-designed tank. Produced from 1928 to 1931, it was based on the Renault FT, with the addition of a vertically sprung suspension.\n\nThe T-18 and its derivatives were essentially unsuccessful designs, but they gave Soviet industry its first experiences in designing armoured vehicles, and in the meantime a number of foreign tank designs were available for production.",
+  "armaments": "37mm Model 28",
+  "armour": "6-16mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/MS-1.jpg/300px-MS-1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "light",
+  "nation": "ussr"
+}

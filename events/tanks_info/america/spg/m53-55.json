@@ -1,0 +1,11 @@
+{
+  "name": "M53/55",
+  "description": "The M55 is an American fully enclosed and armored self-propelled howitzer based on the M53 155 mm self-propelled gun. It has a 203.2 mm (eight-inch) howitzer which can traverse 30° left or right, carrying 10 rounds of ammunition when fully combat loaded. The gun has a maximum range of 10.51 miles (16.92 kilometers) with a rate of fire of one round every two minutes. The M55 is lightly armored, 25 mm maximum, but sufficient to protect the crew from indirect artillery hits and small arms fire.\nThe M55 uses components of the M47 Patton tank, but the automotive aspects are reversed. The engine is mounted in the front and is driven through a front-drive sprocket capable of a top speed of 30 mph (50 kmh). The driver's cupola is visible on the front left of the turret, and spare track blocks are stored on the turret front. Because the driver's seat is in the turret, a special seat is used to keep the driver facing forward, independent of the turret facing.\nThe M55 was deployed in NATO areas during the Cold War and used during the Vietnam War, and subsequently withdrawn from service in the US military in favor of the M110 howitzer.",
+  "armaments": "203.2 mm M47 howitzer (10 rounds)",
+  "armour": "25mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/M55_8_inch_Self-Propelled_Howitzer_3.JPG/300px-M55_8_inch_Self-Propelled_Howitzer_3.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

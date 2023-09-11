@@ -48,7 +48,7 @@ module.exports = {
         case "house": prize = 8000; break;
         case "dirthut": prize = 150; break;
     
-        case "pencil": prize = 20; break;
+        case "pensil": prize = 20; break;
         case "pen": prize = 10; break;
         case "condom": prize = 30; break;
         case "bottle": prize = 50; break;
@@ -68,7 +68,7 @@ module.exports = {
       .setTitle(eval(client.la[ls]["cmds"]["economy"]["storeinfo"]["variable3"]))
       .setDescription(eval(client.la[ls]["cmds"]["economy"]["storeinfo"]["variable4"]))
       .addField("✏️ Useables", ">>> " + 
-`✏️ **\`pencil [10 💸]\`** | ${p2b(10)}
+`✏️ **\`Pensil [10 💸]\`** | ${p2b(10)}
 🖊️ **\`Pen [20 💸]\`** | ${p2b(20)}
 🟪 **\`Condom [30 💸]\`** | ${p2b(30)}
 🍼 **\`Bottle [50 💸]\`** | ${p2b(50)}`
@@ -109,10 +109,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by paninizer#8583 | Bara no Kōtei
+* Bot Coded by paninizer | Bara no Kōtei
 * @INFO
-* Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+* Work for Panzer Shipyards Development | https://panzer-chan.repl.co
 * @INFO
-* Please mention them / Panzer Shipyards Development, when using this Code!
+* Please mention Them / Panzer Shipyards Development, when using this Code!
 * @INFO
 */

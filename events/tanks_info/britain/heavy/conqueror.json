@@ -1,0 +1,11 @@
+{
+  "name": "Conqueror",
+  "description": "The FV 214 Conqueror, also known as \"Tank, Heavy No. 1, 120 mm Gun, Conqueror\" was a British heavy tank of the post-World War II era. It was developed as a response to the Soviet IS-3 heavy tanks and the Conqueror's main armament, a L11 120 mm gun, was larger than the 20-pounder (83.4 mm) gun carried by its peer, the Centurion. The Conqueror's role was to provide long range anti-tank support for the Centurion. Conquerors were issued at nine for each regiment in Germany, usually grouped in three tank troops. In the British Army both the Conqueror and the Centurion were replaced by the Chieftain.",
+  "armaments": "L1 120 mm rifled gun",
+  "armour": "7 inches (180 mm), LOS 10 inches (250 mm)",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Conqueror_front-left_2017_Bovington.jpg/300px-Conqueror_front-left_2017_Bovington.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "heavy",
+  "nation": "britain"
+}

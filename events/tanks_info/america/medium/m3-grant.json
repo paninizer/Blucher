@@ -1,0 +1,11 @@
+{
+  "name": "M3 Grant",
+  "description": "The M3 Grant, officially Medium Tank, M3, was an American medium tank used during World War II. The turret was produced in two forms, one for US needs and one modified to British requirements to place the radio next to the commander. In British Commonwealth service, the tank was called by two names: tanks employing US pattern turrets were called \"Lee\", named after Confederate general Robert E. Lee, while those with British pattern turrets were known as \"Grant\", named after Union general Ulysses S. Grant.",
+  "armaments": "1 × 75 mm Gun M2/M3 in hull, 46 rounds, 1 × 37mm Gun M5/M6 in turret, 178 rounds",
+  "armour": "51 mm (2.0 in) (hull front, turret front, sides, and rear)\n38 mm (1.5 in) (hull sides and rear)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/M-3Grants-E_014053.2.jpg/220px-M-3Grants-E_014053.2.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Achilles",
+  "description": "The 17pdr SP Achilles (officially 17 pounder, Self-Propelled, Achilles) was a British variant of the American M10 tank destroyer armed with the British Ordnance QF 17 pounder high-velocity 76.2 mm (3-inch) anti-tank gun in place of the M10's considerably less powerful 3-inch (76.2 mm) Gun M7. A total of 1,100 M10s were converted to Achilles, making it the second most numerous armoured fighting vehicle to carry the 17 pounder gun, behind the Sherman Firefly.\nThe name \"Achilles\" was officially a designation applied to both the 3\" gun and 17 pounder versions (as Achilles I/II and Achilles Ic/IIc respectively) but was little used during the Second World War; at the time, the vehicle was called 17pdr M10, or 17pdr SP M10, or even occasionally, \"Firefly\". It has since become identified almost exclusively with the 17 pounder version.",
+  "armaments": "QF 17 pounder, 50 rounds",
+  "armour": "9-57.2mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Achilles_Tank_Destroyer_Mk10_at_La_Roche-en-Ardenne%2C_Belgium_pic8.JPG/300px-Achilles_Tank_Destroyer_Mk10_at_La_Roche-en-Ardenne%2C_Belgium_pic8.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "td",
+  "nation": "britain"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "M48 Patton",
+  "description": "The M48 Patton is an American first-generation main battle tank (MBT) introduced in February 1952, being designated as the 90mm Gun Tank: M48. It was designed as a replacement for the M26 Pershing, M4 Sherman variants and M46 Pattons used in the Korean War, and as the successor to the M47 Patton.  Nearly 12,000 M48s were built, mainly by Chrysler and American Locomotive Company, from 1952 to 1961. The M48 underwent many design modifications and improvements during its production life. This led to a wide variety of suspension systems, cupola styles, power packs, fenders and other details among individual tanks.\n\nThe early designs, up to the M48A2C, were powered by a gasoline engine. The M48A3 and A5 versions used a diesel engine, however, gasoline engine versions were still in use in the US Army National Guard through 1968 and through 1975 by many West German Army units. Numerous examples of the M48 saw combat use in various Arab–Israeli conflicts and the Vietnam War. Beginning in 1959, most American M48A1s and A2s were upgraded to the M48A3 model.",
+  "armaments": "**M48–M48A3:** 90mm M41/T139 gun\n**M48A5:** 105 mm M68/T254E2 gun",
+  "armour": "**Upper Glacis:** 110 mm (4.3 in) at 60°. 220 mm (8.7 in) LoS\nTurret Front: 178 mm (7.0 in) at 0°",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kampfpanzer_M_48_A2_C.JPG/300px-Kampfpanzer_M_48_A2_C.JPG",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "mbt",
+  "nation": "america"
+}

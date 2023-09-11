@@ -51,7 +51,7 @@ module.exports = {
         case "house": prize = 8000; break;
         case "dirthut": prize = 150; break;
     
-        case "pencil": prize = 20; break;
+        case "pensil": prize = 20; break;
         case "pen": prize = 10; break;
         case "condom": prize = 30; break;
         case "bottle": prize = 50; break;
@@ -79,7 +79,7 @@ module.exports = {
         case "house": theitems.push(`🏠 ${data.items[`${itemarray}`]} House${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(8000*data.items[`${itemarray}`])} 💸\``); break;
         case "dirthut": theitems.push(`🟫 ${data.items[`${itemarray}`]} Dirthut${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(150*data.items[`${itemarray}`])} 💸\``); break;
     
-        case "pencil": theitems.push(`✏️ ${data.items[`${itemarray}`]} pencil${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(20*data.items[`${itemarray}`])} 💸\``); break;
+        case "pensil": theitems.push(`✏️ ${data.items[`${itemarray}`]} Pensil${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(20*data.items[`${itemarray}`])} 💸\``); break;
         case "pen": theitems.push(`🖊️ ${data.items[`${itemarray}`]} Pen${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(10*data.items[`${itemarray}`])} 💸\``); break;
         case "condom": theitems.push(`🟪 ${data.items[`${itemarray}`]} Condom${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(30*data.items[`${itemarray}`])} 💸\``); break;
         case "bottle": theitems.push(`🍼 ${data.items[`${itemarray}`]} Bottle${data.items[`${itemarray}`] > 1 ? "s":""} | \`${nFormatter(50*data.items[`${itemarray}`])} 💸\``); break;
@@ -124,7 +124,7 @@ module.exports = {
         case "house": prize = 8000; break;
         case "dirthut": prize = 150; break;
 
-        case "pencil": prize = 20; break;
+        case "pensil": prize = 20; break;
         case "pen": prize = 10; break;
         case "condom": prize = 30; break;
         case "bottle": prize = 50; break;
@@ -184,10 +184,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by paninizer#8583 | Bara no Kōtei
+* Bot Coded by paninizer | Bara no Kōtei
 * @INFO
-* Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+* Work for Panzer Shipyards Development | https://panzer-chan.repl.co
 * @INFO
-* Please mention them / Panzer Shipyards Development, when using this Code!
+* Please mention Them / Panzer Shipyards Development, when using this Code!
 * @INFO
 */

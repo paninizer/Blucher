@@ -1,0 +1,11 @@
+{
+  "name": "T20/22/23 Medium",
+  "description": "The Medium Tank T20, Medium Tank T22 and Medium Tank T23 were medium tank designs developed by the United States during the Second World War, to be the successor to the M4 Sherman.\nOn the basis that the M4 was becoming obsolete, the Ordnance Department requested the 76mm gunned T23E3 and T20E3 be standardized as the M27 and M27B1 in July 1943. However, the request was rejected and neither design was ever mass-produced. The Army did not consider it necessary to interrupt M4 production for a vehicle for which they did not perceive a requirement and the introduction of the 76 mm gun to the tank force was opposed by the Armored Ground Force.\n\nSuccessive evolution of the basic design culminated in the M26 Pershing.",
+  "armaments": "76 mm M1A1 gun, 70 rounds",
+  "armour": "62mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/T20_tank_pilot_at_Fisher_plant.png/300px-T20_tank_pilot_at_Fisher_plant.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "medium",
+  "nation": "america"
+}

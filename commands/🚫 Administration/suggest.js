@@ -57,7 +57,7 @@ module.exports = {
                 soonmsg: `👌 Expect this Feature Soon!`,
                 statustext: `<a:Loading:833101350623117342> Waiting for Community Feedback, please vote!`,
                 footertext: `Want to suggest / Feedback something? Simply type in this channel!`,
-                approveemoji: `947339988780064859`,
+                approveemoji: `833101995723194437`,
                 denyemoji: `833101993668771842`,
               }
             });
@@ -92,7 +92,7 @@ module.exports = {
                     .setDescription(eval(client.la[ls]["cmds"]["administration"]["suggest"]["variable8"]))
                 ]});
             
-            if(args[1].length !== 18)
+            if(args[1].length > message.id.length)
                 return message.reply({embeds :[new MessageEmbed()
                     .setColor(es.wrongcolor)
                     .setFooter(client.getFooter(es)).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : `https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png`)

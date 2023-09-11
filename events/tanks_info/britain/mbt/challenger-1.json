@@ -1,0 +1,11 @@
+{
+  "name": "Challenger 1",
+  "description": "The FV4030/4 Challenger 1 is a British main battle tank (MBT) used by the British Army from 1983 to 2001, when it was superseded by the Challenger 2. It is also currently used by the Royal Jordanian Army as its main battle tank, after heavy modifications. The variants for the Jordanian military were to be upgraded using the unmanned Falcon turret.",
+  "armaments": "Royal Ordnance L11A5 120 mm rifled gun (64 rounds)",
+  "armour": "Classified Chobham (suggested equivalent of 600–900 mm RHA)",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Challenger_1MBT_Mk_3_%287527916878%29.jpg/300px-Challenger_1MBT_Mk_3_%287527916878%29.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "mbt",
+  "nation": "britain"
+}

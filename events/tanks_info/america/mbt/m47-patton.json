@@ -1,0 +1,11 @@
+{
+  "name": "M47 Patton",
+  "description": "The M47 Patton was an American main battle tank, a development of the M46 Patton mounting an updated turret, and was in turn further developed as the M48 Patton. It was the second American tank to be named after General George S. Patton, commander of the U.S. Third Army during World War II and one of the earliest American advocates of tanks in battle.\n\nThe M47 was the U.S. Army's and Marine Corps' primary tank, intended to replace the M26 Pershing and M46 Patton medium tanks. The M47 was widely used by U.S. Cold War allies, both SEATO and NATO countries, and was the only Patton series tank that never saw combat while in US service.\n\nAlthough similar in appearance to the later M48s and M60s, those were completely new tank designs. Many different M47 Patton models remain in service internationally. The M47 was the last US tank to have a bow-mounted machine gun in the hull.",
+  "armaments": "90 mm gun M36, 71 rounds",
+  "armour": "**Upper Glacis:** 4 in (100 mm) at 60°. 8 in (200 mm) LoS\n**Turret Front:** 4 in (100 mm) at 40°. 5.22 in (133 mm) LoS",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/M47.jpg/300px-M47.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "mbt",
+  "nation": "america"
+}

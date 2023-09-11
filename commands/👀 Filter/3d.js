@@ -58,4 +58,12 @@ const { handlemsg } = require(`../../handlers/functions`);
     }
   }
 };
-
+/**
+ * @INFO
+ * Bot Coded by paninizer | Bara no Kōtei
+ * @INFO
+ * Work for Panzer Shipyards Development | https://panzer-chan.repl.co
+ * @INFO
+ * Please mention Them / Panzer Shipyards Development, when using this Code!
+ * @INFO
+ */

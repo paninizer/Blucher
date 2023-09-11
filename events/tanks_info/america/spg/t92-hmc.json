@@ -1,0 +1,11 @@
+{
+  "name": "T92 HMC",
+  "description": "The 240 mm Howitzer Motor Carriage T92 was a self-propelled howitzer developed by the United States during World War II. The same mounting with the 8-inch Gun M1 was developed as the T93. Neither was built in significant numbers and the war ended before they could be used in combat.\n\nThe towed 240 mm M1 howitzer was difficult to use due to its weight. Experience with the 155mm howitzer on the M4 chassis suggested it might be possible to mount it on the Heavy Tank T26E3 (which was formally named \"Heavy Tank M26 Pershing\" in March 1945) chassis, and that the 8-inch gun could also be mounted as part of a planned \"Heavy Combat Team\" using the same chassis. The latter was given the designation T93 Gun Motor Carriage.\nThe chassis needed to be lengthened with addition of an extra road wheel, to give seven each side. The drive sprocket was also moved to the front.\nA limited production run (\"limited procurement\") of four pilot vehicles was ordered in March 1945, and the first was finished in July of that year, only five would be built in total. Two T93 were completed by September. All contracts were terminated with the end of the hostilities.",
+  "armaments": "T92: 240 mm howitzer M1\nT93: 8-inch Gun M1",
+  "armour": "25mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/HMC_T92.png/300px-HMC_T92.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

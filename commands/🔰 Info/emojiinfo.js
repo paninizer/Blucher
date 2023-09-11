@@ -51,7 +51,7 @@ module.exports = {
           `${handlemsg(client.la[ls].cmds.info.emojiinfo.embed.field2.value[1])} \`${checkOrCross(emoji?.animated)}\``,
           `${handlemsg(client.la[ls].cmds.info.emojiinfo.embed.field2.value[2])} \`${checkOrCross(emoji?.deleteable)}\``,
           `${handlemsg(client.la[ls].cmds.info.emojiinfo.embed.field2.value[3])} \`${checkOrCross(emoji?.managed)}\``,
-        ].join("\n")).setFooter(client.getFooter(guild.name, `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.${guild.icon.startsWith("a_") ? "gif" : "png"}?size=4096`))
+        ].join("\n")).setFooter(client.getFooter(guild.name, guild.icon ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.${guild.icon.startsWith("a_") ? "gif" : "png"}?size=4096` : client.user.displayAvatarURL()))
         message.reply({embeds: [embed]})
       }
       else if (emoji1 = animatedEmoteRegex.exec(message)) {
@@ -95,10 +95,10 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by paninizer#8583 | Bara no Kōtei
+ * Bot Coded by paninizer | Bara no Kōtei
  * @INFO
- * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+ * Work for Panzer Shipyards Development | https://panzer-chan.repl.co
  * @INFO
- * Please mention them / Panzer Shipyards Development, when using this Code!
+ * Please mention Them / Panzer Shipyards Development, when using this Code!
  * @INFO
  */

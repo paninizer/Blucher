@@ -1,0 +1,11 @@
+{
+  "name": "Cruiser Mk I",
+  "description": "The Tank, Cruiser, Mk I (A9) was a British cruiser tank of the interwar period. It was the first cruiser tank: a fast tank designed to bypass the main enemy lines and engage the enemy's lines of communication, as well as enemy tanks. The Cruiser Mk II was a more heavily armoured adaptation of the Mark I, developed at much the same time.\n\nIn 1936, the British War Office designated two different kinds of tanks for future development: heavily armoured infantry tanks to be used in close co-operation with infantry during attacks, and fast mobile cruiser tanks designed to make forays deep into enemy territory.\nDue to the cost, British replacement designs for Medium Mark II tanks then in service had been cancelled with only three built. In 1934, Sir John Carden of Vickers-Armstrong was asked to provide a \"reasonably cheap tank\" as a replacement for some of the medium models then in use. This design was known by General Staff specification A9. The pilot model of his medium tank design was finished in 1936 and given the designation A9E1.\nIt incorporated the best features of the cancelled Medium Mk III design, but lighter so that it could be powered by a commercial petrol engine. However, this was still in the time of the Great Depression and the tank had a number of cost-cutting measures applied. It was the first British tank to have a centrally located turret and to have powered traverse. The system was by Nash & Thompson and similar to that being introduced on the Vickers Wellington bomber aircraft. The armour was light, with a maximum thickness of 14 mm. Many armour faces were vertical, and there were numerous shot traps, but it could achieve 25 mph (40 km/h) and carried the new high velocity QF 2-pounder (40 mm) gun, which had replaced the QF 3-pounder by the time manufacture started in 1937.",
+  "armaments": "QF 2-pdr, 100 rounds",
+  "armour": "6-14mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mk1CruiserTank.jpg/300px-Mk1CruiserTank.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "light",
+  "nation": "britain"
+}

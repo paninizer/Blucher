@@ -1,0 +1,11 @@
+{
+  "name": "M36 Jackson",
+  "description": "The M36 tank destroyer, formally 90 mm Gun Motor Carriage, M36, was an American tank destroyer used during World War II. The M36 combined the hull of the M10 tank destroyer, which used the M4 Sherman's reliable chassis and drivetrain combined with sloped armor, and a new turret mounting the 90 mm gun M3. Conceived in 1943, the M36 first served in combat in Europe in October 1944, where it partially replaced the M10 tank destroyer. It also saw use in the Korean War, where it was able to defeat any of the Soviet tanks used in that conflict. Some were supplied to South Korea as part of the Military Assistance Program and served for years, as did re-engined examples found in Yugoslavia, which operated into the 1990s. Two remained in service with the Republic of China Army at least until 2001.\n\nThe vehicle is also known under the unofficial nickname Jackson, but this designation appears to be a postwar invention that was never used by the US Army.",
+  "armaments": "90mm gun M3, 47 rounds",
+  "armour": "9.5-127mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/American_tank_destroyers.jpg/300px-American_tank_destroyers.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "td",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "T37",
+  "description": "Ever since 1945, the US Army started to look for its new future light tank. Sure, there was the Chaffee, but the army was looking for something that would pack a bigger punch. The production of the Chaffee ended in August 1945 with roughly 4.7k made (in the future, they would scatter all over the world, sold to US-friendly countries). Meanwhile, between January and November 1945, an army equipment committee convened twice, each time recommending a new tank development. In the eyes of the committee, this new light tank should have better firepower and mobility than the M24 and should be armed with a 76mm (3in) gun, capable of penetrating 127mm of armor (5in), sloped at 30 degrees at 914 meters (1000 yards). The vehicle was to weigh 25 tons.",
+  "armaments": "76 mm Gun T94",
+  "armour": "Upper frontal plate: 25mm (60 deg, 50mm EFF)\nLower frontal plate: 32mm (45 deg, 45mm EFF)\nHull sides: 19-25mm Hull rear: 19mm\nTurret front: 32mm (55 deg, 55mm EFF)\nMantlet: 25-32mm\nTurret sides: 25mm\nTurret rear: 25mm",
+  "footer": "America",
+  "image": "https://wiki.gcdn.co/images/8/84/T37-a.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

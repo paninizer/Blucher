@@ -1,0 +1,11 @@
+{
+  "name": "T-10/IS-10/IS-8",
+  "description": "The T-10 (also known as Object 730 or, IS-8) was a Soviet heavy tank of the Cold War, the final development of the IS tank series. During development, it was called IS-8 and IS-9. It was accepted into production in 1952 as the IS-10 (Iosif Stalin, Russian form of Joseph Stalin), but due to the political climate in the wake of Stalin's death in 1953, it was renamed T-10.\n\nThe biggest differences from its direct ancestor, the IS-3, were a longer hull, seven pairs of road wheels instead of six, a larger turret mounting a new gun with fume extractor, an improved diesel engine, and increased armour. General performance was similar, although the T-10 could carry more ammunition, from 28 rounds to 30 rounds.\n\nT-10s (like the IS tanks they replaced) were deployed in independent tank regiments belonging to armies, and independent tank battalions belonging to divisions. These independent tank units could be attached to mechanized units, to support infantry operations and perform breakthroughs.",
+  "armaments": "1x D-25TA 122 mm gun (30 rounds)",
+  "armour": "**Turret:**\nT-10, A/B: 203mm@24° to 129mm@57°\nT-10M: 230mm@24° to 137mm@57°\n\n**Upper Glacis:** 120mm@55°&40° compound angle, 273mm LoS\n\n**Lower Glacis:** 120mm@50°, 186mm LoS\n\n**Upper Side:** 80mm@62° + 30mm@30°, 205mm LoS\n\n**Lower Side:** 80mm@10°\n\n**Rear:** 60mm\n\n**Mantlet:** 252mm",
+  "footer": "USSR",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/T-10_tank.jpg/300px-T-10_tank.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/3/30/Graffiti_stickers_ussr_S.png",
+  "type": "heavy",
+  "nation": "ussr"
+}

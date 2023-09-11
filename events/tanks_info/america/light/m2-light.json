@@ -1,0 +1,11 @@
+{
+  "name": "M2 Light",
+  "description": "Development of the vehicle based on the M2A3 model was started in December 1938. The tank featured a new two-man turret with more powerful armament. A total of 365 vehicles were manufactured from May 1940 through March 1941. In April 1942, ten additional tanks were produced for training purposes. Some vehicles were supplied to the U.K. under Lend-Lease, others were deployed with the U.S. Marine Corps and saw combat in the Pacific Theater.",
+  "armaments": "37 mm Gun M5, Browning MG caliber .50 HB M2",
+  "armour": "6-25mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/The_British_Army_in_the_United_Kingdom_1939-45_H17816.jpg/300px-The_British_Army_in_the_United_Kingdom_1939-45_H17816.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

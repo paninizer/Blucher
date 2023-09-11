@@ -1,0 +1,11 @@
+{
+  "name": "M3/M5 Stuart",
+  "description": "The M3 Stuart, officially Light Tank, M3, was an American light tank of World War II. An improved version entered service as M5. It was supplied to British and other Commonwealth forces under lend-lease prior to the entry of the U.S. into the war. Thereafter, it was used by U.S. and Allied forces until the end of the war.\n\nThe British service name \"Stuart\" came from the American Civil War Confederate general J. E. B. Stuart and was used for both the M3 and the derivative M5 Light Tank. In U.S. use, the tanks were officially known as \"Light Tank M3\" and \"Light Tank M5\".\n\nStuarts were first used in combat in the North African campaign; about 170 were used by the British forces in Operation Crusader (18 November – 30 December 1941). Stuarts were the first American-crewed tanks in World War II to engage the enemy in tank versus tank combat when used in the Philippines in December 1941 against the Japanese. Outside of the Pacific War, in later years of WWII the M3 was used for reconnaissance and screening.",
+  "armaments": "37mm gun M6, 147 rounds",
+  "armour": "9.5-50.8mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/M5A1_%22Stuart%22_Light_Tank.jpg/300px-M5A1_%22Stuart%22_Light_Tank.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "light",
+  "nation": "america"
+}

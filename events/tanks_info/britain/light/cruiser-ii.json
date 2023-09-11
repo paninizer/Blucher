@@ -1,0 +1,11 @@
+{
+  "name": "Cruiser Mk II",
+  "description": "The Tank, Cruiser, Mk II (A10), was a cruiser tank developed alongside the A9 cruiser tank, and was intended to be a heavier, infantry tank version of that type. In practice, it was not deemed suitable for the infantry tank role and was classified as a \"heavy cruiser\".\n\nThe A10 was developed by Sir John Carden of Vickers in 1934 by the adaptation of his A9 design. The A10 specification called for armour of up to 1 inch (25 mm) standard (the A9 was 14 mm (0.55 in)); a speed of 10 mph (16 km/h)) was acceptable. The two sub-turrets present on the A9 were removed, and extra armour bolted onto that already present on the front and sides of the hull, along with all faces of the turret, providing approximately twice the armour in most areas. The A10 was two tonnes heavier than the A9, but used the same 150 bhp (110 kW) engine, and as a consequence the tank's top speed was cut from 25 miles per hour (40 km/h) to 16 miles per hour (26 km/h).",
+  "armaments": "QF 2 pounder, 100 rounds",
+  "armour": "6-30mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/CruiserMk2.jpg/300px-CruiserMk2.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "light",
+  "nation": "britain"
+}

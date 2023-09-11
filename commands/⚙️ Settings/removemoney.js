@@ -56,7 +56,7 @@ module.exports = {
         yacht: 0, lamborghini: 0, car: 0, motorbike: 0,  bicycle: 0,
         nike: 0, tshirt: 0,
         mansion: 0, house: 0, dirthut: 0,
-        pencil: 0, pen: 0, condom: 0, bottle: 0,
+        pensil: 0, pen: 0, condom: 0, bottle: 0,
         fish: 0, hamster: 0, dog: 0, cat: 0,            
       }
     })
@@ -74,7 +74,7 @@ module.exports = {
         yacht: 0, lamborghini: 0, car: 0, motorbike: 0,  bicycle: 0,
         nike: 0, tshirt: 0,
         mansion: 0, house: 0, dirthut: 0,
-        pencil: 0, pen: 0, condom: 0, bottle: 0,
+        pensil: 0, pen: 0, condom: 0, bottle: 0,
         fish: 0, hamster: 0, dog: 0, cat: 0,          
       }
     })
@@ -117,10 +117,10 @@ module.exports = {
 };
 /**
 * @INFO
-* Bot Coded by paninizer#8583 | Bara no Kōtei
+* Bot Coded by paninizer | Bara no Kōtei
 * @INFO
-* Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
+* Work for Panzer Shipyards Development | https://panzer-chan.repl.co
 * @INFO
-* Please mention them / Panzer Shipyards Development, when using this Code!
+* Please mention Them / Panzer Shipyards Development, when using this Code!
 * @INFO
 */

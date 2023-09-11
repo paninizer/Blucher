@@ -1,0 +1,11 @@
+{
+  "name": "T32 Heavy",
+  "description": "The T32 Heavy Tank was a heavy tank project started by the United States Army to create an appropriate successor to the M4A3E2 Sherman \"Jumbo\". The US Ordnance board managed the production of four prototypes, the main goal being to have the new tank share many common parts with the M26 Pershing.\n\nDespite its promising performance during the final stages of World War II, the M26 Pershing was thought to be too lightly armored to do battle with most German heavy tanks and tank destroyers, such as the Tiger II. Even though its gun was able to penetrate armor satisfactorily, its own armor was believed to be insufficient at stopping enemy shells. Work began in early 1945 to develop a significantly heavier variant of the M26 Pershing. Using data collected from the T29 Heavy Tank project and incorporating an experimental 90mm main gun firing armor-piercing, composite rigid ammunition as well as a more advanced transmission, the first T32 tank was produced. The T15E2 gun mounted on this tank was much more powerful than the gun mounted on the Pershing, and similar to the T26E4 Super Pershing which utilized a similar experimental 90mm, the counterweight at the back of the turret was enlarged substantially to offset the long gun's weight. The T32E1 variant eliminated weak spots in the frontal armor, including removing the hull mounted machine gun. As a result of all the changes, the M26 chassis had to be expanded, with an extra road wheel added on each side, bringing the total to seven, to reduce the ground pressure due to the tank's increased weight. After the end of World War II, the project was cancelled and the vehicles were scrapped.",
+  "armaments": "T15E2 90mm L/73 gun",
+  "armour": "***Turret:***\n**Front:** 298 mm (11.7 in)\n**Side:** 152–197 mm (6.0–7.8 in)\n**Rear:** 152 mm\n**Gun shield:** 298 mm\n\n***Hull:***\n**Front:** 95–127 mm (3.7–5.0 in)\n**Side:** 76 mm (3.0 in)\n**Rear:** 51 mm (2.0 in)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Heavy_Tank%2C_T32.png/300px-Heavy_Tank%2C_T32.png",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "heavy",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "M7 Priest",
+  "description": "The 105 mm Howitzer Motor Carriage M7 was an American self-propelled gun vehicle produced during World War II. It was given the official service name 105 mm Self Propelled Gun, Priest by the British Army, due to the pulpit-like machine gun ring, and following on from the Bishop and the contemporary Deacon self-propelled guns.\n\nDuring the early stages of World War II, US Army observers realized that they would need a self-propelled artillery vehicle with sufficient firepower to support armored operations. Lessons learned with half-tracks (such as the T19 Howitzer Motor Carriage (HMC) with a 105 mm howitzer on the M3 Half-track chassis) also showed that this vehicle would have to be armored and fully tracked. It was decided to use the M3 Lee chassis as the basis for this new vehicle design, named T32. The pilot vehicles used the M3 chassis with an open-topped superstructure, mounting an M2A1 105 mm howitzer, with a machine-gun added after trials.\nThe T32 was accepted for service as the M7 in February 1942 and production began that April. The British Tank Mission had requested 2,500 to be delivered by the end of 1942 and a further 3,000 by the end of 1943, an order which was never fully completed.\nAs the M4 Sherman tank replaced the M3, it was decided to continue production using the M4 chassis (the M4 chassis was a development of the M3). The M7 was subsequently supplanted by the M37 105 mm Howitzer Motor Carriage (on the \"Light Combat Team\" chassis that also gave the M24 Chaffee light tank).",
+  "armaments": "105 mm M1/M2 Howitzer, 69 rounds",
+  "armour": "12-62mm",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/M7_Priest_at_APG.jpg/300px-M7_Priest_at_APG.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "spg",
+  "nation": "america"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Vickers Medium Mark II",
+  "description": "The Vickers Medium Mark II was a British tank built by Vickers in the Inter-war period.\n\nThe Medium Mark II, derived from the Vickers Medium Mark I, was developed to replace the last of the Medium Mark Cs still in use. Production and rebuilding ran from 1925 until 1934. The tank was phased out of service from 1939, replaced by the Cruiser Mk I. It featured several improvements over the Vickers Mark I: a higher superstructure with the driver's visor on top of it instead of in front of it; an improved suspension protected by armour skirts; and Rackham clutches, providing a primitive form of mechanical servo-control. Due to a slightly higher weight its rated speed was somewhat slower than that of the Medium Mark I, at 13 mph (21 km/h) compared to 15 mph (24 km/h).\n\nThe Mark II used the same chassis, suspension and transmission as the Medium Mark I but had a new superstructure. The Mark II was equipped with a 47 mm 3 pdr gun and four machine guns in the turret. The back of the turret had a slope so that the machine gun there could be used against aircraft. There were two Vickers machine guns, one in each side of the hull to the rear.",
+  "armaments": "QF 3-pounder (47 mm)",
+  "armour": "0.25 inches (6.35 mm) to 0.315 inches (8.0 mm)",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Vickers_Medium_Mk_IIA_1.jpg/300px-Vickers_Medium_Mk_IIA_1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "medium",
+  "nation": "britain"
+}

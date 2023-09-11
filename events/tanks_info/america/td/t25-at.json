@@ -1,0 +1,11 @@
+{
+  "name": "T25 AT",
+  "description": "The vehicle was developed based on the T23 tank, but the work on the project was discontinued at the concept exploration stage. The Command of the United States Army did not like the electric transmission and poor gun traverse limits.\nWith encounters with German Tiger tanks in Tunisia, tanks crews were wanting a tank with bigger guns than 75 mm and 76 mm.\nIn March 1943 a new turret was fitted with a 90 mm AA gun and put onto a T23 model.\n\nThe Army Service Forces placed an order for 50 of these tanks.1 10 of these were to be T26s. The first T25s were completed until early 1944.\n\nA request for 8,000 T25s and T26s with 75 mm and 76 mm guns was rejected.\n\nDevelopment\n\nThe T23 medium tank was a development of the T20 medium tank, with a Ford GAN V8 engine with electric transmission. The T20 medium tank would eventually develop into the M26 Pershing.\n\nThe T25 tank destroyer comes from 1943 models of a T23 medium tank chassis mounting a modified version of a 90 mm AA gun which eventually became the M3 90 mm gun.",
+  "armaments": "90mm gun M3, 50 rounds",
+  "armour": "**Front hull**: 76mm\n**Side hull:** 50mm\n**Rear hull:** 38mm\n**Turret front:** 76 mm Front (89 mm Gun Shield)",
+  "footer": "America",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/TM-9-374-T25E1-1.jpg/300px-TM-9-374-T25E1-1.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/9/94/Graffiti_stickers_usa_A.png",
+  "type": "td",
+  "nation": "america"
+}

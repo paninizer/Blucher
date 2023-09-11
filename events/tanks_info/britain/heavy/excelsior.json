@@ -1,0 +1,11 @@
+{
+  "name": "Excelsior",
+  "description": "The Tank, Heavy Assault, A33 (Excelsior) was a British experimental heavy tank based on the Cromwell (A27) design developed in the Second World War. It was developed when there were concerns as to performance of the Churchill tank.\n\nAfter the Dieppe Raid in August 1942, there was concern that the Churchill infantry tank was slow and too unreliable and it was suggested that production of the Churchill stop in 1943 in order to manufacture more of the A27 (Cromwell) design, which was performing well in trials. While two lines of tanks were still policy, there was interest in a \"universal tank chassis\" from which infantry tanks, cruiser tanks, and other vehicles could be built. Until then an interim design based on the A27 to replace the Churchill as an infantry tank was considered.\nRolls-Royce proposed an up-armoured A27M (Cromwell): A31 was a Cromwell with more armour and A32 was a more thorough redesign of the A27 with stronger suspension and armour equivalent to the Churchill. English Electric, contracted to build Cromwells, proposed using the A27 hull and turret with extra armour[note 1] and the track and suspension of the 50-ton US M6 Heavy Tank which had been developed for both US and British use.[1] This scheme received the General Staff number A33.\nEnglish Electric built two prototypes on a Cromwell tank hull, the first with the suspension and T1 track of the M6 tank in 1943 but with a 6-pounder gun. The second was built with a widened Cromwell track and suspension by LMS and different armoured skirts. The design included extra armour and an Ordnance QF 75 mm gun. When the problems of the early Churchill models were worked out, the A33 was no longer required and the project was dropped.",
+  "armaments": "Ordnance QF 75 mm, 64 rounds",
+  "armour": "20-114mm",
+  "footer": "Britain",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/A33_Excelsior.jpg/480px-A33_Excelsior.jpg",
+  "iconURL": "https://wiki.gcdn.co/images/2/28/Graffiti_stickers_uk.png",
+  "type": "heavy",
+  "nation": "britain"
+}

@@ -24,18 +24,18 @@ module.exports = {
   type: "system",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls, GuildSettings) => {
     let theemoji = "📜";
-    let MilratoGuild = client.guilds.cache.get("773668217163218944");
-    if (MilratoGuild) theemoji = "877653386747605032";
+    //let MilratoGuild = client.guilds.cache.get("773668217163218944");
+    //if (MilratoGuild) theemoji = "877653386747605032";
     let allbuttons = [new MessageActionRow().addComponents([new MessageButton().setStyle('SUCCESS').setEmoji(theemoji).setCustomId("User_Apply").setLabel("Apply")])]
     let apply_for_here = client.apply;
     let pre;
-    let temptype = 0;
+    //let temptype = 0;
     let errored = false;
     let timeouterror = false;
     const filter = (reaction, user) => {
       return user.id == cmduser.id
     };
-    let guildid = message.guild.id;
+    //let guildid = message.guild.id;
     let NumberEmojiIds = getNumberEmojis().map(emoji => emoji?.replace(">", "").split(":")[2])
     first_layer()
     async function first_layer() {
@@ -159,10 +159,10 @@ module.exports = {
           else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
-        collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:929001012830806016> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
-        });
-      } catch (e) {
+	collector.on('end', collected => {
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+        });      
+	} catch (e) {
         console.log(String(e.stack).grey.bgRed)
         return message.reply({
           embeds: [new MessageEmbed()
@@ -313,10 +313,10 @@ module.exports = {
           else menu?.reply({content: `<a:animated_wrong:947340139359789106> You are not allowed to do that! Only: <@${cmduser.id}>`, ephemeral: true});
         });
         //Once the Collections ended edit the menu message
-        collector.on('end', collected => {
-          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:929001012830806016> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
-        });
-      } catch (e) {
+	collector.on('end', collected => {
+          menumsg.edit({embeds: [menumsg.embeds[0].setDescription(`~~${menumsg.embeds[0].description}~~`)], components: [], content: `${collected && collected.first() && collected.first().values ? `<a:yes:947339988780064859> **Selected: \`${collected ? collected.first().values[0] : "Nothing"}\`**` : "❌ **NOTHING SELECTED - CANCELLED**" }`})
+        });      
+} catch (e) {
         console.log(String(e.stack).grey.bgRed)
         return message.reply({
           embeds: [new MessageEmbed()
@@ -2640,7 +2640,7 @@ module.exports = {
               .setFooter(client.getFooter(es))
 
               .setColor(es.color)
-              .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable174"])) //paninizer#8583
+              .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable174"])) //paninizer
               .setFooter("ADD THE INDEX TO EDIT THE MSG", message.guild.iconURL({
                 dynamic: true
               }))
@@ -2811,7 +2811,7 @@ module.exports = {
                       Questions = arr
                       var new_embed = new Discord.MessageEmbed().setFooter(client.getFooter(es))
                         .setColor(es.color)
-                        .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable177"])) //paninizer#8583
+                        .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable177"])) //paninizer
                         .setFooter(client.getFooter(message.guild.name, message.guild.iconURL({
                           dynamic: true
                         })))
@@ -3067,7 +3067,7 @@ module.exports = {
                 Questions = await apply_for_here.get(`${message.guild.id}.${pre}.QUESTIONS`);
                 var embed = new Discord.MessageEmbed().setFooter(client.getFooter(es))
                   .setColor(es.color)
-                  .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable188"])) //paninizer#8583
+                  .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable188"])) //paninizer
                   .setFooter(client.getFooter(message.guild.name, message.guild.iconURL({
                     dynamic: true
                   })))
@@ -3103,7 +3103,7 @@ module.exports = {
               .setFooter(client.getFooter(es))
 
               .setColor(es.color)
-              .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable190"])) //paninizer#8583
+              .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable190"])) //paninizer
               .setFooter("ADD THE INDEX TO EDIT THE MSG", message.guild.iconURL({
                 dynamic: true
               }))
@@ -3160,7 +3160,7 @@ module.exports = {
                   Questions = await apply_for_here.get(`${message.guild.id}.${pre}.QUESTIONS`);
                   var new_embed = new Discord.MessageEmbed().setFooter(client.getFooter(es))
                     .setColor(es.color)
-                    .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable193"])) //paninizer#8583
+                    .setTitle(eval(client.la[ls]["cmds"]["setup"]["setup-apply"]["variable193"])) //paninizer
                     .setFooter(client.getFooter(message.guild.name, message.guild.iconURL({
                       dynamic: true
                     })))
@@ -3447,8 +3447,8 @@ module.exports = {
           var embed = new Discord.MessageEmbed()
             .setFooter(client.getFooter(es))
             .setColor(es.color)
-            .setTitle(`${!oldState ? "Enabled Last Verification": "Disabled Last Verification"}`) //paninizer#8583
-            .setDescription(`${!oldState ? "I will now ask the User a last Time if he really wanna apply for the Server": "I will not ask the User"}`) //paninizer#8583
+            .setTitle(`${!oldState ? "Enabled Last Verification": "Disabled Last Verification"}`) //paninizer
+            .setDescription(`${!oldState ? "I will now ask the User a last Time if he really wanna apply for the Server": "I will not ask the User"}`) //paninizer
             .setTimestamp()
           message.reply({
             embeds: [embed]
@@ -3471,42 +3471,38 @@ module.exports = {
 }
 /**
  * @INFO
- * Bot Coded by paninizer#8583 | https://github?.com/Tomato6966/Discord-Js-Handler-Template
- * @INFO
- * Work for Panzer Shipyards Development | https://blucher.panzer-chan.repl.co/
- * @INFO
- * Please mention them / Panzer Shipyards Development, when using this Code!
+ * Bot Coded by paninizer
  * @INFO
  */
 
 function getNumberEmojis() {
   return [
-    "<:Number_0:843943149915078696>",
-    "<:Number_1:843943149902626846>",
-    "<:Number_2:843943149868023808>",
-    "<:Number_3:843943149914554388>",
-    "<:Number_4:843943149919535154>",
-    "<:Number_5:843943149759889439>",
-    "<:Number_6:843943150468857876>",
-    "<:Number_7:843943150179713024>",
-    "<:Number_8:843943150360068137>",
-    "<:Number_9:843943150443036672>",
-    "<:Number_10:843943150594031626>",
-    "<:Number_11:893173642022748230>",
-    "<:Number_12:893173642165383218>",
-    "<:Number_13:893173642274410496>",
-    "<:Number_14:893173642198921296>",
-    "<:Number_15:893173642182139914>",
-    "<:Number_16:893173642530271342>",
-    "<:Number_17:893173642538647612>",
-    "<:Number_18:893173642307977258>",
-    "<:Number_19:893173642588991488>",
-    "<:Number_20:893173642307977266>",
-    "<:Number_21:893173642274430977>",
-    "<:Number_22:893173642702250045>",
-    "<:Number_23:893173642454773782>",
-    "<:Number_24:893173642744201226>",
-    "<:Number_25:893173642727424020>"
+    "<:Number_0:1147927819180068904>",
+    "<:Number_1:1147928159082254346>",
+    "<:Number_2:1147928360551465111>",
+    "<:Number_3:1147928463362244628>",
+    "<:Number_4:1147928595554111568>",
+    "<:Number_5:1147928793181343851>",
+    "<:Number_6:1147928955836444672>",
+    "<:Number_7:1147929111390588991>",
+    "<:Number_8:1147929234480836698>",
+    "<:Number_9:1147929324599656459>",
+    "<:Number_10:1147929457437446274>",
+    "<:Number_11:1147929616057643088>",
+    "<:Number_12:1147929957654339684>",
+    "<:Number_13:1147937276236673025>",
+    "<:Number_14:1147937403538002000>",
+    "<:Number_15:1147937544210747403>",
+    "<:Number_16:1147937648263041034>",
+    "<:Number_17:1147937752076259339>",
+    "<:Number_18:1147938136773632050>",
+    "<:Number_19:1147938290037686283>",
+    "<:Number_20:1147938384254357556>",
+    "<:Number_21:1147938467247050862>",
+    "<:Number_22:1147938558196334697>",
+    "<:Number_23:1147938705710010458>",
+    "<:Number_24:1147938796072095786>",
+    "<:Number_25:1147938901613359134>"
   ]
 }
 
@@ -3533,7 +3529,7 @@ function getApplyEnsureData(){
     "ticket": "Hey {user}! We have some Questions!",
     "one": {
       "role": "0",
-      "message": "Hey you've got accepted for Team 1",
+      "message": "Hey, you've got accepted for Team 1",
       "image": {
         "enabled": false,
         "url": ""
@@ -3541,7 +3537,7 @@ function getApplyEnsureData(){
     },
     "two": {
       "role": "0",
-      "message": "Hey you've got accepted for Team 2",
+      "message": "Hey, you've got accepted for Team 2",
       "image": {
         "enabled": false,
         "url": ""
@@ -3549,7 +3545,7 @@ function getApplyEnsureData(){
     },
     "three": {
       "role": "0",
-      "message": "Hey you've got accepted for Team 3",
+      "message": "Hey, you've got accepted for Team 3",
       "image": {
         "enabled": false,
         "url": ""
@@ -3557,7 +3553,7 @@ function getApplyEnsureData(){
     },
     "four": {
       "role": "0",
-      "message": "Hey you've got accepted for Team 4",
+      "message": "Hey, you've got accepted for Team 4",
       "image": {
         "enabled": false,
         "url": ""
@@ -3565,7 +3561,7 @@ function getApplyEnsureData(){
     },
     "five": {
       "role": "0",
-      "message": "Hey you've got accepted for Team 5",
+      "message": "Hey, you've got accepted for Team 5",
       "image": {
         "enabled": false,
         "url": ""
