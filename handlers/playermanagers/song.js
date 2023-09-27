@@ -215,7 +215,7 @@ async function song(client, message, args, type, slashCommand, extras) {
     //send information
     var playlistembed = new MessageEmbed()
       .setTitle(`Added Playlist 🩸 **\`${res.playlist.name}`.substring(0, 256 - 3) + "`**")
-      .setURL(res.playlist.uri).setColor(ee.color)
+      .setURL(res.playlist.url).setColor(ee.color)
       .setThumbnail(`https://img.youtube.com/vi/${res.tracks[0].identifier}/mqdefault.jpg`)
       .addField("⌛ Duration: ", `\`${format(res.playlist.duration)}\``, true)
       .addField("🔂 Queue length: ", `\`${player.queue.length} Songs\``, true)
@@ -248,10 +248,10 @@ module.exports = song;
 
 /**
  * @INFO
- * Bot Coded by paninizer | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
+ * Bot Coded by Tomato#6966 | https://github?.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js
  * @INFO
- * Work for Panzer Shipyards Development | https://panzer-chan.repl.co
+ * Work for Milrato Development | https://milrato.eu
  * @INFO
- * Please mention Them / Panzer Shipyards Development, when using this Code!
+ * Please mention Him / Milrato Development, when using this Code!
  * @INFO
  */

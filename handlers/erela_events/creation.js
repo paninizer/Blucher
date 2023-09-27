@@ -31,8 +31,7 @@ var {
 				spotify: { clientId: config.spotify.clientID, clientSecret: config.spotify.clientSecret }
 				}, (guild, sPayload) => { //3. Function
   				client.guilds.cache.get(guild).shard.send(JSON.parse(sPayload))
-				})      
-//require the other events
+				})      //require the other events
       require("./node_events")(client)
       require("./client_events")(client)
       require("./events")(client)

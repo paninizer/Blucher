@@ -62,8 +62,6 @@ module.exports = {
             return message.reply({embeds: [embeds[2]]})
           if(cat == "🎶 Music")
             return message.reply({embeds: [embeds[3]]})
-          if(cat == "👀 Filter")
-            return message.reply({embeds: [embeds[4]]})
           if(cat == "⚜️ Custom Queue(s)")
             return message.reply({embeds: [embeds[5]]})
           if(cat == "🚫 Administration")
@@ -78,8 +76,6 @@ module.exports = {
             return message.reply({embeds: [embeds[10]]})
           if(cat == "📈 Ranking")
             return message.reply({embeds: [embeds[11]]})
-          if(cat == "🔊 Soundboard")
-            return message.reply({embeds: [embeds[12]]})
           if(cat == "🎤 Voice")
             return message.reply({embeds: [embeds[13]]})
           if(cat == "🕹️ Fun")
@@ -149,12 +145,6 @@ module.exports = {
             description: "Commands to Play Music / Add Filter"
           },
           {
-            label: "Filter",
-            value: "Filter",
-            emoji: "👀",
-            description: "Commands to Add Filters to the Music"
-          },
-          {
             label: "Customqueue",
             value: "Customqueue",
             emoji: "⚜️",
@@ -195,12 +185,6 @@ module.exports = {
             value: "Ranking",
             emoji: "📈",
             description: "Commands to Manage and Show Ranks"
-          },
-          {
-            label: "Soundboard",
-            value: "Soundboard",
-            emoji: "🔊",
-            description: "Commands for Voice Soundboard"
           },
           {
             label: "Voice",
@@ -339,7 +323,7 @@ module.exports = {
                   case "economy": index = 2; break;
                   case "school": index = 3; break;
                   case "music": index = 4; break;
-                  case "filter": index = 5; break;
+                  //case "filter": index = 5; break;
                   case "customqueue": index = 6; break;
                   case "admin": index = 7; break;
                   case "setup": index = 8; break;
@@ -347,7 +331,7 @@ module.exports = {
                   case "owner": index = 10; break;
                   case "programming": index = 11; break;
                   case "ranking": index = 12; break;
-                  case "soundboard": index = 13; break;
+                  //case "soundboard": index = 13; break;
                   case "voice": index = 14; break;
                   case "fun": index = 15; break;
                   case "minigames": index = 16; break;
@@ -422,12 +406,6 @@ module.exports = {
             .addField("<:Bot_Flag:1042837411153055784> **Bot Commands**", "> "+client.commands.filter((cmd) => cmd.category === "🎶 Music" && cmd.type.includes("bot")).sort((a,b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲"))
             if(!filterdisabled || settings.MUSIC || settings.showdisabled) embeds.push(embed3)
 
-          //FILTER COMMANDS
-          var embed4 = new MessageEmbed()
-            .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "👀 Filter").size}\`] 👀 Filter Commands 👀 | ${settings.FILTER ? "<a:yes:947339988780064859> ENABLED" : "<a:animated_wrong:947340139359789106> DISABLED"}`)
-            .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "👀 Filter").sort((a,b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
-          if(!filterdisabled || settings.FILTER || settings.showdisabled) embeds.push(embed4)
-
           //CUSTOM QUEUE COMMANDS
           var embed5 = new MessageEmbed()
             .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "⚜️ Custom Queue(s)").first().extracustomdesc.length}\`] ⚜️ Custom Queue(s) Commands ⚜️ | ${settings.CUSTOMQUEUE ? "<a:yes:947339988780064859> ENABLED" : "<a:animated_wrong:947340139359789106> DISABLED"}`)
@@ -493,12 +471,6 @@ module.exports = {
             .addField("📈 **Rank Information**", `> ${client.commands.filter((cmd) => cmd.category === "📈 Ranking" && cmd.type === "info").sort((a,b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}`)
           if(!filterdisabled || settings.RANKING || settings.showdisabled) embeds.push(embed11)
           
-          //SOUNDBOARD COMMANDS
-          var embed12 = new MessageEmbed()
-            .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").size}\`] 🔊 Soundboard Commands 🔊 | ${settings.SOUNDBOARD ? "<a:yes:947339988780064859> ENABLED" : "<a:animated_wrong:947340139359789106> DISABLED"}`)
-            .setDescription(`> *${client.commands.filter((cmd) => cmd.category === "🔊 Soundboard").sort((a,b) => a.name.localeCompare(b?.name)).map((cmd) => `\`${cmd.name}\``).join("︲")}*`)
-          if(!filterdisabled || settings.SOUNDBOARD || settings.showdisabled) embeds.push(embed12)
-
           //Voice COMMANDS
           var embed13 = new MessageEmbed()
             .setTitle(`[\`${client.commands.filter((cmd) => cmd.category === "🎤 Voice").first().extracustomdesc.length}\`] 🎤 Voice Commands 🎤 | ${settings.VOICE ? "<a:yes:947339988780064859> ENABLED" : "<a:animated_wrong:947340139359789106> DISABLED"}`)
