@@ -9,6 +9,8 @@ Invite it [here](https://discord.com/api/oauth2/authorize?client_id=854776549260
 https://discord.com/api/oauth2/authorize?client_id=854776549260394526&permissions=8&scope=bot%20applications.commands
 
 
+Currently archived because I cannot pay the AWS bills required to keep it running. Feel free to fork the code and run it yourself, but please be sure to attribute.
+
 <h2>Features</h2>
 
   - 500+ commands
